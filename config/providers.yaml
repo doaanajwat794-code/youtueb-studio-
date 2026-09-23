@@ -1,0 +1,92 @@
+# Production tools and render settings
+# Status: PROPOSED 2026-09-23 — nothing below has been tested with a real API call yet.
+# Prices were gathered 2026-09-23 from web search results (official pricing pages were
+# unreachable from the research environment). Re-check official pages before approving spend.
+# Per-provider "status": UNTESTED -> TESTED (after a real successful run) -> APPROVED (owner ok).
+
+primary_stack: google   # one account, one bill, reachable from this cloud environment
+
+providers:
+  video:
+    primary:
+      name: Google Veo 3.1 (Gemini API)
+      api: generativelanguage.googleapis.com
+      models:
+        hero: veo-3.1-generate-preview        # verify exact model id in docs at setup
+        standard: veo-3.1-fast-generate-preview
+      clip_seconds: 8          # Veo generates 4/6/8 s clips; 1080p at 8 s
+      resolution: 1080p
+      reference_images: true   # "ingredients"/reference images for character consistency (verify limits)
+      usd_per_second: {hero: 0.40, standard: 0.15}   # web-reported; verify
+      commercial_use: "Paid API tier; outputs usable commercially per Google terms; SynthID watermark embedded"
+      data_note: "Use the PAID tier: free-tier inputs may be used to improve Google products"
+      status: UNTESTED
+    alternative:
+      name: Kling 3.0 (official API or reseller e.g. fal.ai)
+      usd_per_second: {standard: 0.084}              # web-reported range 0.075–0.168; verify
+      reachable_from_cloud_env: false                # blocked by current network policy
+      status: UNTESTED
+    not_selected:
+      - name: OpenAI Sora 2 API
+        reason: "API reported to shut down 2026-09-24 — not a stable choice"
+      - name: Runway Gen-4.5 API
+        reason: "~$0.12/s but 720p-class output and separate credit pool; keep as backup for motion-control shots"
+      - name: Seedance 2.x (fal/Replicate)
+        reason: "Strong quality but ~$0.34–0.68/s at 1080p via global resellers; official BytePlus route not sold in US/UK"
+
+  images:        # character sheets, location plates, first frames, thumbnail
+    name: Gemini 3 Pro Image ("Nano Banana Pro")
+    model: gemini-3-pro-image-preview       # verify exact id at setup
+    usd_per_image: 0.134          # 1K/2K; batch ~0.067 (web-reported)
+    status: UNTESTED
+
+  narration_and_dialogue:
+    primary:
+      name: Gemini TTS (Gemini API)
+      model: gemini-2.5-pro-preview-tts     # verify exact id at setup
+      usd_per_million_output_tokens: 20.0   # ~25 tokens per audio second → ~$0.03 per minute
+      status: UNTESTED
+    premium_option:
+      name: ElevenLabs (v3 / Multilingual v2)
+      note: "Commercial rights need a paid subscription (Starter ~$6/mo+); pay-as-you-go API has no commercial licence per reports"
+      reachable_from_cloud_env: false
+      status: UNTESTED
+
+  music:
+    name: Google Lyria 3 Pro / 3.5 (Gemini API)
+    usd_per_track: 0.08          # up to ~3 min per track (web-reported)
+    status: UNTESTED
+
+  sound_effects:
+    plan: "Veo native audio on hero shots + licensed SFX library (e.g. free CC0 packs, downloaded locally) + ElevenLabs SFX optional"
+
+  script_and_planning:
+    name: Claude (this Claude Code session)
+    cost: "Included in the owner's Claude plan — no extra API charge"
+
+  subtitles_alignment:
+    name: "Script-driven SRT timed from TTS segment durations (free); optional Whisper-style alignment later"
+
+  editing:
+    name: FFmpeg (open source, free)
+    status: TESTED_WITH_PLACEHOLDERS   # see state/STATUS.md for the test record
+
+render:
+  width: 1920
+  height: 1080
+  fps: 24
+  video_codec: libx264
+  crf: 18
+  preset: slow
+  pixel_format: yuv420p
+  audio_codec: aac
+  audio_bitrate: 320k
+  audio_sample_rate: 48000
+  loudness_lufs: -14            # integrated loudness target for final master
+  subtitles: {sidecar_srt: true, burn_in: false}   # upload SRT to YouTube as captions
+
+youtube:
+  api: YouTube Data API v3
+  auth: OAuth 2.0 (installed/desktop app), scope youtube.upload (+ youtube.force-ssl for captions)
+  default_privacy: private
+  status: UNTESTED

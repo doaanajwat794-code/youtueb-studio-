@@ -1,0 +1,160 @@
+# Reference videos and channels — structured record
+# Collected: 2026-09-23 via web search only.
+# IMPORTANT: youtube.com is blocked in the research environment, so view counts,
+# exact durations and publish dates could NOT be read from YouTube directly.
+# Fields marked `pending` are filled by:  python -m studio research-stats
+# (needs a free YOUTUBE_API_KEY). Fields marked `third_party` come from a non-YouTube
+# source and must be treated as approximate until verified.
+
+collected_on: "2026-09-23"
+stats_verified_on: null
+
+videos:
+  - id: aAg9iDh9_BQ
+    title: "Oneiric | AI Sci-Fi Short Film | Higgsfield Originals (2026)"
+    url: https://www.youtube.com/watch?v=aAg9iDh9_BQ
+    channel: Higgsfield AI
+    published: pending          # blog coverage dated 2026-08-29 suggests late Aug 2026
+    duration: "~20 min (third_party: Higgsfield, Curious Refuge)"
+    views: pending
+    ai_made: true
+    genre: sci-fi drama anthology (frame story + genre vignettes)
+    why_relevant: Closest match to our target — a ~20-min fully AI narrative film
+    sources:
+      - https://higgsfield.ai/original-series/oneiric/full-film
+      - https://curiousrefuge.com/ai-film-gallery/oneiric-ai-sci-fi-short-film
+      - https://theawesomer.com/oneiric-short-film/812730/
+
+  - id: t33k2tn4GpA
+    title: "Hell Grind | World's First Ever AI Feature Film | Higgsfield Originals (2026)"
+    url: https://www.youtube.com/watch?v=t33k2tn4GpA
+    channel: Higgsfield AI
+    published: "2026-05 (premiere during Cannes week; third_party)"
+    duration: "95 min (third_party: Wikipedia) — outside 10–40 min range; used as a cautionary reference"
+    views: pending
+    ai_made: true
+    genre: action fantasy
+    why_relevant: Largest public AI narrative; reviews show exactly what audiences reject
+    sources:
+      - https://en.wikipedia.org/wiki/Hell_Grind
+      - https://www.notebookcheck.net/First-95-minute-AI-movie-with-skateboards-demons-and-plenty-of-online-criticism.1308627.0.html
+      - https://www.joblo.com/we-saw-a-full-length-ai-generated-feature/
+
+  - id: TAHGZSeGVww
+    title: "Sci-Fi Short Film \"Nano\" | DUST"
+    url: https://www.youtube.com/watch?v=TAHGZSeGVww
+    channel: DUST (@watchdust)
+    published: pending
+    duration: "14 min (third_party)"
+    views: "38M+ (third_party: Wikitubia — unverified)"
+    ai_made: false
+    genre: near-future tech thriller
+    why_relevant: Proven genre benchmark — the most-viewed film on the biggest sci-fi shorts channel
+    sources:
+      - https://youtube.fandom.com/wiki/DUST
+      - https://www.epicheroes.com/sci-fi-short-film-nano-dust-2/
+
+  - id: xYuGb4dbz5Q
+    title: "Sci-Fi Short Film \"A Kind World\" | DUST AI"
+    url: https://www.youtube.com/watch?v=xYuGb4dbz5Q
+    channel: DUST
+    published: "2025-04-25 (third_party: search snippet)"
+    duration: pending
+    views: pending
+    ai_made: "labelled DUST AI — verify"
+    genre: AI / society sci-fi
+    why_relevant: Shows the largest human-made sci-fi channel now distributing AI-made films
+
+  - id: 0KtrQJcKeyk
+    title: "Sci-Fi Short Film \"AI-POCALYPSE\" | DUST"
+    url: https://www.youtube.com/watch?v=0KtrQJcKeyk
+    channel: DUST
+    published: pending
+    duration: pending
+    views: pending
+    ai_made: pending
+    genre: AI apocalypse
+
+  - id: H6-N1v1REu8
+    title: "Simulation | AWARD-WINNING Sci-Fi Short Film"
+    url: https://www.youtube.com/watch?v=H6-N1v1REu8
+    channel: Hashem Al-Ghaili
+    published: "2019 (third_party)"
+    duration: "24 min (third_party)"
+    views: pending
+    ai_made: false
+    genre: philosophical sci-fi (simulated reality)
+    why_relevant: 24-min concept sci-fi from a creator whose later work is AI-assisted; length benchmark
+    sources:
+      - https://simulationthemovie.com/
+      - https://en.wikipedia.org/wiki/Hashem_Al-Ghaili
+
+  - id: QW-NFkVDfdA
+    title: "The Frost AI-Generated Short Film from Waymark"
+    url: https://www.youtube.com/watch?v=QW-NFkVDfdA
+    channel: Waymark
+    published: "2023 (third_party)"
+    duration: "12 min (third_party: MIT Technology Review)"
+    views: pending
+    ai_made: true
+    genre: arctic mystery
+    why_relevant: Early 12-min AI narrative — useful for what stills-based AI looks like (what to avoid)
+    sources:
+      - https://www.technologyreview.com/2023/06/01/1073858/surreal-ai-generative-video-changing-film/
+
+  - id: zpAeygE4d1A
+    title: "Total Pixel Space"
+    url: https://www.youtube.com/watch?v=zpAeygE4d1A
+    channel: Jacob Adler
+    published: "2025 (Runway AI Film Festival Grand Prix)"
+    duration: "9:28 (third_party: Artnet) — just under range"
+    views: pending
+    ai_made: true
+    genre: essay film / cosmic mystery
+    why_relevant: Award-winning proof that a narrated, idea-driven AI film holds attention
+    sources:
+      - https://news.artnet.com/art-world/total-pixel-space-jacob-adler-a-i-film-festival-2662774
+
+  - id: Vssy98rFgRM
+    title: "This Sci-Fi AI Film Has a Brutal Twist - SUPPLY | AI Short Film Beyond Frames"
+    url: https://www.youtube.com/watch?v=Vssy98rFgRM
+    channel: Beyond Frames
+    published: "2026-05 (third_party)"
+    duration: pending
+    views: pending
+    ai_made: true
+    genre: identity / artificial consciousness twist
+    why_relevant: Same promise as Twist Villa (twist ending) — packaging reference
+
+  - id: YY-M5bxTY28
+    title: "AI Short Film: Discarded Companion — A Cinematic Sci-Fi Story"
+    url: https://www.youtube.com/watch?v=YY-M5bxTY28
+    channel: pending
+    published: pending
+    duration: pending
+    views: pending
+    ai_made: "true (reported Kling + Veo 3)"
+    genre: robot companion drama
+
+channels:
+  - name: DUST
+    url: https://www.youtube.com/@watchdust
+    note: "3.4–3.5M subs, ~417M views (third_party: Wikitubia/Favoree); 3–20 min films; 1–2 uploads/week"
+  - name: Neural Viz
+    url: https://www.youtube.com/@NeuralViz
+    note: "~238K subs on 2026-07-19 (third_party); AI mockumentary universe; episodes up to ~8 min; format built around AI's strengths"
+    sources:
+      - https://www.thedaringcreatives.com/creator-stories/neural-viz-ai-tv-universe/
+      - https://takehomehub.com/creator-money/channel-breakdowns/neural-viz
+  - name: Higgsfield AI (Originals)
+    url: https://www.youtube.com/playlist?list=PLaQe6ms8V2M7BR3p0FXxiR-HuHDsDzXav
+    note: "Studio-backed AI films; open-sourced prompts"
+  - name: Aze Alter
+    url: https://www.youtube.com/@AzeAlter
+    note: "Independent AI sci-fi / horror films (third_party: glu.tv)"
+  - name: HFY Sci Fi Audiobook
+    url: https://www.youtube.com/channel/UCwK-GaTUuOQlXA7Ubhp2S-w
+    note: "Long-form narrated sci-fi with AI visuals — format signal AND monetization-risk example"
+  - name: Sci-Fi HFY Stories
+    url: https://www.youtube.com/@Sci-FiHFYStories
+    note: "Same format family as above"

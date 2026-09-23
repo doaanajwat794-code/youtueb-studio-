@@ -1,0 +1,30 @@
+# Budget and cost limits — enforced by studio/budget.py
+# Status: PROPOSED defaults 2026-09-23. The owner sets the final numbers.
+status: draft
+currency: USD
+
+caps:
+  per_video_usd: 600        # hard ceiling for one finished video (all stages)
+  per_month_usd: 700        # hard ceiling across all videos in a calendar month
+  pilot_usd: 60             # first test scene for a new look/provider
+  single_call_usd: 5        # any single API call estimated above this is refused (safety net)
+
+approval:
+  required_for_every_paid_stage: true   # an approval must be recorded per stage
+  overrun_tolerance_pct: 10             # stop the stage if actual spend exceeds approval by >10 %
+  approver: channel owner
+
+free_actions:   # never need approval
+  - research via web search
+  - writing ideas, scripts, bibles, storyboards, metadata drafts
+  - local editing / assembly / subtitle generation with FFmpeg
+  - YouTube Data API reads and private uploads (free quota, no money)
+
+estimation:            # assumptions used by `python -m studio estimate`
+  retake_rate: 0.30    # extra generations for rejected shots (30 %)
+  refs_images_per_character: 4
+  refs_images_per_location: 3
+  thumbnail_candidates: 6
+  pilot_seconds: 60
+  words_per_minute: 140
+  tts_tokens_per_second: 25

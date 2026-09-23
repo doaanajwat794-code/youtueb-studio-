@@ -1,0 +1,46 @@
+# Twist Villa — channel identity and content direction
+# Status: DRAFT proposed 2026-09-23. Becomes "approved" when the owner confirms.
+status: draft
+
+channel:
+  name: Twist Villa
+  handle: "@TwistVela"
+  url: https://www.youtube.com/@TwistVela
+  language: en
+  promise: >-
+    Cinematic, original AI-made stories where the future feels uncomfortably close —
+    and every story ends with a twist you can re-watch and spot the clues for.
+
+format:
+  type: long-form            # never Shorts
+  target_minutes: 20          # allowed range below
+  min_minutes: 15
+  max_minutes: 30
+  aspect_ratio: "16:9"
+  resolution: 1920x1080
+  frame_rate: 24
+  shorts: false               # existing Shorts are NOT used to set long-form strategy
+
+genres:
+  primary: [psychological sci-fi thriller, near-future mystery]
+  secondary: [techno-horror (slow burn, no gore), cosmic mystery, AI / identity drama]
+  avoid: [gore, real people or real brands, real tragedies, political content, kids-targeted content]
+
+audience:
+  who: English-speaking adults 18–44 who watch Black Mirror–style fiction, sci-fi short films, and mystery narration channels
+  watch_context: evenings, TV / desktop, headphones — rewards sound design and slow-burn tension
+
+signature_elements:
+  - Cold-open that shows a moment from late in the story, then rewinds
+  - A single grounded protagonist whose inner voice (narration) carries the film
+  - A "rule" of the world stated early that the twist later turns inside-out
+  - Planted clues that make a second viewing rewarding
+  - A final image that re-frames the first image
+  - Consistent Twist Villa look: teal-amber grade, anamorphic framing, film grain
+
+cadence:
+  target: 1 long-form video every 2–3 weeks (quality over volume)
+
+disclosure:
+  youtube_altered_or_synthetic_toggle: decide per video  # required when realistic people/events could mislead
+  description_note: "Made with AI-assisted tools. Original story by Twist Villa."

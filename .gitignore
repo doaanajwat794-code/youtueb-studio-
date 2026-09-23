@@ -1,0 +1,22 @@
+# Large media — keep in Google Drive / cloud storage, never in git
+media/
+*.mp4
+*.mov
+*.wav
+*.mp3
+*.png
+*.jpg
+!docs/**/*.png
+
+# Secrets
+.env
+.env.*
+!.env.example
+client_secret*.json
+*token*.json
+credentials*.json
+
+# Python
+__pycache__/
+*.pyc
+.venv/

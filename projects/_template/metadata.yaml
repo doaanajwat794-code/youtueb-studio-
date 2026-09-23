@@ -1,0 +1,15 @@
+# {{title}} — YouTube packaging (draft → owner approval → upload as PRIVATE)
+title: "{{title}}"
+description: |-
+  (2-line hook)
+
+  Made with AI-assisted tools. Original story, script and edit by Twist Villa.
+
+  00:00 Cold open
+tags: [sci-fi short film, psychological thriller, AI film, mystery, twist ending]
+category_id: 24                  # Entertainment
+contains_synthetic_media: true   # YouTube "altered or synthetic content" toggle — decide per video
+thumbnail_prompt: >-
+  (one face or one object, one strong colour contrast, room for ≤3 words)
+thumbnail_text: ""
+approved: false
