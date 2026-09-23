@@ -1,25 +1,21 @@
-# {{title}} — Story bible (continuity locks). Paste visual_lock text verbatim into every prompt.
+# {{title}} — Story bible (continuity locks). visual_lock text is pasted verbatim into every prompt.
 look:
   style_lock: >-
-    Cinematic 35mm anamorphic, shallow depth of field, teal-and-amber grade, soft film grain,
-    motivated practical lighting, 16:9, photoreal, no text, no watermarks.
-  negative: "text, subtitles, watermark, logo, extra fingers, distorted faces, cartoon, low quality"
+    Vertical 9:16 cinematic frame, photoreal, 35mm lens look, shallow depth of field,
+    teal-and-amber grade, soft film grain, motivated practical lighting, no text, no watermark.
+  negative: "text, captions, subtitles, watermark, logo, extra fingers, distorted face, cartoon, low quality, horizontal letterbox"
 narrator:
-  voice: Charon              # Gemini TTS voice name — choose in pilot
-  voice_direction: "Intimate, low, measured, slightly weary; American English"
+  voice: Kore                # Gemini TTS voice — confirm in pilot
+  voice_direction: "Close-mic, intimate, calm with rising unease; neutral American English"
 characters:
   - id: lead
     name: "NAME"
-    want: ""
-    fear: ""
     visual_lock: >-
-      Woman in her early 30s, ... (age, face shape, hair, eye colour, skin tone, build,
-      exact wardrobe and colour accent — never changes unless the script says so)
+      (age, face shape, skin tone, eye colour, hair colour/length/style, build, exact wardrobe
+      with colours and materials, one distinctive detail — never changes unless scripted)
     voice: Kore
-    voice_direction: ""
 locations:
   - id: loc1
     name: "LOCATION"
     visual_lock: >-
-      (architecture, materials, palette, light source, time of day, weather)
-props: []
+      (architecture, materials, palette, light sources, time of day, weather)

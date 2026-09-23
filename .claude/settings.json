@@ -5,7 +5,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "cd \"$CLAUDE_PROJECT_DIR\" && echo '=== Twist Villa Studio: saved status (load the twist-villa-studio skill and continue from the next pending task) ===' && cat state/STATUS.md && echo && echo '=== Approved decisions ===' && cat state/decisions.md"
+            "command": "cd \"$CLAUDE_PROJECT_DIR\" && echo '=== Twist Villa Studio (YouTube SHORTS only: 55-60 s, 9:16, 1080x1920) \u2014 load the twist-villa-studio skill and continue from the next pending task ===' && cat state/STATUS.md && echo && echo '=== Approved decisions ===' && cat state/decisions.md"
           }
         ]
       }

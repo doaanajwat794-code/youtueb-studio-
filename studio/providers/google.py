@@ -42,7 +42,7 @@ def _inline_image(path: Path) -> dict:
 def generate_video(guard: SpendGuard, *, model: str, prompt: str, out: Path, usd: float,
                    negative_prompt: str = "", first_frame: Path | None = None,
                    reference_images: list[Path] | None = None, seconds: int = 8,
-                   resolution: str = "1080p", poll_every: int = 10, max_wait: int = 900) -> Path:
+                   resolution: str = "1080p", aspect_ratio: str = "9:16", poll_every: int = 10, max_wait: int = 900) -> Path:
     """Generate one clip with Veo via the long-running predict endpoint and save it to `out`."""
     instance: dict = {"prompt": prompt}
     if first_frame:
@@ -50,7 +50,7 @@ def generate_video(guard: SpendGuard, *, model: str, prompt: str, out: Path, usd
     if reference_images:
         instance["referenceImages"] = [{"image": _inline_image(p), "referenceType": "asset"}
                                        for p in reference_images]
-    params = {"aspectRatio": "16:9", "resolution": resolution, "durationSeconds": seconds}
+    params = {"aspectRatio": aspect_ratio, "resolution": resolution, "durationSeconds": seconds}
     if negative_prompt:
         params["negativePrompt"] = negative_prompt
 
@@ -80,7 +80,7 @@ def generate_video(guard: SpendGuard, *, model: str, prompt: str, out: Path, usd
 # ------------------------------------------------------------------ images
 
 def generate_image(guard: SpendGuard, *, model: str, prompt: str, out: Path, usd: float,
-                   references: list[Path] | None = None, aspect_ratio: str = "16:9") -> Path:
+                   references: list[Path] | None = None, aspect_ratio: str = "9:16") -> Path:
     parts: list[dict] = [{"text": prompt}]
     for ref in references or []:
         img = _inline_image(ref)

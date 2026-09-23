@@ -1,12 +1,12 @@
 # Budget and cost limits — enforced by studio/budget.py
-# Status: APPROVED range 2026-09-24 — owner's preferred monthly budget is $50–150.
-status: approved
+# Status: PROPOSED defaults 2026-09-23. The owner sets the final numbers.
+status: draft
 currency: USD
 
 caps:
-  per_video_usd: 45         # hard ceiling for one finished Short (all stages)
-  per_month_usd: 150        # hard ceiling across all Shorts in a calendar month
-  pilot_usd: 10             # first ~12 s (3 shots) test of a new look/provider
+  per_video_usd: 600        # hard ceiling for one finished video (all stages)
+  per_month_usd: 700        # hard ceiling across all videos in a calendar month
+  pilot_usd: 60             # first test scene for a new look/provider
   single_call_usd: 5        # any single API call estimated above this is refused (safety net)
 
 approval:
@@ -23,8 +23,8 @@ free_actions:   # never need approval
 estimation:            # assumptions used by `python -m studio estimate`
   retake_rate: 0.30    # extra generations for rejected shots (30 %)
   refs_images_per_character: 4
-  refs_images_per_location: 2
-  thumbnail_candidates: 0      # Shorts use a frame from the video; no paid thumbnail
-  pilot_seconds: 12            # pilot = first ~12 s (≈3 shots); reused in the final cut
-  words_per_minute: 150
+  refs_images_per_location: 3
+  thumbnail_candidates: 6
+  pilot_seconds: 60
+  words_per_minute: 140
   tts_tokens_per_second: 25

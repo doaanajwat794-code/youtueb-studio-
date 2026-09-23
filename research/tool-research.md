@@ -1,5 +1,9 @@
 # Production Tool Research — APIs, pricing, commercial terms
 
+> **Shorts update (2026-09-24):** still valid for Shorts. Veo 3.1 supports native 9:16 at 1080p
+> (to verify in the pilot). A 58-second Short costs about $19–27 on the Google stack
+> (see `state/ideas-backlog.md`). Music comes from the free YouTube Audio Library.
+
 **Collected:** 2026-09-23 via web search. Official pricing pages (ai.google.dev,
 kling.ai, elevenlabs.io, fal.ai) were **blocked** from the research environment, so
 prices below are as reported by search results and third-party guides.

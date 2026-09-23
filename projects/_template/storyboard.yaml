@@ -1,29 +1,29 @@
-# {{title}} — Storyboard. One entry per shot; ids are unique; order = edit order.
-# tier: hero ($0.40/s Veo 3.1) for faces/dialogue/key reveals, standard ($0.15/s Veo 3.1 Fast) otherwise.
+# {{title}} — Storyboard (10–12 shots, total 55–60 s). Order = edit order. Ids unique.
+# tier: hero ($0.40/s Veo 3.1) for hook, face close-ups, twist; standard ($0.15/s Veo 3.1 Fast) otherwise.
 shots:
-  - id: S01-001
-    scene: 1
-    seconds: 5.0          # on-screen length (3–8 s); clip is generated at 8 s and trimmed
-    trim_start: 0.5       # optional: skip the first frames of the generated clip
-    tier: standard
+  - id: S01
+    beat: hook
+    seconds: 2.5
+    trim_start: 0.3
+    tier: hero
     location: loc1
     characters: [lead]
-    camera: "slow push-in, eye level, 35mm"
+    camera: "extreme close-up, vertical 9:16, slow push-in, face in upper third"
     prompt: >-
-      (what happens in the shot: subject + action + mood + light — one idea per shot)
-    sfx: []               # optional wav files in media/<slug>/audio/sfx/
+      (one subject, one action, one moment)
+    native_audio_db: -16   # optional: keep Veo's own ambience/SFX under the mix
+    sfx: []
 audio:
   lines:
-    - id: N001
-      type: narration     # narration | dialogue
-      speaker: narrator   # narrator or a character id
-      at_shot: S01-001    # line starts at this shot…
-      offset: 0.4         # …plus this many seconds
-      direction: ""       # optional delivery note for TTS
+    - id: N01
+      type: narration
+      speaker: narrator
+      at_shot: S01
+      offset: 0.3
       text: >-
-        (the exact line)
+        (first line — starts within 0.5 s)
   music:
-    - id: M01
-      start_shot: S01-001
-      end_shot: S01-001
-      prompt: "(mood, instrumentation, tempo — the Twist Villa leitmotif)"
+    - id: M01              # free YouTube Audio Library track saved as media/<slug>/audio/music/M01.wav
+      start_shot: S01
+      end_shot: S01
+      gain_db: -16

@@ -1,5 +1,5 @@
 # Production tools and render settings
-# Status: Shorts settings 2026-09-24 (9:16, 1080x1920). Paid adapters are still UNTESTED.
+# Status: PROPOSED 2026-09-23 — nothing below has been tested with a real API call yet.
 # Prices were gathered 2026-09-23 from web search results (official pricing pages were
 # unreachable from the research environment). Re-check official pages before approving spend.
 # Per-provider "status": UNTESTED -> TESTED (after a real successful run) -> APPROVED (owner ok).
@@ -16,7 +16,6 @@ providers:
         standard: veo-3.1-fast-generate-preview
       clip_seconds: 8          # Veo generates 4/6/8 s clips; 1080p at 8 s
       resolution: 1080p
-      aspect_ratio: "9:16"     # native vertical; one forum report says the API returned 16:9 — the pilot verifies this
       reference_images: true   # "ingredients"/reference images for character consistency (verify limits)
       usd_per_second: {hero: 0.40, standard: 0.15}   # web-reported; verify
       commercial_use: "Paid API tier; outputs usable commercially per Google terms; SynthID watermark embedded"
@@ -54,17 +53,12 @@ providers:
       status: UNTESTED
 
   music:
-    primary:
-      name: YouTube Audio Library (free, cleared for YouTube use)
-      how: "Owner or session downloads a track into media/<slug>/audio/music/; record title + licence in metadata"
-      cost: 0
-    optional:
-      name: Google Lyria 3 Pro / 3.5 (Gemini API)
-      usd_per_track: 0.08          # web-reported
-      status: NOT_BUILT            # request format to be confirmed from official docs
+    name: Google Lyria 3 Pro / 3.5 (Gemini API)
+    usd_per_track: 0.08          # up to ~3 min per track (web-reported)
+    status: UNTESTED
 
   sound_effects:
-    plan: "Veo native audio (included in the Veo price) per shot via storyboard native_audio_db, plus free YouTube Audio Library / CC0 SFX"
+    plan: "Veo native audio on hero shots + licensed SFX library (e.g. free CC0 packs, downloaded locally) + ElevenLabs SFX optional"
 
   script_and_planning:
     name: Claude (this Claude Code session)
@@ -77,9 +71,9 @@ providers:
     name: FFmpeg (open source, free)
     status: TESTED_WITH_PLACEHOLDERS   # see state/STATUS.md for the test record
 
-render:                       # YouTube Shorts master
-  width: 1080
-  height: 1920
+render:
+  width: 1920
+  height: 1080
   fps: 24
   video_codec: libx264
   crf: 18
@@ -89,13 +83,7 @@ render:                       # YouTube Shorts master
   audio_bitrate: 320k
   audio_sample_rate: 48000
   loudness_lufs: -14            # integrated loudness target for final master
-  subtitles:
-    sidecar_srt: true          # also uploaded as YouTube captions
-    burn_in: true              # Shorts: captions baked into the picture
-    font: DejaVu Sans
-    font_size: 10              # libass units (PlayResY 288) — ~67 px on a 1920-px-tall frame
-    margin_v: 70               # keeps captions above the Shorts UI at the bottom
-    max_chars_per_line: 26
+  subtitles: {sidecar_srt: true, burn_in: false}   # upload SRT to YouTube as captions
 
 youtube:
   api: YouTube Data API v3

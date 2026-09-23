@@ -1,13 +1,15 @@
 # Twist Villa Studio
 
 The production studio for the YouTube channel **[Twist Villa](https://www.youtube.com/@TwistVela)**:
-original long-form (15–30 min) AI-made sci-fi, mystery and psychological-thriller films.
+original **YouTube Shorts** (55–60 s, vertical 1080x1920): AI-made cinematic mystery,
+psychological-thriller and sci-fi stories about identity and technology, each with a final twist.
+(The earlier long-form plan is archived in `archive/longform/`.)
 
 ## How to use it (no coding needed)
 Open this repository in Claude Code and say what you want, for example:
 - "Continue where we left off."
-- "Give me three new story ideas."
-- "What will the next video cost?"
+- "Give me three new Short ideas."
+- "What will the next Short cost?"
 
 Claude loads the `twist-villa-studio` skill and the saved files automatically, so you
 never have to re-explain the channel.
@@ -18,7 +20,8 @@ never have to re-explain the channel.
 | `config/` | Approved channel direction, story framework, tools, budget |
 | `research/` | Competitor and tool research with source links |
 | `state/` | Current status, next task, decisions, spending ledger |
-| `projects/` | One folder per video: idea, script, bible, storyboard, metadata |
+| `projects/` | One folder per Short: idea, script, bible, storyboard, metadata |
+| `archive/longform/` | Inactive long-form research and settings |
 | `studio/` | The pipeline code (`python -m studio --help`) |
 | `media/` | Generated video/audio (not in GitHub — copy finished files to Google Drive) |
 

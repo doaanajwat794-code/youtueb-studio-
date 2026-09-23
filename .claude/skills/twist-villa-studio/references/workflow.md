@@ -1,82 +1,71 @@
-# Production workflow — stage by stage
+# Shorts production workflow — stage by stage
 
-Each stage ends with: update `projects/<slug>/project.yaml` → `stage`, update
-`state/STATUS.md` → next pending task, commit text files. Ask for owner sign-off at
-every ✋.
+After each stage, update `projects/<slug>/project.yaml` → `stage` and `state/STATUS.md` →
+next pending task, then commit the text files. ✋ = owner sign-off, 💲 = paid (needs approval).
 
-## 1. Idea (free) ✋
-- Re-read `research/competitor-research.md` (patterns, what NOT to copy) and
-  `config/channel.yaml` (genres, avoid-list).
-- Write 3 loglines in `idea.md` using the framework's one-sentence test.
-- Web-search each logline's core twist to check it isn't a known film/short.
-- Recommend one, with a reason. Owner picks.
+## 1. Ideas (free) ✋
+- Re-read `research/shorts-research.md` (principles, "do not copy" list) and
+  `config/channel.yaml`.
+- Pitch 3 ideas in `state/ideas-backlog.md`: logline, hook shot, clue, twist, echo ending,
+  cast/locations, difficulty. Web-search each twist to check it isn't a known story.
+- Recommend one. The owner picks.
 
-## 2. Screenplay (free) ✋
-- Follow `config/storytelling-framework.md` beat table, scaled to the target length.
-- Word budget: minutes × 140 (narration + dialogue). Mark every clue in the tracker.
-- Dialogue exchanges ≤ 4 lines; staged to avoid heavy lip-sync (OTS, silhouettes,
-  screens, intercoms, back-of-head, hands).
-- Self-review before showing: hook in first 15 s? mini-cliffhanger every 3–4 min?
-  midpoint flip? all clues paid off? final image mirrors the opening?
+## 2. Script (free) ✋
+- Follow the beat sheet in `config/storytelling-framework.md` (target 58 s).
+- 110–130 narration words; ≤ 2 dialogue lines. Mark the planted clue and its payoff.
+- Self-check: is frame 1 striking? First line starts ≤ 0.5 s? New information every
+  5–6 s? Twist at ~0:45–0:52? Final image echoes frame 1?
 
-## 3. Story bible (free) ✋
-- `bible.yaml`: one `visual_lock` paragraph per character and location, written as
-  concrete physical facts (age, hair, wardrobe colours, materials, light). These
-  strings are pasted verbatim into every prompt — that is how continuity is enforced.
-- Choose narrator + character voices (Gemini TTS voice names; confirm in pilot).
+## 3. Bible (free)
+- `bible.yaml`: `visual_lock` for the protagonist (face, hair, age, build, exact wardrobe and
+  colours) and each location. These are pasted verbatim into every prompt.
+- Narrator voice (Gemini TTS voice name + direction).
 
 ## 4. Storyboard (free) ✋
-- `storyboard.yaml`: one entry per shot, 3–8 s each, average ~5 s.
-- Every shot: one action, one camera move, location + characters from the bible.
-- `tier: hero` only for faces-in-close-up, dialogue and reveal shots (~25 %).
-- Anchor each voice line to a shot (`at_shot` + `offset`); check line length fits.
-- Run `python -m studio estimate <slug>` and show the full cost table.
+- 10–12 shots, 3–8 s each, summing to 55–60 s. Vertical framing notes on every shot.
+- `tier: hero` for the hook, face close-ups, and the twist shot (~3 shots); the rest `standard`.
+- `native_audio_db: -14` on shots whose Veo ambience/SFX you want in the mix.
+- Anchor each narration line with `at_shot` + `offset`, and check the lines fit their shots.
 
-## 5. Reference images (paid) ✋💲
-- `python -m studio estimate <slug> --stage refs` → owner approves →
-  `python -m studio approve <slug> --stage refs --usd <amount>` →
-  `python -m studio generate <slug> --stage refs`.
-- Review the sheets with the owner; regenerate any off-model image (inside budget).
+## 5. Estimate and approval ✋💲
+- `python -m studio estimate <slug>` → show the table → wait for approval.
+- Record approvals per stage (`refs`, `pilot`, `footage`, `audio`). For `footage`, approve
+  the footage estimate minus the pilot amount (the pilot shots are not regenerated).
 
-## 6. Pilot (paid, small) ✋💲
-- First ~60 s of the storyboard, full quality. Assemble it with placeholder or real
-  narration. Judge: character consistency, look, motion quality, voice quality.
-- Update `config/providers.yaml` statuses to TESTED for what worked. If something
-  failed, fix prompts/tools before the main spend.
+## 6. Reference images 💲
+- `python -m studio generate <slug> --stage refs`. Review them; the protagonist must look
+  identical across all sheets.
 
-## 7. Full footage (paid, main cost) ✋💲
-- Approve once for the stage; the guard stops at approval +10 %.
-- Generation is resumable: existing shot files are skipped.
-- QC every shot: on-model? continuity (wardrobe, props, light direction)? no
-  artefacts on faces/hands? no text/watermarks? Re-generate failures within budget.
-- Never reuse a shot; the assembler rejects duplicate files.
+## 7. Pilot (first ~12 s ≈ 3 shots) 💲
+- `python -m studio generate <slug> --stage pilot`. Check: is it really 1080x1920 vertical?
+  Does the face match the reference? Are the grade and grain right? Is there motion?
+- If the API returns 16:9, stop, report it, and fix before spending more.
+- Mark Veo `status: TESTED` in `config/providers.yaml` only after this works.
 
-## 8. Voice, music, SFX (paid, small) ✋💲
-- `python -m studio generate <slug> --stage audio` for narration/dialogue.
-- Listen to every line; re-generate unnatural reads with a `direction` note.
-- Music: Lyria cues (adapter pending docs check) or licensed library tracks — record
-  the licence in `metadata.yaml` description credits.
-- SFX: CC0/licensed library files in `media/<slug>/audio/sfx/`.
+## 8. Footage 💲
+- `python -m studio generate <slug> --stage footage` (existing files are skipped).
+- QC every shot: on-model face and wardrobe, continuity of props and light direction,
+  no warped hands or faces, no garbled text, subject framed for vertical. Regenerate
+  failures within the approved amount.
 
-## 9. Assembly (free)
-- `python -m studio assemble <slug>` → `media/<slug>/final.mp4`, `final.en.srt`,
-  `sync-report.json`. It normalises to 1920x1080 / 24 fps, ducks music under voice,
-  normalises loudness to −14 LUFS, and verifies resolution, fps, audio, A/V sync
-  (±0.10 s) and runtime.
-- Watch the full export before calling it done. Check caption line breaks.
+## 9. Audio 💲 (cents)
+- `python -m studio generate <slug> --stage audio` for narration.
+- Music: a free YouTube Audio Library track → `media/<slug>/audio/music/M01.wav`; record the
+  title in the description credits if its licence requires attribution.
+- SFX: Veo native audio (`native_audio_db`) and library SFX → `media/<slug>/audio/sfx/`.
 
-## 10. Packaging ✋
-- `metadata.yaml`: title (≤ 60 chars, honest), description (hook, AI note, chapters,
-  credits), tags, synthetic-media flag. Thumbnail: 6 candidates (paid, small),
-  owner picks; add ≤ 3 words of text in the edit, not in the AI image.
+## 10. Assemble (free)
+- `python -m studio assemble <slug>` produces `final.mp4` (1080x1920, 24 fps, captions burned
+  in), `final.en.srt`, and `sync-report.json`.
+- Automatic checks: resolution, fps, audio present, A/V sync ±0.10 s, runtime = storyboard.
+- Manual checks: runtime is 55–60 s, captions match speech, no caption covers a face, the
+  twist lands, and the loop into frame 1 feels intentional.
 
-## 11. Private upload (free) ✋
-- `python -m studio upload <slug>` → private video + captions + thumbnail.
-- Owner reviews in YouTube Studio. **Public/scheduled only on explicit approval.**
-- Move `media/<slug>/final.mp4` and sources to Google Drive; note the Drive link in
-  `project.yaml`.
+## 11. Packaging ✋
+- `metadata.yaml`: title ≤ 50 characters, a 1–2 line description with the AI note,
+  3–5 hashtags including #Shorts, and `contains_synthetic_media: true` for realistic humans.
 
-## Session hand-off checklist
-- [ ] `state/STATUS.md` updated (done / next pending task / blockers)
-- [ ] `state/decisions.md` updated if a permanent change was approved
-- [ ] Text/config committed and pushed; no media or secrets staged
+## 12. Private upload ✋
+- `python -m studio upload <slug>` uploads privately with captions. The owner reviews in
+  YouTube Studio. **Public or scheduled publishing only on explicit approval.**
+- Copy `final.mp4` to Google Drive and note the link in `project.yaml`.

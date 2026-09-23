@@ -1,85 +1,49 @@
-# Twist Villa Storytelling Framework — "The Villa Structure"
+# Twist Villa Shorts Framework — "60 Seconds, One Twist"
 
-Status: **DRAFT (proposed 2026-09-23)** — becomes approved when the owner confirms.
+Status: **ACTIVE (Shorts pivot, 2026-09-24).** Built from `research/shorts-research.md`.
+The long-form framework is archived in `archive/longform/storytelling-framework.md`.
 
-Built from the research in `research/competitor-research.md`. The core lessons:
-long AI films fail on weak story, synthetic-sounding dialogue and choppy editing
-(Hell Grind reviews); they succeed when the format is designed around what AI does
-well (Neural Viz) and when a clear frame device holds varied scenes together
-(Oneiric). So Twist Villa is **narrator-led**: one strong voice carries the film,
-dialogue is sparse and short, and visuals are atmospheric, cinematic and continuous.
+## 1. The one-sentence test
+> **[Character] notices [impossible detail] in a world where [rule] — and the truth is
+> [twist], which was visible in the very first shot.**
 
----
+If the twist doesn't re-frame the first shot, the story isn't ready.
 
-## 1. The one-sentence test (must pass before any script is written)
-
-> **[Protagonist] must [goal] in a world where [rule], but [pressure] — until they
-> discover [twist] that makes [the rule] mean something else.**
-
-If the twist doesn't reverse the meaning of the rule, it isn't a Twist Villa story.
-
-## 2. Structure for a 20-minute film (scale proportionally for 15–30 min)
-
-| Time | Beat | Purpose | Retention job |
+## 2. The 60-second beat sheet (target 58 s, never under 55 or over 60)
+| Time | Beat | Picture | Narration job |
 |---|---|---|---|
-| 0:00–0:45 | **Cold open** | A vivid, unexplained moment from the final act | Hook: a question the viewer needs answered |
-| 0:45–1:15 | **Title card + promise** | Channel ident, film title, one line of narration | Tell viewers what kind of ride this is |
-| 1:15–4:00 | **The ordinary + the rule** | Protagonist's world; state the world's rule clearly | Clue #1 planted in plain sight |
-| 4:00–5:00 | **Inciting break** | Something violates the rule | First mini-cliffhanger |
-| 5:00–10:00 | **Investigation** | Protagonist digs; 2 short dialogue scenes max | Clue #2, a false answer that feels right |
-| 10:00–11:00 | **Midpoint reveal** | The false answer collapses | Re-hook at the 50 % mark |
-| 11:00–16:00 | **Pressure** | Stakes turn personal; the world pushes back | Clue #3; ticking clock |
-| 16:00–18:00 | **The twist** | Truth revealed; the rule is inverted | Pay-off of all three clues (quick flash-backs) |
-| 18:00–19:30 | **Consequence** | Protagonist's choice under the new truth | Emotional pay-off |
-| 19:30–20:00 | **Final image** | Mirrors the cold open, now meaning something else | Re-watch trigger + end screen |
+| 0.0–2.0 | **Hook** | The single most striking, impossible image, already moving | First line starts ≤ 0.5 s; poses the question |
+| 2–10 | **Rule** | Establish character + world | State the rule of the world in one sentence |
+| 10–22 | **Crack 1** | The first thing that breaks the rule; **plant the clue** | Curiosity |
+| 22–35 | **Crack 2** | Escalation, stakes turn personal | Dread / urgency |
+| 35–45 | **Push** | The character acts: opens, follows, confronts | Shortest sentences |
+| 45–52 | **Twist** | Reveal shot; music cuts out; signature sting | One line that re-frames everything |
+| 52–58 | **Echo** | An image that mirrors frame 1 (loop into the re-watch) | Final line, or silence |
 
-Mini-cliffhanger every **3–4 minutes** (end of each beat) so the long format never sags.
+## 3. Hard rules
+- **10–12 shots**, each 3–8 s, all different, all moving. No stills, no repeats.
+- **One protagonist.** Other characters appear as voices, screens, silhouettes, or hands.
+- **1–2 locations**, each with a locked description.
+- **Narration 110–130 words** (at ~150 wpm this leaves breathing room). Dialogue ≤ 2 lines.
+- Vertical composition: subject in the upper two-thirds; the bottom 25 % stays clear for
+  captions and the Shorts UI.
+- Every shot is written from the bible's `visual_lock` strings, so continuity comes from
+  the prompts rather than luck.
 
-## 3. Voice and dialogue rules
+## 4. Sound
+- Room tone under everything (Veo native audio, or library ambience).
+- One music bed (free YouTube Audio Library); it **drops out 1 s before the twist**.
+- A signature **Twist Villa sting** at the reveal, the same sound in every Short (brand audio).
+- Master at −14 LUFS.
 
-- **Narration ≈ 60–70 % of spoken words.** First-person, past tense, intimate
-  ("I didn't notice it the first time.") — the protagonist, recorded as a log,
-  confession, or message. This hides AI lip-sync weakness and sounds premium.
-- **Dialogue ≈ 30–40 %,** in short exchanges (≤ 4 lines each), shot mostly as
-  over-the-shoulder, silhouettes, screens, radios, intercoms — minimal visible lip-sync.
-- Every line must either reveal character, plant a clue, or raise a question.
-- Speaking rate target: ~140 words per minute → a 20-min film ≈ 2,400–2,800 words.
+## 5. Packaging
+- **Title:** ≤ 50 characters with a curiosity gap, and never a lie.
+  e.g. "She Was Restored 41 Times".
+- **Description:** a one-line hook, the AI note, and 3–5 hashtags (#Shorts #SciFi #PlotTwist …).
+- **Cover frame:** choose a frame of the protagonist's face (Shorts use a frame, not a paid
+  thumbnail).
 
-## 4. Characters
-
-- **1 protagonist, 2–3 supporting characters, 1 "presence"** (a system, place, or
-  voice that represents the rule). Small casts = better visual consistency.
-- Each character gets a locked visual sheet (face, hair, wardrobe, colour accent) in
-  `bible.yaml`, plus a one-line want, a one-line fear, and a distinctive voice.
-- Prefer designs that stay consistent: distinctive silhouettes, fixed wardrobe,
-  helmets/masks/uniforms where the story allows.
-
-## 5. Visual grammar
-
-- 3–5 recurring **locations**, each with a locked look (palette, light, time of day).
-- Shot lengths 3–8 s; average ~5 s → ~220–260 unique shots for 20 minutes.
-- Every shot has motion (camera or subject). No still-image slideshow segments.
-- Re-establish location with a wide shot at each scene start; match eye-lines.
-- The twist sequence reuses **framings** (not footage) of earlier clues, re-lit.
-
-## 6. Sound design
-
-- Room tone under everything; no dead silence except as a deliberate beat.
-- One musical theme (leitmotif) introduced in the cold open, varied through the film.
-- Music drops out before each reveal; a single sound cue marks each clue.
-- Narration at −16 LUFS integrated for the final mix (YouTube-friendly), music ducked.
-
-## 7. Packaging
-
-- **Title:** curiosity + concrete image, ≤ 60 characters, no clickbait lies.
-  Pattern: "*[Ordinary thing] + [wrong detail]*" — e.g. "The Elevator That Stopped
-  on Floor 0". Never reuse a competitor's title structure verbatim.
-- **Thumbnail:** one face or one object, one strong colour contrast, ≤ 3 words.
-- **Description:** 2-line hook, AI-assistance note, chapters, credits for music/tools.
-
-## 8. Originality checklist (run before approving any idea)
-
-- [ ] Premise is not a retelling of a known film, short, or competitor video
-- [ ] No names, characters, or signature images borrowed from existing works
-- [ ] Twist is new to us (search the logline before committing)
-- [ ] Setting and rule are specific, not generic "AI takes over"
+## 6. Originality checklist
+- [ ] The premise isn't a known film, episode, or reference Short (see the research "not copy" list)
+- [ ] No borrowed names, characters, or signature images
+- [ ] The twist is logical: a first-time viewer could have guessed it from the clue

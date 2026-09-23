@@ -46,9 +46,9 @@ def _channel_median_views(channel_id: str, n: int = 30) -> float | None:
     return statistics.median(views) if views else None
 
 
-def refresh_research_stats() -> list[dict]:
-    """Fill pending fields in research/sources.yaml with verified API data."""
-    path = config.ROOT / "research" / "sources.yaml"
+def refresh_research_stats(path: Path | None = None) -> list[dict]:
+    """Fill pending fields in research/shorts-sources.yaml with verified API data."""
+    path = path or config.ROOT / "research" / "shorts-sources.yaml"
     data = config.load_yaml(path)
     ids = [v["id"] for v in data["videos"]]
     items = {i["id"]: i for i in _get("videos", part="snippet,statistics,contentDetails",
@@ -117,6 +117,7 @@ def upload_private(slug: str) -> str:
         "status": {"privacyStatus": "private", "selfDeclaredMadeForKids": False,
                    "containsSyntheticMedia": bool(meta.get("contains_synthetic_media", True))},
     }
+    # A vertical video of 3 minutes or less is classified as a Short by YouTube automatically.
     request = yt.videos().insert(part="snippet,status", body=body,
                                  media_body=MediaFileUpload(str(media / "final.mp4"), chunksize=16 << 20,
                                                             resumable=True))

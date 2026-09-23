@@ -1,10 +1,11 @@
-"""Assemble shots + voice + music + SFX into a 1920x1080 master with captions and a sync report.
+"""Assemble shots + voice + music + SFX into the render-size master (Shorts: 1080x1920) with captions.
 
 Expected files (all under media/<slug>/):
   shots/<shot_id>.mp4          one generated clip per storyboard shot (no reuse allowed)
   audio/lines/<line_id>.wav    one file per narration/dialogue line
   audio/music/<cue_id>.wav     optional music cues
   audio/sfx/<name>.wav         optional sound effects referenced by shots[].sfx
+Shots with `native_audio_db` also contribute their own generated audio (e.g. Veo ambience/SFX).
 """
 from __future__ import annotations
 
@@ -67,6 +68,11 @@ def assemble(slug: str) -> dict:
              "-vf", vf, "-an", "-c:v", render["video_codec"], "-crf", str(render["crf"]),
              "-preset", render["preset"], str(dst)])
         lines.append(f"file '{dst.resolve()}'")
+        if shot.get("native_audio_db") is not None and probe(src)["has_audio"]:
+            native = work / "norm" / f"{shot['id']}.native.wav"
+            run(["-ss", str(shot.get("trim_start", 0)), "-i", str(src), "-t", str(shot["seconds"]),
+                 "-vn", "-ac", "2", "-ar", str(render["audio_sample_rate"]), str(native)])
+            shot["_native"] = native
     concat_list.write_text("\n".join(lines), encoding="utf-8")
     picture = work / "picture.mp4"
     run(["-f", "concat", "-safe", "0", "-i", str(concat_list), "-c", "copy", str(picture)])
@@ -104,6 +110,9 @@ def assemble(slug: str) -> dict:
 
     sfx_labels = []
     for shot in shots:
+        if shot.get("_native"):
+            inputs += ["-i", str(shot["_native"])]
+            sfx_labels.append((len(inputs) // 2, spans[shot["id"]][0], float(shot["native_audio_db"])))
         for name in shot.get("sfx", []) or []:
             wav = media / "audio" / "sfx" / name
             if not wav.exists():
@@ -142,15 +151,31 @@ def assemble(slug: str) -> dict:
     graph = work / "mix.filter"
     graph.write_text(";\n".join(parts), encoding="utf-8")
 
+    # 5. captions: sidecar SRT always; burned into the picture for Shorts
+    subs = render.get("subtitles", {})
+    srt = media / "final.en.srt"
+    n_cues = build_srt(cues, srt, per_line=int(subs.get("max_chars_per_line", 42)))
+    video_args = ["-map", "0:v", "-c:v", "copy"]
+    if subs.get("burn_in") and n_cues:
+        style = (f"FontName={subs.get('font', 'DejaVu Sans')},FontSize={subs.get('font_size', 10)},"
+                 f"PrimaryColour=&H00FFFFFF,OutlineColour=&H00000000,BorderStyle=1,Outline=2,Shadow=1,"
+                 f"Bold=1,Alignment=2,MarginV={subs.get('margin_v', 70)}")
+        escaped = str(srt.resolve()).replace("\\", "/").replace(":", "\\:").replace("'", "\\'")
+        video_args = ["-filter_complex", f"[0:v]subtitles='{escaped}':force_style='{style}'[vout]",
+                      "-map", "[vout]", "-c:v", render["video_codec"], "-crf", str(render["crf"]),
+                      "-preset", render["preset"], "-pix_fmt", render["pixel_format"]]
+        mixed = work / "mix.wav"
+        run(["-i", str(picture), *inputs, "-filter_complex_script", str(graph), "-map", "[mix]",
+             "-t", f"{total:.3f}", str(mixed)])
+        inputs, graph = ["-i", str(mixed)], None
+
     final = media / "final.mp4"
-    run(["-i", str(picture), *inputs, "-filter_complex_script", str(graph),
-         "-map", "0:v", "-map", "[mix]", "-c:v", "copy", "-c:a", render["audio_codec"],
+    audio_map = ["-map", "1:a"] if graph is None else ["-filter_complex_script", str(graph), "-map", "[mix]"]
+    run(["-i", str(picture), *inputs, *audio_map, *video_args, "-c:a", render["audio_codec"],
          "-b:a", render["audio_bitrate"], "-ar", str(render["audio_sample_rate"]),
          "-movflags", "+faststart", "-t", f"{total:.3f}", str(final)])
 
-    # 5. captions + sync report
-    srt = media / "final.en.srt"
-    n_cues = build_srt(cues, srt)
+    # 6. sync report
     report = verify(final, total, render)
     report.update({"captions": str(srt), "caption_cues": n_cues, "warnings": warnings,
                    "shots": len(shots), "voice_lines": len(cues)})
@@ -165,7 +190,7 @@ def verify(final: Path, expected: float, render: dict) -> dict:
     v = stream_duration(final, "v")
     a = stream_duration(final, "a")
     checks = {
-        "resolution_1920x1080": (info["width"], info["height"]) == (render["width"], render["height"]),
+        f"resolution_{render['width']}x{render['height']}": (info["width"], info["height"]) == (render["width"], render["height"]),
         "fps": abs(info["fps"] - render["fps"]) < 0.01,
         "has_audio": info["has_audio"],
         "av_sync": abs(v - a) <= SYNC_TOLERANCE_S,

@@ -1,49 +1,51 @@
 # Twist Villa Studio — Status
 
-**Last updated:** 2026-09-23 · **Phase:** 0 — Setup & approvals · **Active video:** none yet
+**Last updated:** 2026-09-24 · **Format:** YouTube Shorts (55–60 s, 9:16, 1080x1920)
+**Phase:** 1 — Pick the first Short · **Active Short:** none yet
 
 ## Next pending task
-**Owner decisions needed (no money is spent until these are made):**
-1. Approve or edit the storytelling framework → `config/storytelling-framework.md`
-2. Approve or edit channel direction → `config/channel.yaml`
-3. Approve the tool stack (Google: Veo 3.1 + Veo 3.1 Fast, Gemini Image, Gemini TTS, Lyria)
-4. Set budget caps → `config/budget.yaml` (proposed: $600 per video, $700 per month)
-5. Create accounts/keys (free to create): Google AI Studio **paid-tier** API key,
-   YouTube Data API key, YouTube OAuth client — then add them as cloud-environment secrets
+**Owner picks one of the 3 pitched ideas** in `state/ideas-backlog.md`
+(recommended: #1 "Face Not Recognized").
 
-**Then, in order:** run `python -m studio research-stats` (fills in real view counts,
-free) → pick the first story idea (free) → screenplay (free) → story bible +
-storyboard (free) → pilot minute (≈ $25–50, needs approval).
+Then, in order (the first four steps are free):
+1. `python -m studio new "<title>"`, then write the full script (58 s, 110–130 words)
+2. Story bible (locked character/location descriptions + narrator voice)
+3. Storyboard: 11 shots with timed narration
+4. `python -m studio estimate <slug>` → show the cost (~$19–27) → **wait for owner approval**
+5. Keys needed before any generation: `GEMINI_API_KEY` (Google AI Studio, paid tier), plus
+   YouTube OAuth for the private upload. See `.env.example`.
+6. Paid: reference images (~$1.40) → pilot = first ~12 s, 3 shots (~$7.30; checks that 9:16 works)
+   → remaining footage → narration → assemble → private upload.
 
 ## Done
-- 2026-09-23 · Repo inspected (was empty). Skill, CLAUDE.md, config, research, and
-  pipeline code created.
-- 2026-09-23 · Competitor research saved (`research/competitor-research.md`,
-  `research/sources.yaml`). View counts pending — youtube.com blocked in this environment.
-- 2026-09-23 · Tool/pricing research saved (`research/tool-research.md`).
-- 2026-09-23 · **Tested (free, offline):** `python -m studio selftest` passed all
-  checks — 1920x1080 / 24 fps export, audio present, A/V sync ±0.10 s, runtime match,
-  captions (SRT) generated, duplicate-footage rejection, and budget guard refusals
-  (no approval, over approval, over single-call cap, over per-video cap).
+- 2026-09-23 · Initial long-form setup (Skill, config, research, pipeline, selftest). **Archived** 2026-09-24 → `archive/longform/`.
+- 2026-09-24 · **Pivot to Shorts approved by the owner.** Updated CLAUDE.md, the Skill, channel/budget/provider config,
+  story framework, templates, and workflow guides. Long-form files archived, not deleted.
+- 2026-09-24 · Shorts research saved (`research/shorts-research.md`, `research/shorts-sources.yaml`).
+  View counts are pending because youtube.com is blocked here; third-party figures are labelled.
+- 2026-09-24 · Pipeline adapted: 1080x1920 render, burned-in captions, Veo native audio in the mix,
+  9:16 requests to Veo and the image model.
+- 2026-09-24 · **Tested (free, offline):** `python -m studio selftest` passed: 1080x1920 / 24 fps,
+  audio present, A/V sync ±0.10 s, runtime match, burned captions checked on a frame, duplicate
+  footage rejected, and all budget-guard refusals work.
+- 2026-09-24 · Three original Short ideas pitched (`state/ideas-backlog.md`).
 
 ## Integration test status
 | Integration | Status |
 |---|---|
-| FFmpeg assembly, mix, captions, sync check | ✅ TESTED with synthetic media |
+| FFmpeg assembly (vertical), mix, burned captions, sync check | ✅ TESTED with synthetic media |
 | Budget guard / approvals / ledger | ✅ TESTED (selftest) |
-| Veo 3.1 video (Gemini API) | ⏳ UNTESTED — needs GEMINI_API_KEY + approval |
-| Gemini image (refs, thumbnail) | ⏳ UNTESTED |
-| Gemini TTS (voice) | ⏳ UNTESTED |
-| Lyria music | ⛔ NOT BUILT — request format to confirm from docs |
+| Veo 3.1 video, 9:16 (Gemini API) | ⏳ UNTESTED — needs GEMINI_API_KEY + approval; the pilot verifies 9:16 |
+| Gemini image (reference sheets) | ⏳ UNTESTED |
+| Gemini TTS (narration) | ⏳ UNTESTED |
+| Music | Free YouTube Audio Library (manual download); the Lyria adapter is NOT BUILT |
 | YouTube research stats (API key) | ⏳ UNTESTED — needs YOUTUBE_API_KEY |
 | YouTube private upload (OAuth) | ⏳ UNTESTED — needs OAuth setup |
 
 ## Blockers / environment notes
-- Cloud environment network blocks youtube.com, elevenlabs.io, kling.ai, fal.ai,
-  runwayml.com, replicate.com. Google APIs (`*.googleapis.com`) are reachable.
-  To use Kling or ElevenLabs from here, add their API hosts in the environment's
-  network settings.
-- Container storage is temporary: finished videos must be copied to Google Drive.
+- This cloud environment blocks youtube.com, elevenlabs.io, kling.ai, fal.ai, runwayml.com and
+  replicate.com. Google APIs (`*.googleapis.com`) are reachable, so the Google stack works here.
+- Container storage is temporary: copy finished Shorts to Google Drive.
 
 ## Spend to date
-$0.00 (see `state/spend-ledger.csv`)
+$0.00 (see `state/spend-ledger.csv`) · Monthly cap $150 · Per-Short cap $45

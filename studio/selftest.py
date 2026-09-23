@@ -19,12 +19,15 @@ def _make_inputs(root) -> None:
     shots = []
     for i in range(6):
         sid = f"S01-{i + 1:03}"
-        # unique pattern per shot, deliberately 1280x720 / 30 fps to prove normalisation
-        run(["-f", "lavfi", "-i", f"testsrc2=size=1280x720:rate=30:duration=4",
+        # unique pattern per shot, deliberately 720x1280 / 30 fps to prove normalisation;
+        # shot 3 carries its own audio track to test native (Veo-style) audio
+        extra = ["-f", "lavfi", "-i", "sine=frequency=880:duration=4"] if i == 2 else []
+        run(["-f", "lavfi", "-i", "testsrc2=size=720x1280:rate=30:duration=4", *extra,
              "-vf", f"hue=h={i * 60}", "-c:v", "libx264", "-pix_fmt", "yuv420p",
-             str(media / "shots" / f"{sid}.mp4")])
+             *(["-c:a", "aac", "-shortest"] if extra else []), str(media / "shots" / f"{sid}.mp4")])
         shots.append({"id": sid, "seconds": 3.0, "tier": "standard" if i else "hero",
-                      "prompt": "test pattern", "sfx": ["whoosh.wav"] if i == 3 else []})
+                      "prompt": "test pattern", "sfx": ["whoosh.wav"] if i == 3 else [],
+                      **({"native_audio_db": -12} if i == 2 else {})})
     lines = []
     for i, text in enumerate(["I didn't notice it the first time.",
                               "The elevator only had one button, and it was already lit.",
@@ -67,6 +70,9 @@ def run_selftest() -> list[str]:
         report = assemble.assemble(SLUG)
         for name, ok in report["checks"].items():
             results.append(f"{'PASS' if ok else 'FAIL'}  export check: {name}")
+        frame = config.media_dir(SLUG) / "caption-check.png"
+        run(["-ss", "4.0", "-i", str(config.media_dir(SLUG) / "final.mp4"), "-frames:v", "1", str(frame)])
+        results.append(f"INFO  caption frame for visual check: {frame}")
         results.append(f"INFO  video {report['video_seconds']}s / audio {report['audio_seconds']}s, "
                        f"{report['caption_cues']} caption cues, warnings: {report['warnings'] or 'none'}")
 

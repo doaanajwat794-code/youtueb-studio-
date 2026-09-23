@@ -1,0 +1,29 @@
+# {{title}} — Storyboard. One entry per shot; ids are unique; order = edit order.
+# tier: hero ($0.40/s Veo 3.1) for faces/dialogue/key reveals, standard ($0.15/s Veo 3.1 Fast) otherwise.
+shots:
+  - id: S01-001
+    scene: 1
+    seconds: 5.0          # on-screen length (3–8 s); clip is generated at 8 s and trimmed
+    trim_start: 0.5       # optional: skip the first frames of the generated clip
+    tier: standard
+    location: loc1
+    characters: [lead]
+    camera: "slow push-in, eye level, 35mm"
+    prompt: >-
+      (what happens in the shot: subject + action + mood + light — one idea per shot)
+    sfx: []               # optional wav files in media/<slug>/audio/sfx/
+audio:
+  lines:
+    - id: N001
+      type: narration     # narration | dialogue
+      speaker: narrator   # narrator or a character id
+      at_shot: S01-001    # line starts at this shot…
+      offset: 0.4         # …plus this many seconds
+      direction: ""       # optional delivery note for TTS
+      text: >-
+        (the exact line)
+  music:
+    - id: M01
+      start_shot: S01-001
+      end_shot: S01-001
+      prompt: "(mood, instrumentation, tempo — the Twist Villa leitmotif)"

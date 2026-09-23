@@ -1,15 +1,13 @@
-# {{title}} — YouTube packaging (draft → owner approval → upload as PRIVATE)
-title: "{{title}}"
+# {{title}} — YouTube Short packaging (draft → owner approval → PRIVATE upload)
+title: "{{title}}"          # ≤ 50 characters, curiosity gap, honest
 description: |-
-  (2-line hook)
+  (one-line hook)
 
-  Made with AI-assisted tools. Original story, script and edit by Twist Villa.
+  Made with AI tools. Original story by Twist Villa.
+  Music: (track title — YouTube Audio Library)
 
-  00:00 Cold open
-tags: [sci-fi short film, psychological thriller, AI film, mystery, twist ending]
+  #Shorts #SciFi #PlotTwist #Mystery #AIFilm
+tags: [shorts, sci-fi short, plot twist, psychological thriller, mystery, AI film]
 category_id: 24                  # Entertainment
-contains_synthetic_media: true   # YouTube "altered or synthetic content" toggle — decide per video
-thumbnail_prompt: >-
-  (one face or one object, one strong colour contrast, room for ≤3 words)
-thumbnail_text: ""
+contains_synthetic_media: true   # realistic AI humans → disclose
 approved: false

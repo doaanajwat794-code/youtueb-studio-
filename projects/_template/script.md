@@ -1,17 +1,12 @@
-# {{title}} — Screenplay
+# {{title}} — Short script (target 58 s · 110–130 words)
 
-Target runtime: 20:00 · ~2,600 spoken words · Narration ≈ 65 % / dialogue ≈ 35 %
-Beat sheet: config/storytelling-framework.md §2
+Beat sheet: config/storytelling-framework.md · Clue → payoff must be marked.
 
-## Clue tracker
-| Clue | Planted (scene) | Paid off (scene) |
-|---|---|---|
-| #1 | | |
-| #2 | | |
-| #3 | | |
+| # | Time | Picture (vertical) | Narration / dialogue | Sound |
+|---|---|---|---|---|
+| 1 | 0.0–2.0 | HOOK — | V.O.: | |
+| 2 | | RULE — | | |
+| … | | | | |
+| 11 | 52–58 | ECHO — | | |
 
----
-
-## SCENE 1 — COLD OPEN (0:00–0:45) — INT./EXT. LOCATION — TIME
-*Visual:* …
-**NARRATOR (V.O.):** …
+Word count: __ · Clue planted in shot __ · paid off in shot __

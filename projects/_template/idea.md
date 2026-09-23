@@ -1,15 +1,14 @@
-# {{title}} — Idea
+# {{title}} — Idea (Short)
 
-## Three loglines (pick one)
-1. **[Protagonist] must [goal] in a world where [rule], but [pressure] — until [twist].**
-2.
-3.
+**Logline (one-sentence test):** [Character] notices [impossible detail] in a world where [rule] — and the truth is [twist], visible in the very first shot.
 
-## Chosen logline
-Why it fits Twist Villa (framework §1 test, originality checklist §8):
+| Beat | Content |
+|---|---|
+| Hook (0–2 s) | |
+| Rule | |
+| Clue (planted) | |
+| Twist (≈0:45–0:52) | |
+| Echo (final image ↔ frame 1) | |
 
-## Research patterns used
-- (link each to research/competitor-research.md)
-
-## Owner approval
-- [ ] Idea approved (date):
+Originality check (searched on): …
+- [ ] Owner selected this idea (date):

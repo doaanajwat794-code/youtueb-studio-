@@ -28,7 +28,7 @@ def _prices() -> dict:
         "clip_seconds": p["video"]["primary"]["clip_seconds"],
         "image": p["images"]["usd_per_image"],
         "tts_per_token": p["narration_and_dialogue"]["primary"]["usd_per_million_output_tokens"] / 1e6,
-        "music": p["music"]["usd_per_track"],
+        "music": float(p["music"]["primary"].get("cost", p["music"]["primary"].get("usd_per_track", 0))),
     }
 
 
@@ -84,7 +84,7 @@ def estimate(slug: str, stage: str) -> dict:
         gen_s, usd = _shots_cost(shots, prices, retake)
         runtime = sum(float(s["seconds"]) for s in shots)
         return {"usd": round(usd, 2),
-                "detail": f"{len(shots)} shots, {runtime/60:.1f} min on screen, ~{gen_s:.0f} s generated "
+                "detail": f"{len(shots)} shots, {runtime:.0f} s on screen, ~{gen_s:.0f} s generated "
                           f"(Veo hero ${prices['video']['hero']}/s, standard ${prices['video']['standard']}/s, "
                           f"+{retake:.0%} retakes)"}
 
@@ -96,7 +96,8 @@ def estimate(slug: str, stage: str) -> dict:
     tracks = len(board.get("audio", {}).get("music", []))
     music = tracks * prices["music"] * (1 + retake) * 2  # ×2 candidates per cue
     return {"usd": round(tts + music, 2),
-            "detail": f"{words} words (~{speech_s/60:.1f} min speech, 3 takes) + {tracks} music cues (2 candidates each)"}
+            "detail": f"{words} words (~{speech_s:.0f} s speech, 3 takes) + {tracks} music cues "
+                      f"(${prices['music']}/track)"}
 
 
 # ---------------------------------------------------------------- approvals

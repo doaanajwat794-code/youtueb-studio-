@@ -1,4 +1,9 @@
-# YouTube integration — setup, upload, disclosure
+# YouTube integration — setup, upload, disclosure (Shorts)
+
+## How a Short is recognised
+A vertical (9:16) video of 3 minutes or less is classified as a Short automatically. Our
+Shorts are 55–60 s at 1080x1920. `#Shorts` in the title or description is optional; we add
+it among 3–5 hashtags.
 
 ## One-time setup (owner, ~20 minutes, free)
 1. Google Cloud Console → create project "Twist Villa Studio".
@@ -25,11 +30,12 @@
   Verify the current rule during setup.
 - **Quota:** default 10,000 units/day; one upload costs ~1,600 units, captions ~400,
   thumbnail ~50. Research stats cost a few units per call.
-- **Thumbnails** via API require a verified channel (phone verification).
+- **Shorts cover:** Shorts use a frame chosen in the YouTube app/Studio; we don't pay for
+  thumbnails. (Custom thumbnails via API need a verified channel and may not apply to Shorts.)
 
 ## Upload behaviour (enforced in `studio/youtube.py`)
 - `privacyStatus` is hard-coded to `private`. No public/unlisted/scheduled path exists.
-- Uploads captions (`final.en.srt`) and `thumbnail.jpg` if present.
+- Uploads captions (`final.en.srt`) as a caption track (they are also burned into the picture).
 - Sets `containsSyntheticMedia` from `metadata.yaml` (YouTube's altered/synthetic
   content disclosure). Decide per video; default `true` for realistic humans.
 

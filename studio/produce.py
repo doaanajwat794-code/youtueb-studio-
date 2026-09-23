@@ -66,7 +66,8 @@ def footage(slug: str, stage: str = "footage") -> int:
             guard, model=prov["models"][tier], prompt=compose_shot_prompt(shot, bible), out=out,
             usd=prov["clip_seconds"] * prov["usd_per_second"][tier],
             negative_prompt=bible.get("look", {}).get("negative", ""),
-            reference_images=_refs_for(shot, slug), seconds=prov["clip_seconds"], resolution=prov["resolution"])
+            reference_images=_refs_for(shot, slug), seconds=prov["clip_seconds"], resolution=prov["resolution"],
+            aspect_ratio=prov.get("aspect_ratio", "9:16"))
         made += 1
     return made
 
@@ -87,14 +88,15 @@ def refs(slug: str) -> int:
             jobs.append((out_dir / f"char_{c['id']}_{i}.png",
                          f"Character reference sheet, {view}, neutral background. {c['visual_lock']} {style}"))
     for l in bible.get("locations", []):
-        for i, time_of_day in enumerate(["establishing wide", "medium detail", "reverse angle"]
+        for i, time_of_day in enumerate(["establishing vertical frame", "medium detail", "reverse angle"]
                                         [:est.get("refs_images_per_location", 3)]):
             jobs.append((out_dir / f"loc_{l['id']}_{i}.png",
                          f"Location plate, {time_of_day}, no people. {l['visual_lock']} {style}"))
     for path, prompt in jobs:
         if path.exists():
             continue
-        google.generate_image(guard, model=model, prompt=prompt, out=path, usd=img["usd_per_image"])
+        google.generate_image(guard, model=model, prompt=prompt, out=path, usd=img["usd_per_image"],
+                              aspect_ratio=config.providers()["providers"]["video"]["primary"].get("aspect_ratio", "9:16"))
         made += 1
     return made
 
@@ -112,7 +114,7 @@ def audio(slug: str) -> int:
         if out.exists():
             continue
         speaker = voices.get(line.get("speaker", "narrator"), {})
-        seconds = len(line["text"].split()) / 140 * 60
+        seconds = len(line["text"].split()) / 150 * 60
         usd = max(seconds * 25 * tts["usd_per_million_output_tokens"] / 1e6, 0.001)
         google.synthesize_speech(guard, model=model, text=line["text"], out=out, usd=usd,
                                  voice=speaker.get("voice", "Charon"),

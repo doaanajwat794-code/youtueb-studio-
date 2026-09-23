@@ -1,0 +1,102 @@
+# Reference Shorts / short-form AI stories — structured record
+# Collected 2026-09-24 via web search. youtube.com is blocked in this environment, so views
+# could NOT be read directly. `pending` fields are filled by `python -m studio research-stats`
+# (needs a free YOUTUBE_API_KEY). `third_party` = reported by a non-YouTube source, unverified.
+
+collected_on: "2026-09-24"
+stats_verified_on: null
+
+videos:
+  # --- Vertical Shorts found by search (AI sci-fi / twist); dates from search index
+  - id: Zl5ChX_eRM0
+    url: https://www.youtube.com/shorts/Zl5ChX_eRM0
+    title: "AI Sci-Fi | Digital Amnesia Trip — Cinematic 4K #shorts"
+    channel: pending
+    published: "2025-11-05 (search index)"
+    duration: pending
+    views: pending
+    why: Retro-futurist AI visual Short — style reference (mood-led, little story)
+  - id: GmSzQAsrDYo
+    url: https://www.youtube.com/shorts/GmSzQAsrDYo
+    title: "AI made an 80s sci-fi movie … #shorts"
+    channel: pending
+    published: "2026-08-05 (search index)"
+    duration: pending
+    views: pending
+    why: "Genre-pastiche hook ('AI made an 80s movie') — packaging reference"
+  - id: -DBSAlb_x9c
+    url: https://www.youtube.com/shorts/-DBSAlb_x9c
+    title: "AI Movie Companion: Unexpected Twists & Realistic Future! #shorts"
+    channel: pending
+    published: "2026-01-17 (search index)"
+    duration: pending
+    views: pending
+    why: AI-companion twist premise — same theme family as Twist Villa (check we don't overlap)
+  - id: Cypfluov-Cg
+    url: https://www.youtube.com/shorts/Cypfluov-Cg
+    title: "The AI Sci-Fi Future is Almost Here… But Do We Want It? #shorts"
+    channel: pending
+    published: "2026-05-06 (search index)"
+    duration: pending
+    views: pending
+    why: Question-hook title pattern
+
+  # --- Short AI films (3–5 min, horizontal) — story-compression references
+  - id: vz3iTY38vF4
+    url: https://www.youtube.com/watch?v=vz3iTY38vF4
+    title: "AI Short Film: EPILOGUE | A Black Mirror Style Sci-Fi Short"
+    channel: pending
+    published: "2026-07 (search index)"
+    duration: pending
+    views: pending
+    why: Black Mirror / Twilight Zone framing, made with Seedance 2.0
+  - id: 36JtIiXWXrA
+    url: https://www.youtube.com/watch?v=36JtIiXWXrA
+    title: "THE BLACK RIDGE | AI Sci-Fi Short Film | Higgsfield Global Film Festival"
+    channel: pending
+    published: "2026-09 (search index)"
+    duration: "3–5 min (festival rule, third_party)"
+    views: pending
+    why: "Single-character premise: a lone astronaut hears an impossible transmission in a voice she knows"
+  - id: KEdcGxMcqFg
+    url: https://www.youtube.com/watch?v=KEdcGxMcqFg
+    title: "FIVE MINUTES | AI Sci-Fi Short Film | Higgsfield Global Film Festival 2026"
+    channel: pending
+    published: "2026 (search index)"
+    duration: "3–5 min (festival rule, third_party)"
+    views: pending
+    why: Countdown/time-pressure structure
+  - id: BMLTQ0ouz1U
+    url: https://www.youtube.com/watch?v=BMLTQ0ouz1U
+    title: "RESET | AI Sci-Fi Short Film | Higgsfield Film Festival"
+    channel: pending
+    published: "2026 (search index)"
+    duration: "3–5 min (festival rule, third_party)"
+    views: pending
+    why: Loop/reset premise family — we must keep our loop idea distinct
+  - id: Vssy98rFgRM
+    url: https://www.youtube.com/watch?v=Vssy98rFgRM
+    title: "This Sci-Fi AI Film Has a Brutal Twist - SUPPLY | AI Short Film Beyond Frames"
+    channel: Beyond Frames
+    published: "2026-05 (third_party)"
+    duration: pending
+    views: pending
+    why: Manufactured-identity twist; "brutal twist" packaging
+
+channels_and_cases:
+  - name: BigfootBoyz (Veo 3 character vlogs)
+    note: "0 → 330K+ followers and 15M+ views in 3 days (third_party: Superprompt guide) — recurring character + consistent format"
+    source: https://superprompt.com/blog/how-to-make-viral-ai-character-vlogs
+  - name: Devin Supertramp "AI Fails" Shorts
+    note: "28M views in first month (third_party: Hollywood Reporter coverage via search)"
+    source: https://www.hollywoodreporter.com/business/digital/youtube-add-google-veo-3-shorts-ai-1236293135/
+  - name: The Dor Brothers
+    url: https://www.youtube.com/@thedorbrothers
+    note: "AI-only studio, 100M+ views across platforms (third_party: GIGAZINE)"
+    source: https://gigazine.net/gsc_news/en/20250731-dor-video-studio-ai/
+  - name: '"Two-Sentence Hospital Horror" (anonymous case study)'
+    note: "1.8M views; channel 2K → 25K subs in < 1 month; strong-payoff videos held 65–80 % retention (third_party: Medium)"
+    source: https://medium.com/@NoahBourland/use-ai-to-make-10k-month-with-viral-horror-short-videos-587d9027d41e
+  - name: Neural Viz
+    url: https://www.youtube.com/@NeuralViz
+    note: "AI universe with recurring characters; ~238K subs Jul 2026 (third_party)"

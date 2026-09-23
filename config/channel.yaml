@@ -1,6 +1,7 @@
 # Twist Villa — channel identity and content direction
-# Status: DRAFT proposed 2026-09-23. Becomes "approved" when the owner confirms.
-status: draft
+# Status: APPROVED by the owner 2026-09-24 (Shorts pivot). Long-form settings are archived
+# in archive/longform/ and must not be used unless the owner explicitly asks.
+status: approved
 
 channel:
   name: Twist Villa
@@ -8,39 +9,44 @@ channel:
   url: https://www.youtube.com/@TwistVela
   language: en
   promise: >-
-    Cinematic, original AI-made stories where the future feels uncomfortably close —
-    and every story ends with a twist you can re-watch and spot the clues for.
+    60-second cinematic stories about identity and technology — every one ends with a
+    twist that makes you watch it again.
 
 format:
-  type: long-form            # never Shorts
-  target_minutes: 20          # allowed range below
-  min_minutes: 15
-  max_minutes: 30
-  aspect_ratio: "16:9"
-  resolution: 1920x1080
+  type: shorts                 # YouTube Shorts ONLY
+  min_seconds: 55
+  max_seconds: 60
+  target_seconds: 58
+  aspect_ratio: "9:16"
+  resolution: 1080x1920
   frame_rate: 24
-  shorts: false               # existing Shorts are NOT used to set long-form strategy
+  long_form: false             # do not produce long-form unless the owner explicitly asks
 
 genres:
-  primary: [psychological sci-fi thriller, near-future mystery]
-  secondary: [techno-horror (slow burn, no gore), cosmic mystery, AI / identity drama]
+  primary: [cinematic mystery, psychological thriller, science fiction]
+  theme: human identity and technology
   avoid: [gore, real people or real brands, real tragedies, political content, kids-targeted content]
 
+production:
+  footage: fully AI-generated moving video (no still-image slideshows, no repeated shots)
+  audio: original narration, sound effects, music
+  editing: cinematic cuts, burned-in captions, loudness-normalised mix
+
 audience:
-  who: English-speaking adults 18–44 who watch Black Mirror–style fiction, sci-fi short films, and mystery narration channels
-  watch_context: evenings, TV / desktop, headphones — rewards sound design and slow-burn tension
+  who: English-speaking viewers 16–44 who like Black Mirror, Twilight Zone, sci-fi and mystery
+  watch_context: phone, vertical, often sound-on; decides to stay or swipe in ~2 seconds
 
 signature_elements:
-  - Cold-open that shows a moment from late in the story, then rewinds
-  - A single grounded protagonist whose inner voice (narration) carries the film
-  - A "rule" of the world stated early that the twist later turns inside-out
-  - Planted clues that make a second viewing rewarding
-  - A final image that re-frames the first image
-  - Consistent Twist Villa look: teal-amber grade, anamorphic framing, film grain
+  - A striking, unexplained image in the first 1–2 seconds
+  - One central character, same face and wardrobe in every shot
+  - A single "rule" of the world that the twist turns inside-out
+  - One planted clue that the twist pays off
+  - Final shot that echoes the first shot (encourages a re-watch / loop)
+  - Twist Villa look: teal–amber grade, shallow depth of field, soft film grain
 
 cadence:
-  target: 1 long-form video every 2–3 weeks (quality over volume)
+  target: 3–5 Shorts per month (fits the $50–150 monthly budget)
 
 disclosure:
-  youtube_altered_or_synthetic_toggle: decide per video  # required when realistic people/events could mislead
-  description_note: "Made with AI-assisted tools. Original story by Twist Villa."
+  youtube_altered_or_synthetic_toggle: true   # realistic AI humans → disclose
+  description_note: "Made with AI tools. Original story by Twist Villa."
