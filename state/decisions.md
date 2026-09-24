@@ -14,7 +14,7 @@ anywhere else. Format: `YYYY-MM-DD · decision · (file updated)`.
 
 ## Pending owner approval
 - **Production workflow (proposed 2026-09-24):** Veo for all footage; the tested FFmpeg pipeline for edit/captions/mix; Gemini TTS narration with an optional free ShortsFaceless voice A/B on the pilot; ShortsFaceless is never used for footage. (research/tool-research.md → ShortsFaceless)
-- **Cost mix:** "Lean" (hook + twist on Veo 3.1, 9 shots on Veo 3.1 Fast) ≈ $23 per Short vs. the recommended 3-hero mix ≈ $26.50
+- **Cost mix:** "Lean" (hook + twist on Veo 3.1, 9 shots on Veo 3.1 Fast) ≈ $24 per Short vs. the recommended 3-hero mix ≈ $26.50
 - Choice of the first Short idea (state/ideas-backlog.md)
 - Tool stack for Shorts: Veo 3.1 + Veo 3.1 Fast (9:16), Gemini Image, Gemini TTS, free YouTube Audio Library music (config/providers.yaml)
 - Shorts framework "60 Seconds, One Twist" (config/storytelling-framework.md)
