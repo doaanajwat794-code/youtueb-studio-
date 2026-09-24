@@ -4,8 +4,12 @@
 **Phase:** 1 — Pick the first Short · **Active Short:** none yet
 
 ## Next pending task
-**Owner picks one of the 3 pitched ideas** in `state/ideas-backlog.md`
-(recommended: #1 "Face Not Recognized").
+1. **Owner reviews the ShortsFaceless findings** (research/tool-research.md, end of file) and
+   approves or edits the proposed workflow (state/decisions.md → pending).
+2. **Owner does the 5-minute ShortsFaceless dashboard check** (API page? real video clips?
+   separate voice download?) and reports back.
+3. **Owner picks one of the 3 pitched ideas** in `state/ideas-backlog.md`
+   (recommended: #1 "Face Not Recognized").
 
 Then, in order (the first four steps are free):
 1. `python -m studio new "<title>"`, then write the full script (58 s, 110–130 words)
@@ -29,6 +33,8 @@ Then, in order (the first four steps are free):
   audio present, A/V sync ±0.10 s, runtime match, burned captions checked on a frame, duplicate
   footage rejected, and all budget-guard refusals work.
 - 2026-09-24 · Three original Short ideas pitched (`state/ideas-backlog.md`).
+- 2026-09-24 · ShortsFaceless investigated (web only): no public API found; visuals are animated
+  AI stills, not moving video; useful only as manual helper (voice A/B, ideas). Veo stays for footage.
 
 ## Integration test status
 | Integration | Status |
@@ -41,6 +47,7 @@ Then, in order (the first four steps are free):
 | Music | Free YouTube Audio Library (manual download); the Lyria adapter is NOT BUILT |
 | YouTube research stats (API key) | ⏳ UNTESTED — needs YOUTUBE_API_KEY |
 | YouTube private upload (OAuth) | ⏳ UNTESTED — needs OAuth setup |
+| ShortsFaceless (owner subscription) | 🔎 INVESTIGATED (web only) — no API; manual use only; not for footage |
 
 ## Blockers / environment notes
 - This cloud environment blocks youtube.com, elevenlabs.io, kling.ai, fal.ai, runwayml.com and

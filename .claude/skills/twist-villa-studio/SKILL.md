@@ -42,6 +42,10 @@ Summarize the state in 3–5 lines, then **continue from the next pending task**
 6. **Quality bar.** Real motion footage only: no stills, no reused shots (the assembler
    rejects duplicates), a hook in the first 2 s, and a twist that pays off a planted clue.
 7. **Tested ≠ written.** Keep adapters marked `UNTESTED` until a real run succeeds.
+8. **Use what the owner already pays for first**, when quality allows. The owner has an active
+   **ShortsFaceless** subscription. It has no API, so any use is manual, and its animated-still
+   visuals are **never** used as Twist Villa footage. Allowed roles are listed in
+   `config/providers.yaml → owner_subscriptions`. Never buy a new subscription without approval.
 
 ## 3. Pipeline (one Short = one folder in `projects/<slug>/`)
 
@@ -55,7 +59,7 @@ Summarize the state in 3–5 lines, then **continue from the next pending task**
 | 6 | Reference images (character + locations) | `media/<slug>/refs/` | ~$2 |
 | 7 | Pilot: first ~12 s (3 shots; checks 9:16, look, consistency) | `media/<slug>/shots/` | ~$5–7 |
 | 8 | Remaining footage | `media/<slug>/shots/` | main cost |
-| 9 | Narration (Gemini TTS); music + SFX (free library, Veo native audio) | `media/<slug>/audio/` | cents |
+| 9 | Narration (Gemini TTS, or a ShortsFaceless voice if it wins the pilot A/B); music + SFX (free library, Veo native audio) | `media/<slug>/audio/` | cents / $0 |
 | 10 | Assemble: 1080x1920, burned captions, mix, sync check | `media/<slug>/final.mp4` | No |
 | 11 | Title, description, hashtags | `metadata.yaml` | No |
 | 12 | Private upload → owner reviews → owner decides on publishing | video ID | No |

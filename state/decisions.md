@@ -10,8 +10,11 @@ anywhere else. Format: `YYYY-MM-DD · decision · (file updated)`.
 - 2026-09-24 · **Do not return to long-form** unless the owner explicitly asks. Long-form research and settings are archived in `archive/longform/` and are not the main reference. (CLAUDE.md, SKILL.md)
 - 2026-09-24 · **Budget:** preferred $50–150 per month. Caps set to $150/month and $45 per Short. (config/budget.yaml)
 - 2026-09-24 · Use the existing tested editing pipeline (FFmpeg) for assembly. (studio/assemble.py)
+- 2026-09-24 · Owner has an **active ShortsFaceless subscription**. Rule: check existing subscriptions before any paid service; never buy a new subscription, generate paid footage, or publish without approval. (SKILL.md rule 8, config/providers.yaml → owner_subscriptions)
 
 ## Pending owner approval
+- **Production workflow (proposed 2026-09-24):** Veo for all footage; the tested FFmpeg pipeline for edit/captions/mix; Gemini TTS narration with an optional free ShortsFaceless voice A/B on the pilot; ShortsFaceless is never used for footage. (research/tool-research.md → ShortsFaceless)
+- **Cost mix:** "Lean" (hook + twist on Veo 3.1, 9 shots on Veo 3.1 Fast) ≈ $23 per Short vs. the recommended 3-hero mix ≈ $26.50
 - Choice of the first Short idea (state/ideas-backlog.md)
 - Tool stack for Shorts: Veo 3.1 + Veo 3.1 Fast (9:16), Gemini Image, Gemini TTS, free YouTube Audio Library music (config/providers.yaml)
 - Shorts framework "60 Seconds, One Twist" (config/storytelling-framework.md)

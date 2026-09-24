@@ -49,6 +49,10 @@ next pending task, then commit the text files. ✋ = owner sign-off, 💲 = paid
   failures within the approved amount.
 
 ## 9. Audio 💲 (cents)
+- **Pilot only, optional voice A/B (free, manual):** the owner pastes the pilot narration into
+  ShortsFaceless as a Custom Script, picks 1–2 voices, and downloads the result. We extract the
+  audio (`ffmpeg -i sf.mp4 -vn sf.wav`) and compare it with Gemini TTS. If ShortsFaceless wins,
+  and its export has no baked-in music, build an import step; otherwise use Gemini TTS.
 - `python -m studio generate <slug> --stage audio` for narration.
 - Music: a free YouTube Audio Library track → `media/<slug>/audio/music/M01.wav`; record the
   title in the description credits if its licence requires attribution.

@@ -71,3 +71,52 @@ this cloud environment today, (c) commercially licensed on the paid tier, and
 (d) competitively priced. Keep **Kling 3.0** as the budget/motion alternative and
 **ElevenLabs** as the premium narrator option if Gemini TTS doesn't sound human
 enough in the pilot.
+
+---
+
+## Owner subscription: ShortsFaceless (investigated 2026-09-24)
+
+**Method:** web search only. shortsfaceless.com is blocked from this environment, and I can't
+log into the owner's account, so plan-specific details must be confirmed in the owner's
+dashboard (checklist below).
+
+### What it is
+- An all-in-one faceless-Shorts generator: from one prompt (or a **custom script**) it writes
+  the script, makes **one AI image per sentence** with "subtle effects", adds a voiceover
+  (**40+ voices**, 10+ languages), adds synced animated captions, and exports a vertical HD video
+  ([ShortsFaceless blog](https://www.shortsfaceless.com/blog/2026-comparison-guide-ai-faceless-video-generator),
+  [AI Tools Police](https://aitoolspolice.com/reviews/shortsfaceless/)).
+- **17 visual styles** (e.g. Anime, Neon, Watercolor). You can edit every sentence and image
+  prompt, upload your own images, and regenerate as often as you like.
+- **Auto-posting/scheduling to YouTube only**, via its own Google/YouTube connection
+  ([Google API disclosure](https://www.shortsfaceless.com/google-api-disclosure)).
+- **Plans (third-party reported):** Essential $19/mo (30 videos), Professional $29/mo (60 videos);
+  no free plan ([AI Tools Police](https://aitoolspolice.com/reviews/shortsfaceless/),
+  [OpenTools](https://opentools.ai/tools/shortsfaceless)).
+- **Ownership:** its site says users own their generated videos and may use them commercially.
+
+### Findings against Twist Villa requirements
+| Question | Finding | Confidence |
+|---|---|---|
+| Official public API / developer access? | **None found.** No API docs or developer page. Its only "API" page is about *its* use of Google/YouTube APIs. | Medium-high (verify in dashboard) |
+| Does the owner's plan include API access? | **Not shown anywhere, so assume no** until the dashboard proves otherwise. | — |
+| Authorized way to connect it to Claude Code? | None. Scripting its website with your login would likely break its terms and require sharing your password, so this is **not recommended**. | High |
+| Genuinely moving cinematic scenes? | **No.** Visuals are AI still images with subtle motion (Ken Burns-style), one per sentence. A competitor's comparison says both tools "generate AI images for visuals". | High |
+| Consistent characters across scenes? | Not a documented feature. Each sentence gets a fresh image. | Medium |
+| Voiceover | Yes: 40+ voices. Separate audio download is not documented. | Medium |
+| Captions / editing | Yes, but tied to its own image timeline, so it can't edit our Veo footage. | High |
+
+### Verdict
+ShortsFaceless **cannot produce Twist Villa's footage**. Its animated stills break the
+approved "fully AI moving video, no slideshows" rule, and they sit in the format YouTube's
+"inauthentic content" policy targets. Veo (or another true video model) remains necessary.
+The only realistic overlaps are optional, **manual** helpers: voice A/B testing, idea
+generation, and possibly style-reference images. They save at most ~$1.50 per Short, because
+footage is ~95 % of the cost.
+
+### 5-minute dashboard checklist (owner)
+1. Is there any "API", "Developer", "Integrations" or "Webhooks" page in Settings? (Screenshot it.)
+2. Does any style or plan option produce **AI video clips** (real motion), not animated images?
+3. Can you download the **voiceover audio alone**, or the video **without background music**?
+4. Can you download the **individual images** at full resolution?
+5. Which plan are you on, and when does it renew?

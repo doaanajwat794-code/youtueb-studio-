@@ -66,6 +66,22 @@ providers:
   sound_effects:
     plan: "Veo native audio (included in the Veo price) per shot via storyboard native_audio_db, plus free YouTube Audio Library / CC0 SFX"
 
+  owner_subscriptions:
+    shortsfaceless:
+      url: https://www.shortsfaceless.com/
+      plan: "active (owner) — tier to confirm; reported $19/mo (30 videos) or $29/mo (60 videos)"
+      api: none_found          # no public API found 2026-09-24; assume the plan has no API access
+      integration: manual_only # no automated login/scraping (terms + credential risk)
+      extra_cost: 0            # already paid
+      allowed_roles:           # proposed, pending owner approval
+        - "voice A/B test: owner pastes our narration as a Custom Script, downloads, and we compare with Gemini TTS on the pilot"
+        - "idea brainstorming from seed keywords (ideas still pass our originality check)"
+        - "optional style/mood reference images (only if full-resolution image download is available)"
+      not_allowed_roles:
+        - "footage: its visuals are AI stills with subtle motion — fails the 'fully moving video, no slideshow' rule"
+        - "final editing/captions/posting: it can't edit our Veo footage; we use the tested FFmpeg pipeline + private API upload"
+      status: INVESTIGATED_WEB_ONLY   # confirm with the owner's dashboard checklist in research/tool-research.md
+
   script_and_planning:
     name: Claude (this Claude Code session)
     cost: "Included in the owner's Claude plan — no extra API charge"
