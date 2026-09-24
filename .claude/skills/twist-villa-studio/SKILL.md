@@ -1,75 +1,73 @@
 ---
 name: twist-villa-studio
-description: Production studio for the Twist Villa YouTube channel — makes original 55–60 second vertical (9:16, 1080x1920) YouTube Shorts in English — cinematic AI mystery, psychological-thriller and sci-fi stories about identity and technology with a final twist. Researches Shorts, writes stories, storyboards, generates AI video/voice through paid APIs under a strict budget-approval guard, assembles with burned-in captions, and prepares private YouTube uploads. Use for any Twist Villa task: Short ideas, scripts, storyboards, generation, editing, titles/hashtags, uploads, research, budget, or "continue where we left off".
+description: Production studio for the Twist Villa YouTube channel — original 55–60 second vertical (9:16, 1080x1920) English YouTube Shorts; cinematic mystery, sci-fi and psychological-thriller stories about technology and human identity, with realistic moving footage, consistent characters and unexpected endings. Claude researches, writes scripts, storyboards and copy-paste Google Flow prompts; the owner generates the clips in Google Flow (existing subscription); Claude imports, edits, adds narration/SFX/music/captions, exports the MP4, and prepares title/description/hashtags/cover and private uploads. Use for any Twist Villa task or "continue where we left off".
 ---
 
-# Twist Villa Studio — Shorts
+# Twist Villa Studio — Shorts made with Google Flow
 
-You are the channel's showrunner, researcher, and production engineer. The owner is not
-a developer: speak plainly, show costs in dollars, and ask only for decisions that are
-genuinely theirs (money, publishing, creative approval).
+You are the channel's showrunner, researcher, prompt writer and editor. The owner is not a
+developer: speak plainly, number the steps, and ask only for real decisions (story choice,
+creative approval, money, publishing).
 
-**Format lock:** YouTube Shorts only. Each one is 55–60 s, 9:16, 1080x1920, English.
-Long-form is archived in `archive/longform/`; do not produce it or use it as the main
-reference unless the owner explicitly asks.
+## Locked settings (approved 2026-09-24)
+- **Format:** YouTube Shorts only. Each one is 55–60 s, 9:16, 1080x1920, English. Long-form is
+  archived (`archive/longform/`); don't use it unless the owner explicitly asks.
+- **Genre and style:** cinematic mystery, sci-fi and psychological thriller about technology and
+  human identity; realistic moving footage, consistent characters, natural movement, strong hooks,
+  unexpected endings.
+- **Footage:** the owner generates it **manually in Google Flow** (existing subscription) from
+  Claude's prompts. **No paid video API.** Veo API adapters stay disabled.
+- **ShortsFaceless:** use it only where it genuinely helps (currently: a narration voice option).
+  **Never** use its animated still images as footage.
+- **Extra spend target: $0 per Short.** Any paid API call still needs a written estimate and
+  explicit approval (`studio/budget.py` enforces this).
 
-## 1. Load memory first (every session, before anything else)
+## 1. Load memory first (every session)
+Read `state/STATUS.md` → `config/channel.yaml` → `config/budget.yaml` → `state/decisions.md`,
+then as needed: `config/storytelling-framework.md`, `state/ideas-backlog.md`,
+`config/providers.yaml`, `research/shorts-research.md`. Summarize in 3–5 lines and
+**continue from the next pending task**.
 
-| File | What it holds |
+## 2. Division of work
+| Claude | Owner |
 |---|---|
-| `state/STATUS.md` | Phase, active Short, **next pending task**, blockers |
-| `config/channel.yaml` | Identity, Shorts format, genres, signature elements |
-| `config/budget.yaml` | Caps: $45 per Short, $150 per month; approval rules |
-| `state/decisions.md` | Permanent approved decisions (these override defaults) |
-| `config/storytelling-framework.md` | The 60-second beat sheet (when writing) |
-| `state/ideas-backlog.md` | Pitched ideas and which one the owner picked |
-| `config/providers.yaml` | Tools, models, render settings (when producing) |
-| `research/shorts-research.md` | Shorts principles and the "do not copy" list (when ideating) |
+| Research, 3 ideas, script, storyboard, bible | Picks the idea, approves the script |
+| `flow-prompts.md`: reference-image prompts + one prompt per shot, with file names | Generates in Flow, downloads, renames `CODE_SNN_vN.mp4` |
+| Import + QC clips, narration, SFX, music, captions, edit, export | Hands over clips (Drive folder or local folder) and records/exports the voice if chosen |
+| Title, description, hashtags, cover, private upload | Approves publishing |
 
-Summarize the state in 3–5 lines, then **continue from the next pending task**.
+Owner's step-by-step guide: `references/flow-handoff.md`.
 
-## 2. Non-negotiable rules
-
-1. **No paid call without approval.** Run `python -m studio estimate <slug>`, show the
-   dollar amount, and wait for an explicit "approved". Record it with
-   `python -m studio approve <slug> --stage <stage> --usd <amount>`. The code refuses to
-   spend without it and refuses anything over the caps.
-2. **Private uploads only.** Public, unlisted, or scheduled publishing needs explicit
-   approval in the current conversation.
-3. **No secrets in git.**
-4. **No invented data.** Unverified numbers are labelled `pending` / `third_party`.
-5. **Originality.** Borrow principles, never scripts, characters, or storylines.
-6. **Quality bar.** Real motion footage only: no stills, no reused shots (the assembler
-   rejects duplicates), a hook in the first 2 s, and a twist that pays off a planted clue.
-7. **Tested ≠ written.** Keep adapters marked `UNTESTED` until a real run succeeds.
-8. **Use what the owner already pays for first**, when quality allows. The owner has an active
-   **ShortsFaceless** subscription. It has no API, so any use is manual, and its animated-still
-   visuals are **never** used as Twist Villa footage. Allowed roles are listed in
-   `config/providers.yaml → owner_subscriptions`. Never buy a new subscription without approval.
-
-## 3. Pipeline (one Short = one folder in `projects/<slug>/`)
-
-| # | Stage | Output | Paid? |
+## 3. Pipeline (one Short = `projects/<slug>/`)
+| # | Step | Command / file | Who |
 |---|---|---|---|
-| 1 | Pitch 3 original ideas → owner picks | `state/ideas-backlog.md` | No |
-| 2 | Script (58 s, 110–130 words) | `script.md` | No |
-| 3 | Bible: character, locations, look, voice | `bible.yaml` | No |
-| 4 | Storyboard: 10–12 shots + timed narration | `storyboard.yaml` | No |
-| 5 | Cost estimate → **owner approval** | `approvals.yaml` | — |
-| 6 | Reference images (character + locations) | `media/<slug>/refs/` | ~$2 |
-| 7 | Pilot: first ~12 s (3 shots; checks 9:16, look, consistency) | `media/<slug>/shots/` | ~$5–7 |
-| 8 | Remaining footage | `media/<slug>/shots/` | main cost |
-| 9 | Narration (Gemini TTS, or a ShortsFaceless voice if it wins the pilot A/B); music + SFX (free library, Veo native audio) | `media/<slug>/audio/` | cents / $0 |
-| 10 | Assemble: 1080x1920, burned captions, mix, sync check | `media/<slug>/final.mp4` | No |
-| 11 | Title, description, hashtags | `metadata.yaml` | No |
-| 12 | Private upload → owner reviews → owner decides on publishing | video ID | No |
+| 1 | 3 original ideas → owner picks | `state/ideas-backlog.md` | Claude → owner |
+| 2 | Project + script (58 s, 110–130 words) | `python -m studio new "<title>" --code XXX` → `script.md`, `narration.txt` | Claude |
+| 3 | Bible: character/location locks, look, voice | `bible.yaml` | Claude |
+| 4 | Storyboard: 10–12 shots, timed narration | `storyboard.yaml` | Claude |
+| 5 | Flow prompt sheet + credit estimate | `python -m studio flow-prompts <slug>` → `flow-prompts.md` | Claude |
+| 6 | Generate refs + clips in Flow, download, rename | `CODE_REF_*.png`, `CODE_SNN_vN.mp4` | Owner |
+| 7 | Hand-off | `fetch-drive <slug> <folderId>` or files in `media/<slug>/incoming/` | Owner → Claude |
+| 8 | Import + QC | `python -m studio import-clips <slug> [--pick S03=v1]` | Claude |
+| 9 | Narration | `import-voice <slug> <file>` (ShortsFaceless/own voice) or Gemini TTS free tier | Claude |
+| 10 | Music + SFX | YouTube Audio Library → `audio/music/M01.wav`; Flow native audio (`native_audio_db`); library SFX | Claude (+ owner download if needed) |
+| 11 | Assemble + export | `python -m studio assemble <slug>` → `final.mp4` 1080x1920, burned captions, sync report | Claude |
+| 12 | Packaging | `metadata.yaml`; `python -m studio thumbnail <slug> --at 2.0 --text "..."` | Claude → owner approves |
+| 13 | Private upload | `python -m studio upload <slug>` (needs YouTube OAuth), or the owner uploads the MP4 manually | Owner decides on publishing |
 
 Details and QC checklists: `references/workflow.md`. Prompting: `references/prompting-guide.md`.
 Publishing: `references/youtube-publishing.md`.
-Commands: `python -m studio --help`; `python -m studio new "<title>"` creates a project.
 
-## 4. After every working session
-1. Update `state/STATUS.md`: what was done, the next pending task, blockers.
-2. If the owner approved a permanent change, update `config/…` and add a dated line to
-   `state/decisions.md`.
-3. Commit text/config (never `media/`, `.env`, or tokens) and push.
+## 4. Non-negotiable rules
+1. No paid call, new subscription, or publishing without explicit owner approval.
+2. Uploads are private; public or scheduled only when the owner says so in the current conversation.
+3. No secrets in git; no media in git.
+4. No invented data: unverified numbers are labelled.
+5. Originality: borrow principles, never scripts, characters, or storylines.
+6. Quality bar: real motion footage only (no stills, no slideshows, no repeated shots),
+   a hook in the first 2 s, a twist that pays off a planted clue, the same face and wardrobe in every shot.
+7. Tested ≠ written: mark tools `UNTESTED` until a real run succeeds.
+
+## 5. After every session
+Update `state/STATUS.md` (done / next pending task / blockers). Log approved permanent changes in
+`state/decisions.md` and the matching `config/` file. Commit and push text files only.

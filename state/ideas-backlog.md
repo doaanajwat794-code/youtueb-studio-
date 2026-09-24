@@ -48,12 +48,16 @@ sees the cursor.
 - **Echo:** Tap. Frame 1 again, but the coffee is now a different colour. It loops.
 - **Why it works:** Very on-brand for an AI channel, a designed loop, and cheap (glitch effects happen in the edit). **Risk:** meta-AI stories can feel gimmicky, and phone-UI text must stay minimal.
 
-## Estimated cost per Short (all three are similar, 11 shots)
-| Mix | Footage | Refs + audio | **Total** |
-|---|---|---|---|
-| Recommended: 3 hero (Veo 3.1) + 8 standard (Veo 3.1 Fast) | ≈ $25.0 | ≈ $1.5 | **≈ $26.50** |
-| Budget: all Veo 3.1 Fast | ≈ $17.2 | ≈ $1.5 | **≈ $18.70** |
-| Premium: all Veo 3.1 | ≈ $45.8 | ≈ $1.5 | **≈ $47** (over the $45 per-Short cap) |
+## Google Flow feasibility and credits (updated 2026-09-24: Flow workflow)
+Credits are web-reported (Quality ≈ 100 and Fast ≈ 20 per 8-s clip); check the number Flow shows.
+Each estimate is for 11 clips with 30 % retakes. Extra money spent: **$0** (subscription only).
 
-The exact figure comes from `python -m studio estimate <slug>` once the storyboard exists.
-Music is free (YouTube Audio Library). Prices are web-reported; verify at first use.
+| Idea | Visible cast / locations | Hard parts in Flow | All Fast | 2 Quality + 9 Fast |
+|---|---|---|---|---|
+| #1 Face Not Recognized ⭐ | 1 woman at two ages (young + old, both locked) · son as voice/silhouette · 2 rooms | The old/young match: make the old reference *from* the young one in Flow's image editor | ≈ 300 credits | ≈ 540 credits |
+| #2 Still Here | 1 man · daughter from behind/phone glow · graveyard + kitchen | "Rain passes through him" is VFX-like; needs 2–3 retakes | ≈ 300 | ≈ 540 |
+| #3 Regenerate | 1 man · friend as silhouette · 1 apartment | Jump cuts are done in our edit (cheap); the "Regenerate" phone UI is added in the edit, not generated | ≈ 300 | ≈ 540 |
+
+**Recommendation:** #1, all Fast except the hook (S01) and the mirror reveal (twist) on Quality.
+On Google AI Pro (≈ 1,000 credits/month, web-reported) that's about 1–2 Shorts a month, or ~3 if
+all shots are Fast. Your plan tier sets the real number.

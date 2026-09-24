@@ -24,8 +24,8 @@ class BudgetError(SystemExit):
 def _prices() -> dict:
     p = config.providers()["providers"]
     return {
-        "video": p["video"]["primary"]["usd_per_second"],
-        "clip_seconds": p["video"]["primary"]["clip_seconds"],
+        "video": p["video"]["api_optional"]["usd_per_second"],
+        "clip_seconds": p["video"]["api_optional"]["clip_seconds"],
         "image": p["images"]["usd_per_image"],
         "tts_per_token": p["narration_and_dialogue"]["primary"]["usd_per_million_output_tokens"] / 1e6,
         "music": float(p["music"]["primary"].get("cost", p["music"]["primary"].get("usd_per_track", 0))),

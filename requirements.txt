@@ -3,3 +3,4 @@ requests>=2.31
 imageio-ffmpeg>=0.5     # portable ffmpeg binary (used if ffmpeg is not installed)
 google-auth-oauthlib>=1.2
 google-api-python-client>=2.130
+pillow>=10.1            # thumbnail text

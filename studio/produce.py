@@ -43,7 +43,7 @@ def _refs_for(shot: dict, slug: str) -> list:
 
 def footage(slug: str, stage: str = "footage") -> int:
     guard = SpendGuard(slug, stage)
-    prov = config.providers()["providers"]["video"]["primary"]
+    prov = config.providers()["providers"]["video"]["api_optional"]
     board = config.load_yaml(config.project_dir(slug) / "storyboard.yaml")
     bible = _bible(slug)
     shots = board["shots"]
@@ -96,7 +96,7 @@ def refs(slug: str) -> int:
         if path.exists():
             continue
         google.generate_image(guard, model=model, prompt=prompt, out=path, usd=img["usd_per_image"],
-                              aspect_ratio=config.providers()["providers"]["video"]["primary"].get("aspect_ratio", "9:16"))
+                              aspect_ratio=config.providers()["providers"]["video"]["api_optional"].get("aspect_ratio", "9:16"))
         made += 1
     return made
 

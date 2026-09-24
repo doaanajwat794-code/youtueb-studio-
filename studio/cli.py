@@ -30,9 +30,10 @@ def cmd_new(args):
     for f in template.iterdir():
         (pdir / f.name).write_text(f.read_text(encoding="utf-8").replace("{{title}}", args.title)
                                    .replace("{{slug}}", slug), encoding="utf-8")
-    config.save_yaml(pdir / "project.yaml", {"title": args.title, "slug": slug, "stage": "idea",
-                                             "created": dt.date.today().isoformat()})
-    print(f"Created projects/{slug}/")
+    code = (args.code or "".join(w[0] for w in re.findall(r"[A-Za-z0-9]+", args.title))[:4]).upper()
+    config.save_yaml(pdir / "project.yaml", {"title": args.title, "slug": slug, "code": code,
+                                             "stage": "idea", "created": dt.date.today().isoformat()})
+    print(f"Created projects/{slug}/ (clip code {code})")
 
 
 def cmd_estimate(args):
@@ -70,6 +71,43 @@ def cmd_assemble(args):
     from .assemble import assemble
 
     print(json.dumps(assemble(args.slug), indent=2))
+
+
+def cmd_flow_prompts(args):
+    from .flow import write_prompt_sheet
+
+    print(f"Wrote {write_prompt_sheet(args.slug)}")
+
+
+def cmd_import_clips(args):
+    from pathlib import Path
+
+    from .flow import import_clips
+
+    src = Path(args.source) if args.source else config.media_dir(args.slug) / "incoming"
+    picks = {k.upper(): int(v.lstrip("vV")) for k, v in (p.split("=") for p in args.pick or [])}
+    print("\n".join(import_clips(args.slug, src, picks)))
+
+
+def cmd_fetch_drive(args):
+    from .flow import fetch_drive_folder
+
+    files = fetch_drive_folder(args.slug, args.folder_id)
+    print(f"Downloaded {len(files)} files to media/{args.slug}/incoming/")
+
+
+def cmd_import_voice(args):
+    from pathlib import Path
+
+    from .voice import import_narration
+
+    print("\n".join(import_narration(args.slug, Path(args.file), noise_db=args.noise)))
+
+
+def cmd_thumbnail(args):
+    from .thumbnail import make_thumbnail
+
+    print(f"Wrote {make_thumbnail(args.slug, args.at, args.text or '')}")
 
 
 def cmd_selftest(_):
@@ -110,8 +148,9 @@ def main(argv=None):
     p = argparse.ArgumentParser(prog="studio", description="Twist Villa Studio pipeline")
     sub = p.add_subparsers(dest="cmd", required=True)
     sub.add_parser("status", help="show saved status and this month's spend").set_defaults(fn=cmd_status)
-    s = sub.add_parser("new", help="create a new video project")
+    s = sub.add_parser("new", help="create a new Short project")
     s.add_argument("title")
+    s.add_argument("--code", help="2–4 letter clip code, e.g. FNR")
     s.set_defaults(fn=cmd_new)
     s = sub.add_parser("estimate", help="estimate cost of a stage (free)")
     s.add_argument("slug")
@@ -130,6 +169,28 @@ def main(argv=None):
     s = sub.add_parser("assemble", help="edit, mix, caption and export final.mp4 (free)")
     s.add_argument("slug")
     s.set_defaults(fn=cmd_assemble)
+    s = sub.add_parser("flow-prompts", help="write projects/<slug>/flow-prompts.md for Google Flow (free)")
+    s.add_argument("slug")
+    s.set_defaults(fn=cmd_flow_prompts)
+    s = sub.add_parser("import-clips", help="import Flow clips named CODE_SNN_vN.mp4 (free)")
+    s.add_argument("slug")
+    s.add_argument("--from", dest="source", help="folder with clips (default media/<slug>/incoming)")
+    s.add_argument("--pick", nargs="*", help="choose takes, e.g. S03=v1 S07=v2 (default: highest take)")
+    s.set_defaults(fn=cmd_import_clips)
+    s = sub.add_parser("fetch-drive", help="download a link-shared Google Drive folder into incoming/")
+    s.add_argument("slug")
+    s.add_argument("folder_id")
+    s.set_defaults(fn=cmd_fetch_drive)
+    s = sub.add_parser("import-voice", help="split one narration recording into storyboard lines")
+    s.add_argument("slug")
+    s.add_argument("file")
+    s.add_argument("--noise", type=float, default=-35, help="silence threshold in dB")
+    s.set_defaults(fn=cmd_import_voice)
+    s = sub.add_parser("thumbnail", help="vertical cover from a frame of final.mp4 (free)")
+    s.add_argument("slug")
+    s.add_argument("--at", type=float, default=1.0, help="time in seconds")
+    s.add_argument("--text", help="up to 3 words")
+    s.set_defaults(fn=cmd_thumbnail)
     sub.add_parser("selftest", help="offline end-to-end test with fake media (free)").set_defaults(fn=cmd_selftest)
     sub.add_parser("research-stats", help="fill research/sources.yaml from the YouTube API") \
         .set_defaults(fn=cmd_research_stats)

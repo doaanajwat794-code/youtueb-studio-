@@ -1,5 +1,5 @@
 # {{title}} — Storyboard (10–12 shots, total 55–60 s). Order = edit order. Ids unique.
-# tier: hero ($0.40/s Veo 3.1) for hook, face close-ups, twist; standard ($0.15/s Veo 3.1 Fast) otherwise.
+# tier: hero → Flow 'Quality' (hook, twist, key close-ups); standard → Flow 'Fast'. Clips are 8 s; `seconds` is what we use.
 shots:
   - id: S01
     beat: hook
@@ -9,9 +9,11 @@ shots:
     location: loc1
     characters: [lead]
     camera: "extreme close-up, vertical 9:16, slow push-in, face in upper third"
+    flow_mode: Ingredients to Video   # or Text to Video / Frames to Video
+    flow_notes: ""                    # extra instruction for the owner in Flow
     prompt: >-
       (one subject, one action, one moment)
-    native_audio_db: -16   # optional: keep Veo's own ambience/SFX under the mix
+    native_audio_db: -16   # optional: keep the Flow clip's own ambience/SFX under the mix
     sfx: []
 audio:
   lines:

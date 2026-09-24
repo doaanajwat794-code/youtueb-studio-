@@ -1,4 +1,13 @@
-# Shot-prompt guide — vertical Shorts (Veo 3.1, 9:16)
+# Shot-prompt guide: vertical Shorts in Google Flow (Veo 3.1, 9:16)
+
+## Google Flow specifics
+- **Ingredients to Video:** up to 3 reference images per prompt. Always use the same character
+  front portrait and the location plate. This is the main consistency tool.
+- **Frames to Video:** give a start (and optional end) frame; best for continuing an action across a cut.
+- Settings every time: Portrait 9:16 · 8 s · 1 output · Quality for ⭐ hero shots, Fast otherwise.
+- Every prompt ends with the audio rule (ambience/SFX only, **no music, no voices**) and the text
+  rule (no on-screen text). Narration and music are added in our edit.
+- Change one thing at a time when fixing a shot (prompt *or* reference *or* lighting), so drift is diagnosable.
 
 ## Prompt anatomy (assembled by `studio/produce.py` in this order)
 1. **Action**: one subject, one verb, one moment.

@@ -4,9 +4,19 @@ This repository is the production studio for the YouTube channel **Twist Villa**
 (https://www.youtube.com/@TwistVela).
 
 **Current format: YouTube Shorts ONLY.** Each Short is 55–60 seconds, 9:16, 1080x1920,
-in English, and fully AI-generated moving video with original narration, SFX, music and
-cinematic editing. Genres: cinematic mystery, psychological thriller, and science fiction
-about human identity and technology.
+in English: realistic AI-generated moving footage with consistent characters, natural movement,
+strong opening hooks, and unexpected endings, plus original narration, SFX, music, captions
+and cinematic editing. Genres: cinematic mystery, science fiction, psychological thriller,
+technology and human identity.
+
+**Production model (approved 2026-09-24):** use the owner's existing subscriptions.
+- **Google Flow** (paid subscription): the owner generates every clip manually from Claude's
+  `flow-prompts.md` and hands the files back. **No paid video API. Never ask the owner to
+  buy a Veo API plan.**
+- **ShortsFaceless** (30 videos/month): only where it genuinely helps (e.g. the narration
+  voice). **Never** use its animated still images as footage.
+- Claude does research, ideas, scripts, storyboards, Flow prompts, import, edit, narration,
+  SFX, music, captions, export, and the title/description/hashtags/cover.
 
 **Long-form is archived** (`archive/longform/`). Never produce long-form, and never use
 the archived files as the main reference, unless the owner explicitly asks.
@@ -20,17 +30,18 @@ Use the `twist-villa-studio` skill for any work in this repo. Before anything el
 
 1. `state/STATUS.md` — current phase, active Short, and the **next pending task**
 2. `config/channel.yaml` — channel identity and Shorts format
-3. `config/budget.yaml` — spend limits ($50–150/month preferred) and approval rules
+3. `config/budget.yaml` — extra-spend target $0; approval rules
 4. `state/decisions.md` — permanent decisions the owner already approved
 
 Then continue from the next pending task in `state/STATUS.md`. Read
-`config/storytelling-framework.md`, `config/providers.yaml`, `research/shorts-research.md`,
-and `state/ideas-backlog.md` when the task touches them.
+`config/storytelling-framework.md`, `config/providers.yaml` (subscriptions + render settings),
+`research/shorts-research.md`, `state/ideas-backlog.md`, and the Skill's
+`references/flow-handoff.md` when the task touches them.
 
 ## Hard rules
 
-- **Money:** never call a paid API without the owner's explicit approval of a written
-  cost estimate for that step. Every spend is logged in `state/spend-ledger.csv`.
+- **Money:** use the existing subscriptions. Never buy a subscription or call a paid API
+  without the owner's explicit approval of a written cost estimate for that step. Every spend is logged in `state/spend-ledger.csv`.
   The code enforces this (`studio/budget.py`); never bypass or weaken the guard.
 - **Publishing:** uploads are always `private`. Never make a video public, unlisted,
   or scheduled without explicit owner approval in the current conversation.

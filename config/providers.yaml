@@ -4,36 +4,39 @@
 # unreachable from the research environment). Re-check official pages before approving spend.
 # Per-provider "status": UNTESTED -> TESTED (after a real successful run) -> APPROVED (owner ok).
 
-primary_stack: google   # one account, one bill, reachable from this cloud environment
+primary_stack: owner_subscriptions   # APPROVED 2026-09-24: use Google Flow + ShortsFaceless, no paid video API
 
 providers:
   video:
-    primary:
+    primary:                       # APPROVED 2026-09-24 — manual generation by the owner
+      name: Google Flow (owner's paid subscription; Veo 3.1 inside Flow)
+      how: "Claude writes flow-prompts.md → owner generates in Flow → downloads → names CODE_SNN_vN.mp4 → hands over"
+      extra_cost_usd: 0            # covered by the subscription (uses Flow credits)
+      aspect_ratio: "9:16"         # set Portrait/9:16 in Flow before generating
+      clip_seconds: 8
+      outputs_per_prompt: 1
+      models: {hero: "Veo 3.1 Quality", standard: "Veo 3.1 Fast"}
+      credits_per_generation: {quality: 100, fast: 20}   # web-reported 2026 (Fast may be 10 on Ultra); check in Flow
+      monthly_credits_note: "Google AI Pro ≈ 1,000 credits/month, Ultra 12,500–25,000 (web-reported). Check your balance in Flow."
+      consistency_tools: [Ingredients to Video (up to 3 reference images), Frames to Video, same prompt locks]
+      download: "Highest resolution Flow offers (1080p if available); 720p is upscaled by our pipeline"
+      status: MANUAL_UNTESTED      # becomes TESTED after the first real clips import cleanly
+    api_optional:                  # NOT USED — kept only if the owner ever approves pay-per-use API
       name: Google Veo 3.1 (Gemini API)
       api: generativelanguage.googleapis.com
       models:
-        hero: veo-3.1-generate-preview        # verify exact model id in docs at setup
+        hero: veo-3.1-generate-preview
         standard: veo-3.1-fast-generate-preview
-      clip_seconds: 8          # Veo generates 4/6/8 s clips; 1080p at 8 s
+      clip_seconds: 8
       resolution: 1080p
-      aspect_ratio: "9:16"     # native vertical; one forum report says the API returned 16:9 — the pilot verifies this
-      reference_images: true   # "ingredients"/reference images for character consistency (verify limits)
-      usd_per_second: {hero: 0.40, standard: 0.15}   # web-reported; verify
-      commercial_use: "Paid API tier; outputs usable commercially per Google terms; SynthID watermark embedded"
-      data_note: "Use the PAID tier: free-tier inputs may be used to improve Google products"
-      status: UNTESTED
-    alternative:
-      name: Kling 3.0 (official API or reseller e.g. fal.ai)
-      usd_per_second: {standard: 0.084}              # web-reported range 0.075–0.168; verify
-      reachable_from_cloud_env: false                # blocked by current network policy
-      status: UNTESTED
+      aspect_ratio: "9:16"
+      usd_per_second: {hero: 0.40, standard: 0.15}   # web-reported
+      status: DISABLED_BY_OWNER    # owner: "do not require a new Veo API subscription"
     not_selected:
       - name: OpenAI Sora 2 API
-        reason: "API reported to shut down 2026-09-24 — not a stable choice"
-      - name: Runway Gen-4.5 API
-        reason: "~$0.12/s but 720p-class output and separate credit pool; keep as backup for motion-control shots"
-      - name: Seedance 2.x (fal/Replicate)
-        reason: "Strong quality but ~$0.34–0.68/s at 1080p via global resellers; official BytePlus route not sold in US/UK"
+        reason: "API reported to shut down 2026-09-24"
+      - name: Kling / Runway / Seedance APIs
+        reason: "Extra paid services; owner prefers existing subscriptions"
 
   images:        # character sheets, location plates, first frames, thumbnail
     name: Gemini 3 Pro Image ("Nano Banana Pro")
@@ -42,6 +45,19 @@ providers:
     status: UNTESTED
 
   narration_and_dialogue:
+    plan: "APPROVED 2026-09-24: $0 narration. First Short = A/B test of options 1 and 2, the owner picks the permanent voice."
+    option_1_shortsfaceless:
+      how: "Owner pastes narration.txt as a Custom Script in ShortsFaceless, picks the chosen voice, downloads; we run import-voice"
+      cost: "1 of the owner's 30 monthly ShortsFaceless videos"
+      caveat: "Only usable if the export has no background music (or music can be turned off)"
+      status: UNTESTED
+    option_2_gemini_tts_free_tier:
+      how: "Free Google AI Studio key (no billing). Free-tier inputs may be used by Google to improve products; narration text is not sensitive."
+      cost: 0
+      status: UNTESTED
+    option_3_owner_recording:
+      how: "Owner records narration on a phone; we run import-voice"
+      cost: 0
     primary:
       name: Gemini TTS (Gemini API)
       model: gemini-2.5-pro-preview-tts     # verify exact id at setup
@@ -66,21 +82,25 @@ providers:
   sound_effects:
     plan: "Veo native audio (included in the Veo price) per shot via storyboard native_audio_db, plus free YouTube Audio Library / CC0 SFX"
 
-  owner_subscriptions:
+  owner_subscriptions:            # APPROVED 2026-09-24
+    google_flow:
+      status: active_paid
+      role: "ALL video footage — owner generates manually from flow-prompts.md"
+      also_useful_for: "reference images (character sheets, location plates) inside Flow"
+      api: none_used                # no automation of the Flow website
     shortsfaceless:
       url: https://www.shortsfaceless.com/
-      plan: "active (owner) — tier to confirm; reported $19/mo (30 videos) or $29/mo (60 videos)"
-      api: none_found          # no public API found 2026-09-24; assume the plan has no API access
-      integration: manual_only # no automated login/scraping (terms + credential risk)
-      extra_cost: 0            # already paid
-      allowed_roles:           # proposed, pending owner approval
-        - "voice A/B test: owner pastes our narration as a Custom Script, downloads, and we compare with Gemini TTS on the pilot"
-        - "idea brainstorming from seed keywords (ideas still pass our originality check)"
-        - "optional style/mood reference images (only if full-resolution image download is available)"
+      status: active
+      plan: "30 videos per month (owner-confirmed 2026-09-24)"
+      api: none_found               # no public API found; assume no API access
+      integration: manual_only
+      allowed_roles:
+        - "narration voice: paste narration.txt as a Custom Script, export with music off, then import-voice (uses 1 of 30/month)"
+        - "optional idea brainstorming (ideas must still pass our originality check)"
       not_allowed_roles:
-        - "footage: its visuals are AI stills with subtle motion — fails the 'fully moving video, no slideshow' rule"
-        - "final editing/captions/posting: it can't edit our Veo footage; we use the tested FFmpeg pipeline + private API upload"
-      status: INVESTIGATED_WEB_ONLY   # confirm with the owner's dashboard checklist in research/tool-research.md
+        - "footage: animated still images are never used as Twist Villa footage"
+        - "final edit/captions/posting: our pipeline does these on the Flow footage"
+      status_check: "dashboard checklist still open: music-off export? voice-only download?"
 
   script_and_planning:
     name: Claude (this Claude Code session)

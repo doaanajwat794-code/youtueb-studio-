@@ -1,12 +1,16 @@
 # Budget and cost limits — enforced by studio/budget.py
-# Status: APPROVED range 2026-09-24 — owner's preferred monthly budget is $50–150.
+# Status: APPROVED 2026-09-24 — produce with existing subscriptions (Google Flow, ShortsFaceless).
+# Extra spend target is $0 per Short. The caps below are only a safety net for any paid API call
+# the owner explicitly approves; nothing is charged without a recorded approval.
 status: approved
 currency: USD
+additional_spend_target_usd_per_short: 0
+subscriptions_in_use: [Google Flow, ShortsFaceless (30 videos/month)]
 
 caps:
-  per_video_usd: 45         # hard ceiling for one finished Short (all stages)
-  per_month_usd: 150        # hard ceiling across all Shorts in a calendar month
-  pilot_usd: 10             # first ~12 s (3 shots) test of a new look/provider
+  per_video_usd: 5          # safety net: max extra API spend per Short, only with approval
+  per_month_usd: 20         # safety net: max extra API spend per month, only with approval
+  pilot_usd: 0              # pilots happen in Flow (subscription credits)
   single_call_usd: 5        # any single API call estimated above this is refused (safety net)
 
 approval:
