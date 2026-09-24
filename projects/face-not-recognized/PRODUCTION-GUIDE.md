@@ -1,4 +1,4 @@
-# Face Not Recognized: your production guide
+# Face Not Recognized: your production guide (story v2)
 
 Your part: **make 5 reference images and 11 clips in Google Flow, download them, rename them, and put
 them in one folder.** Optional: 2 voice recordings and 2 music tracks. Claude does everything else.
@@ -39,17 +39,17 @@ Use the **same** image files every time. Don't regenerate a reference halfway th
 ## 2. The 11 clips
 | Shot | Time in the film | Ingredients to add | Save as |
 |---|---|---|---|
-| S01 hook | 0.0–4.5 s | ELISE_YOUNG_FRONT + CORRIDOR | `FNR_S01_v1.mp4` |
-| S02 door | 4.5–10.0 s | ELISE_YOUNG_FRONT + CORRIDOR | `FNR_S02_v1.mp4` |
-| S03 panel | 10.0–15.0 s | ELISE_YOUNG_FRONT + CORRIDOR | `FNR_S03_v1.mp4` |
-| S04 eye | 15.0–20.0 s | ELISE_YOUNG_FRONT + CORRIDOR | `FNR_S04_v1.mp4` |
-| S05 mirror | 20.0–24.0 s | ELISE_YOUNG_FRONT + CORRIDOR | `FNR_S05_v1.mp4` |
-| S06 mirror flash | 24.0–25.0 s | ELISE_OLD_FRONT + CORRIDOR | `FNR_S06_v1.mp4` |
-| S07 reaction | 25.0–29.0 s | ELISE_YOUNG_FRONT + CORRIDOR | `FNR_S07_v1.mp4` |
-| S08 elevator | 29.0–35.0 s | ELISE_YOUNG_FRONT + THEO_FRONT + CORRIDOR | `FNR_S08_v1.mp4` |
-| S09 twist | 35.0–42.5 s | ELISE_OLD_FRONT + THEO_FRONT + CORRIDOR | `FNR_S09_v1.mp4` |
-| S10 realisation | 42.5–50.0 s | ELISE_OLD_FRONT + CORRIDOR | `FNR_S10_v1.mp4` |
-| S11 echo | 50.0–57.6 s | ELISE_YOUNG_FRONT + CORRIDOR | `FNR_S11_v1.mp4` |
+| S01 hook | 0.0–5.0 s | ELISE_YOUNG_FRONT + CORRIDOR | `FNR_S01_v1.mp4` |
+| S02 door | 5.0–11.0 s | ELISE_YOUNG_FRONT + CORRIDOR | `FNR_S02_v1.mp4` |
+| S03 panel | 11.0–15.5 s | ELISE_YOUNG_FRONT + CORRIDOR | `FNR_S03_v1.mp4` |
+| S04 lens stutters | 15.5–20.0 s | ELISE_YOUNG_FRONT + CORRIDOR | `FNR_S04_v1.mp4` |
+| S05 mirror (lens on) | 20.0–23.5 s | ELISE_YOUNG_FRONT + CORRIDOR | `FNR_S05_v1.mp4` |
+| S06 mirror flash (lens off) | 23.5–24.5 s | ELISE_OLD_FRONT + CORRIDOR | `FNR_S06_v1.mp4` |
+| S07 lens flickers back | 24.5–28.5 s | ELISE_YOUNG_FRONT + CORRIDOR | `FNR_S07_v1.mp4` |
+| S08 elevator | 28.5–34.5 s | ELISE_YOUNG_FRONT + THEO_FRONT + CORRIDOR | `FNR_S08_v1.mp4` |
+| S09 twist | 34.5–41.5 s | ELISE_OLD_FRONT + THEO_FRONT + CORRIDOR | `FNR_S09_v1.mp4` |
+| S10 new lens | 41.5–49.1 s | ELISE_OLD_FRONT + CORRIDOR | `FNR_S10_v1.mp4` |
+| S11 echo | 49.1–56.7 s | ELISE_YOUNG_FRONT + CORRIDOR | `FNR_S11_v1.mp4` |
 
 **For each shot:**
 1. Choose **Ingredients to Video** (or what your account offers, see step 0) and add the ingredient images.
@@ -60,6 +60,10 @@ Use the **same** image files every time. Don't regenerate a reference halfway th
 6. **Rename** in Windows: click the file in Downloads → press **F2** → type e.g. `FNR_S03_v2.mp4` → Enter.
    `S` = shot number (always two digits), `v` = take number. Keep all takes; Claude uses the highest
    take unless you say "use S03 v1".
+
+**v2 continuity (most important):** the blue ring in Elise's eye is the story's rule.
+Ring glowing = she sees herself young. S04 must end with the ring coming back *weak*, not off.
+S05 and S06 must have the *same framing*. In S10 the ring must switch *on after* she puts the lens in.
 
 Tips: generate in order (S01 → S11). If a face drifts, regenerate with the same prompt first. Change
 only one thing at a time.

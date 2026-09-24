@@ -5,7 +5,8 @@ media_folder: FNR               # clips go in media/FNR/incoming/
 status: active                  # the current active Short (not a permanent story template)
 stage: preproduction_awaiting_owner_approval
 created: '2026-09-24'
-target_seconds: 57.6
+target_seconds: 56.7
+story_version: 2   # 2026-09-24 continuity fixes: intermittent lens, lens replacement, biometric rule
 format: {type: youtube_short, aspect_ratio: '9:16', resolution: 1080x1920, language: en}
 production:
   video: Google Flow (owner's subscription), generated manually by the owner

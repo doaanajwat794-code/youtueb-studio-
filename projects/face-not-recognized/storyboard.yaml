@@ -1,12 +1,21 @@
-# Face Not Recognized — storyboard (edit order). Total 57.6 s. ALL shots: Veo 3.1 Fast in Flow, 9:16, 8 s.
+# Face Not Recognized — storyboard v2 (edit order). Total 56.7 s. ALL shots: Veo 3.1 Fast in Flow, 9:16, 8 s.
 # `seconds` = what we use from each 8-second clip; `trim_start` skips the first frames.
-# POV rule: the film shows Elise as SHE sees herself (young) — except the mirror flash (S06) and
-# Theo's point of view (S09–S10), where we see her true age.
+#
+# THE RULE THE AUDIENCE LEARNS VISUALLY (v2, owner continuity fixes 2026-09-24):
+#   • Blue ring glowing in her iris = the AR lens is working = Elise sees her 37-year-old face.
+#   • Ring drops out (even for a second) = she sees the truth (67).
+#   • Her phone and door recognise her through the PAIRED LENS. Their cameras see her real face,
+#     but her enrolled face is still the 37-year-old one. When the lens fails, pairing fails and
+#     the real 67-year-old face doesn't match → "Face not recognized". (Shown by the on-screen
+#     interface text "Paired lens: not detected" / "Lens paired ✓", plus Theo's line.)
+#   • The lens malfunctions INTERMITTENTLY (S01 weak → S04 stutters → S06 drops out → S07 flickers
+#     back) and is REPLACED on camera in S10, so the young face in S11 is logically restored.
+# POV: we see Elise as SHE sees herself, except S06 (the lens drops out) and S09–S10 (Theo's view).
 
 shots:
   - id: S01
     beat: hook
-    seconds: 4.5
+    seconds: 5.0
     trim_start: 0.3
     tier: standard
     characters: [elise_young]
@@ -14,18 +23,19 @@ shots:
     camera: extreme close-up at eye level, very slow push-in, her face in the upper third of the frame, the edge of the phone visible at the bottom
     prompt: >-
       Extreme close-up of Elise's face at night in her apartment corridor, lit from below by the
-      cold white glow of the smartphone she raises to her face. The screen light suddenly turns a
+      cold white glow of the smartphone she raises to her face. The very thin electric-blue ring
+      around the edge of her iris glows weakly and flickers once. The phone's light suddenly turns a
       pulsing red that washes over her skin. Her eyes narrow and her lips part in confusion; she
-      tilts the phone slightly and tries again. A very faint electric-blue ring is barely visible
-      around the edge of her iris.
-    flow_notes: The phone screen must face HER; we add the "Face not recognized" message in the edit.
+      tilts the phone slightly and tries again.
+    flow_notes: The phone screen must face HER; the "Face not recognized" message is added in the edit.
     native_audio_db: -20
     sfx:
-      - {file: ui_error.wav, offset: 1.2, gain_db: -10}
+      - {file: lens_crackle.wav, offset: 0.8, gain_db: -18}
+      - {file: ui_error.wav, offset: 1.4, gain_db: -10}
 
   - id: S02
     beat: rule
-    seconds: 5.5
+    seconds: 6.0
     trim_start: 0.3
     tier: standard
     characters: [elise_young]
@@ -33,17 +43,17 @@ shots:
     camera: medium shot from the side at shoulder height, smooth slow tracking alongside her, settling as she stops
     prompt: >-
       Elise walks along the corridor to her dark walnut apartment door, stops, and looks directly
-      into the round camera lens of the slim black facial-recognition panel beside the door. The
-      thin light ring around the lens glows white, then turns amber. She presses the matte black
-      door handle; it does not move. She frowns and tries once more.
+      into the round camera lens of the slim black facial-recognition panel beside the door. The thin
+      light ring around the panel's lens flickers soft blue for a moment, as if searching, then turns
+      amber. She presses the matte black door handle; it does not move. She frowns and tries once more.
     native_audio_db: -20
     sfx:
-      - {file: ui_scan.wav, offset: 1.6, gain_db: -12}
-      - {file: ui_deny.wav, offset: 2.3, gain_db: -10}
+      - {file: ui_scan.wav, offset: 0.8, gain_db: -12}
+      - {file: ui_deny.wav, offset: 3.6, gain_db: -10}
 
   - id: S03
     beat: clue
-    seconds: 5.0
+    seconds: 4.5
     trim_start: 0.3
     tier: standard
     characters: [elise_young]
@@ -58,59 +68,60 @@ shots:
     native_audio_db: -20
 
   - id: S04
-    beat: crack_1
-    seconds: 5.0
+    beat: lens_intermittent
+    seconds: 4.5
     trim_start: 0.3
     tier: standard
     characters: [elise_young]
     location: corridor
     camera: extreme macro close-up of one eye, locked off, perfectly still
     prompt: >-
-      Extreme macro close-up of Elise's left grey-green eye in warm amber corridor light. A very thin,
-      softly glowing electric-blue ring around the outer edge of her iris flickers, stutters like a
-      failing screen, and dims. She blinks slowly twice, and a fingertip rises into frame to touch
-      the corner of her eye.
-    no_ingredient: []
-    flow_mode: Ingredients to Video
-    flow_notes: If the eye comes out distorted, try Text to Video with the same prompt.
+      Extreme macro close-up of Elise's left grey-green eye in warm amber corridor light. The very
+      thin, softly glowing electric-blue ring around the outer edge of her iris stutters like a
+      failing screen: it blinks off, struggles back on, blinks off again, then returns weaker and
+      unstable, flickering. She blinks slowly and a fingertip rises into frame to touch the corner of
+      her eye.
+    flow_notes: The ring must come BACK on at the end (weak and flickering), not stay off. If the eye looks distorted, try Text to Video with the same prompt.
     native_audio_db: -24
     sfx:
-      - {file: lens_crackle.wav, offset: 0.6, gain_db: -8}
+      - {file: lens_crackle.wav, offset: 0.3, gain_db: -8}
 
   - id: S05
-    beat: crack_2
-    seconds: 4.0
+    beat: mirror_young
+    seconds: 3.5
     trim_start: 0.3
     tier: standard
     characters: [elise_young]
     location: corridor
-    camera: over-the-shoulder medium shot from behind Elise toward the mirrored wall panel, static
+    camera: medium close-up looking into the full-height mirror, over Elise's shoulder, static; her reflection faces the camera
     prompt: >-
-      From behind Elise's shoulder, she turns toward the full-height mirrored wall panel beside the
-      elevator at the end of the corridor. In the mirror her reflection looks back at her: the same
-      young woman with dark chestnut hair and the cream turtleneck. The brass wall sconces flicker
-      once.
+      Over Elise's shoulder, looking into the full-height mirrored wall panel beside the elevator.
+      Her reflection faces the camera: the young woman with dark chestnut hair and the cream
+      turtleneck, a faint unstable blue ring glowing in the irises of her reflected eyes. She studies
+      her own face, uneasy.
+    flow_notes: S05 and S06 must use the SAME framing (same distance, height and angle) so the cut between them reads as one continuous moment.
     native_audio_db: -20
 
   - id: S06
-    beat: mirror_flash
+    beat: mirror_truth
     seconds: 1.0
     trim_start: 1.5
     tier: standard
     characters: [elise_old]
     location: corridor
-    camera: medium shot looking straight into the full-height mirrored wall panel, static, same height and distance as the previous shot
+    camera: medium close-up looking into the full-height mirror, over Elise's shoulder, static; same framing as the previous shot
     prompt: >-
-      The full-height mirrored wall panel beside the elevator. The reflection in the mirror shows
-      Elise at 67 with silver-white hair, standing still in the identical cream cable-knit
-      turtleneck, staring back with wide, frightened eyes. The brass sconce light flickers.
-    flow_notes: We use only 1 second of this clip (the sharpest moment), as a flash between S05 and S07.
+      Over Elise's shoulder, looking into the full-height mirrored wall panel beside the elevator.
+      The reflection shows Elise at 67 with silver-white hair in the identical cream cable-knit
+      turtleneck, standing in the same pose, staring back with wide, frightened eyes. There is no
+      blue glow in her eyes. The brass sconce light flickers.
+    flow_notes: We use only 1 second of this clip (the sharpest moment). The woman in the foreground and the reflection are both the older Elise.
     native_audio_db: null
     sfx:
       - {file: mirror_shimmer.wav, offset: 0.0, gain_db: -6}
 
   - id: S07
-    beat: crack_2_reaction
+    beat: lens_returns
     seconds: 4.0
     trim_start: 0.3
     tier: standard
@@ -118,10 +129,13 @@ shots:
     location: corridor
     camera: close-up at eye level, very slow gentle pull-back
     prompt: >-
-      Close-up of Elise stepping back from the mirror, her breath catching. One hand rises to cover
-      her mouth, and the thin gold wedding band on her finger catches the amber light. Her eyes
-      glisten with shock as she keeps staring at the mirror.
+      Close-up of Elise stepping back from the mirror, her breath catching. The thin electric-blue
+      ring around her irises flickers back on, weak and unstable. One hand rises to cover her mouth,
+      and the thin gold wedding band on her finger catches the amber light. Her eyes glisten with
+      shock as she keeps staring at the mirror.
     native_audio_db: -20
+    sfx:
+      - {file: lens_crackle.wav, offset: 0.2, gain_db: -14}
 
   - id: S08
     beat: arrival
@@ -142,7 +156,7 @@ shots:
 
   - id: S09
     beat: twist
-    seconds: 7.5
+    seconds: 7.0
     trim_start: 0.3
     tier: standard
     characters: [elise_old, theo]
@@ -151,27 +165,33 @@ shots:
     prompt: >-
       Reverse over-the-shoulder shot from behind Theo, the back of his head and navy wool coat soft in
       the foreground. He faces Elise, now clearly seen at her true age of 67 with silver-white hair,
-      standing in the corridor clutching her phone to her chest, frightened and searching his face.
-      Theo speaks softly to her; we never see his mouth. She slowly lowers the phone.
+      standing in the corridor clutching her phone to her chest, frightened and searching his face. A
+      faint blue glow flickers weakly in her eyes and dies. Theo speaks softly to her; we never see his
+      mouth. She slowly lowers the phone.
     flow_notes: Theo must stay turned away from camera (back of head) so no lip-sync is needed.
     native_audio_db: -22
     sfx:
       - {file: sting.wav, offset: 0.0, gain_db: -4}
 
   - id: S10
-    beat: realisation
-    seconds: 7.5
+    beat: lens_replaced
+    seconds: 7.6
     trim_start: 0.3
     tier: standard
     characters: [elise_old]
     location: corridor
-    camera: close-up at eye level, static, shallow focus on her eyes
+    camera: close-up at eye level, static, shallow focus on her eyes, the lens case soft in the foreground
     prompt: >-
-      Close-up of Elise at 67 in the warm corridor light as understanding slowly reaches her. Tears
-      well in her grey-green eyes and she exhales, trembling. In the soft-focus foreground a man's
-      hand in a navy wool coat sleeve opens a small white contact-lens case, revealing two clear
-      lenses with a faint blue rim.
+      Close-up of Elise at 67 in the warm corridor light, tears in her grey-green eyes. In the
+      soft-focus foreground a man's hand in a navy wool coat sleeve holds open a small white
+      contact-lens case with two clear lenses that have a faint blue rim. She takes one lens on her
+      fingertip, tilts her head back slightly and places it in her eye, then blinks twice. A very thin
+      electric-blue ring lights up around her iris, traces all the way around it, and glows steady and
+      bright. Her breathing calms.
+    flow_notes: The key moment is the blue ring switching on AFTER she puts the lens in. If the lens insertion looks unnatural, keep the hand movement small and slow.
     native_audio_db: -22
+    sfx:
+      - {file: lens_boot.wav, offset: 4.6, gain_db: -10}
 
   - id: S11
     beat: echo
@@ -183,33 +203,34 @@ shots:
     camera: extreme close-up at eye level, very slow push-in, framed exactly like the opening shot, face in the upper third
     prompt: >-
       Extreme close-up of Elise's face at night, lit from below by her smartphone held at face
-      height, exactly like the opening shot. The thin electric-blue ring around her iris glows steady
-      and bright. The phone's light turns a soft calm green on her skin. A single tear runs down her
-      cheek and a faint, peaceful smile forms.
+      height, exactly like the opening shot. The thin electric-blue ring around her irises glows
+      steady and bright. The phone's light turns a soft calm green on her skin. A single tear runs
+      down her cheek and a faint, peaceful smile forms.
     native_audio_db: -20
     sfx:
-      - {file: ui_unlock.wav, offset: 1.4, gain_db: -10}
-      - {file: door_click.wav, offset: 2.2, gain_db: -8}
+      - {file: ui_unlock.wav, offset: 1.2, gain_db: -10}
+      - {file: door_click.wav, offset: 2.0, gain_db: -8}
 
-# Interface text added in the edit (Flow is told NOT to render text)
+# Interface text added in the edit (Flow is told NOT to render text). This carries the world rule.
 overlays:
-  - {text: "✕  Face not recognized", style: alert, at_shot: S01, offset: 1.2, duration: 3.1, y: 0.30}
-  - {text: "Unknown visitor · Access denied", style: alert, at_shot: S02, offset: 2.3, duration: 3.0, y: 0.30}
-  - {text: "Estimated age: 67", style: info, at_shot: S03, offset: 0.4, duration: 4.3, y: 0.30}
-  - {text: "✓  Welcome home, Elise", style: success, at_shot: S11, offset: 1.4, duration: 3.6, y: 0.30}
+  - {text: "✕  Face not recognized", style: alert, at_shot: S01, offset: 1.4, duration: 3.4, y: 0.30}
+  - {text: "Paired lens: not detected", style: info, at_shot: S02, offset: 1.4, duration: 2.0, y: 0.30}
+  - {text: "Unknown visitor · Access denied", style: alert, at_shot: S02, offset: 3.6, duration: 2.3, y: 0.30}
+  - {text: "Estimated age: 67", style: info, at_shot: S03, offset: 0.4, duration: 3.9, y: 0.30}
+  - {text: "✓  Lens paired\nWelcome home, Elise", style: success, at_shot: S11, offset: 1.2, duration: 3.8, y: 0.30}
 
 audio:
   lines:        # narrator = Elise (voice-narrator.txt), theo = Theo (voice-theo.txt)
     - {id: N01, type: narration, speaker: narrator, at_shot: S01, offset: 0.4, text: "My phone stopped recognizing my face tonight."}
-    - {id: N02, type: narration, speaker: narrator, at_shot: S02, offset: 1.6, text: "Then my own front door."}
-    - {id: N03, type: narration, speaker: narrator, at_shot: S03, offset: 2.2, text: "I'm thirty-seven."}
-    - {id: N04, type: narration, speaker: narrator, at_shot: S04, offset: 0.8, text: "Then my eye flickered… like a dying screen."}
-    - {id: N05, type: narration, speaker: narrator, at_shot: S05, offset: 0.3, text: "The elevator mirror was always kind to me."}
+    - {id: N02, type: narration, speaker: narrator, at_shot: S02, offset: 1.2, text: "Then my own front door."}
+    - {id: N03, type: narration, speaker: narrator, at_shot: S03, offset: 1.8, text: "I'm thirty-seven."}
+    - {id: N04, type: narration, speaker: narrator, at_shot: S04, offset: 0.5, text: "Then my eye started to flicker."}
+    - {id: N05, type: narration, speaker: narrator, at_shot: S05, offset: 0.2, text: "The mirror was always kind to me."}
     - {id: N06, type: narration, speaker: narrator, at_shot: S07, offset: 0.6, text: "That woman wore my sweater. My ring. My eyes."}
-    - {id: D01, type: dialogue, speaker: theo, at_shot: S09, offset: 1.2, text: "Mum… the lenses died again."}
-    - {id: D02, type: dialogue, speaker: theo, at_shot: S10, offset: 1.0, text: "Everything's still set to the face you remember."}
-    - {id: N07, type: narration, speaker: narrator, at_shot: S11, offset: 0.3, text: "Thirty years ago, I chose the face I'd keep."}
+    - {id: D01, type: dialogue, speaker: theo, at_shot: S09, offset: 0.8, text: "Mum… the lenses died again."}
+    - {id: D02, type: dialogue, speaker: theo, at_shot: S09, offset: 3.3, text: "Everything's still set to the face you remember."}
+    - {id: N07, type: narration, speaker: narrator, at_shot: S11, offset: 0.4, text: "Thirty years ago, I chose the face I'd keep."}
     - {id: N08, type: narration, speaker: narrator, at_shot: S11, offset: 4.6, text: "Tonight, I chose it again."}
   music:        # free YouTube Audio Library tracks (owner downloads; see production guide)
     - {id: M01, start_shot: S01, end_shot: S08, gain_db: -18}   # tense, minimal, pulsing; fades out before the twist
-    - {id: M02, start_shot: S10, end_shot: S11, gain_db: -17}   # soft, emotional piano
+    - {id: M02, start_shot: S10, end_shot: S11, gain_db: -17}   # soft, emotional piano from the moment she takes the lens

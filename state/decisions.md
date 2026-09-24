@@ -26,8 +26,10 @@ anywhere else. Format: `YYYY-MM-DD · decision · (file updated)`.
 - 2026-09-24 · **Public YouTube publishing: NOT approved.** Private only. (config/budget.yaml, studio/youtube.py)
 - 2026-09-24 · Owner confirmed: **Google Flow = active paid subscription, primary video tool; ShortsFaceless = 30 videos/month**; prefer existing subscriptions; the owner generates clips manually. (config/providers.yaml → owner_subscriptions)
 
+- 2026-09-24 · **FNR story v2** (owner's continuity notes): intermittent lens malfunction, lens replaced on camera before the final transformation, and the biometric rule (devices trust the paired lens; their cameras see the real face). (projects/face-not-recognized/*)
+
 ## Pending owner approval
-- **FNR production package:** screenplay (`script.md`), character references (`bible.yaml`), storyboard (`storyboard.yaml`), Flow prompts (`flow-prompts.md`), packaging draft (`metadata.yaml`)
+- **FNR production package v2:** screenplay (`script.md`), character references (`bible.yaml`), storyboard (`storyboard.yaml`), Flow prompts (`flow-prompts.md`), packaging draft (`metadata.yaml`)
 - Flow account check (portrait with Fast, Ingredients to Video, image generation, credits, download sizes): PRODUCTION-GUIDE step 0
 - Voice route: Google Vids (preferred, unverified for the account) vs Gemini free tier vs own recording
 - Shorts framework "60 Seconds, One Twist" (config/storytelling-framework.md)

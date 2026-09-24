@@ -6,11 +6,11 @@ Claude's prompts and delivers them to the **local folder** via Claude Code on th
 Extra paid spending: **not approved** ($0 caps). Public publishing: **not approved**.
 
 **Active Short:** `projects/face-not-recognized/` · code **FNR** · media `media/FNR/`
-**Phase:** 2 — Pre-production package ready, **waiting for owner approval**
+**Phase:** 2 — Pre-production package **v2** (continuity fixes) ready, **waiting for owner approval**
 
 ## Next pending task
 **Owner reviews and approves the FNR production package:**
-- `projects/face-not-recognized/script.md` (screenplay, 57.6 s)
+- `projects/face-not-recognized/script.md` (screenplay v2, 56.7 s)
 - `projects/face-not-recognized/bible.yaml` (Elise young/old, Theo, corridor, look)
 - `projects/face-not-recognized/storyboard.yaml` + `flow-prompts.md` (11 shots, copy-paste prompts)
 - `projects/face-not-recognized/PRODUCTION-GUIDE.md` (the owner's steps, Windows setup, voice, music)
@@ -38,6 +38,15 @@ Then Claude (on the owner's PC): `import-clips` → frame QC → `make-sfx` → 
 - 2026-09-24 · **Tested (free):** selftest 16/16 PASS; **dress rehearsal of the real FNR storyboard** with
   dummy clips/voices/music: 57.6 s, 1080x1920, A/V in sync, 10 caption cues, 4 interface overlays
   checked by eye, no voice overlaps after fixing N07/N08 timing, cover text fits.
+
+- 2026-09-24 · **Story v2 (owner's continuity notes):** the lens fails intermittently (weak → stutters →
+  drops out in the mirror → flickers back → dies when Theo sees her); the mirror sequence follows the
+  lens (ring on = young, ring off = truth, same framing for S05/S06); the lens is replaced on camera in
+  S10 (the ring powers on) before she is young again in S11; biometric rule shown with interface text
+  ("Paired lens: not detected" → "Lens paired ✓") + Theo's line. Bible `world_rules` added; new SFX
+  `lens_boot`. Prompt sheet regenerated (11 shots, all Fast, ≈ 300 credits).
+- 2026-09-24 · **Re-tested (free):** selftest 16/16 PASS; FNR v2 dress rehearsal: 56.7 s, 1080x1920,
+  A/V in sync, 10 caption cues, 5 overlays incl. the 2-line "Lens paired" card checked by eye, no voice overlaps.
 
 ## Integration test status
 | Integration | Status |

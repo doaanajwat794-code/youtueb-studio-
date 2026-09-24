@@ -62,10 +62,29 @@ characters:
       lean. He wears a navy-blue wool overcoat over a grey crew-neck sweater and carries a small
       white rounded contact-lens case.
 
+world_rules:     # v2 (2026-09-24): the logic every shot must respect
+  lens_on: >-
+    The AR contact lenses show Elise her 37-year-old face in every mirror and reflection. A thin
+    electric-blue ring glowing around her iris means the lens is on. Other people and cameras are
+    not affected: they see her real, 67-year-old face.
+  lens_malfunction: >-
+    Tonight the lenses fail INTERMITTENTLY: the ring glows weakly (S01), stutters off and on (S04),
+    drops out for one second (S06, when she sees the truth), and flickers back (S07). Complete
+    failure only when Theo sees her (S09).
+  biometrics: >-
+    Her phone and door were enrolled with her 37-year-old face and trust her through the paired
+    lens (the lens vouches for her). Their cameras always see her real face. When the lens fails,
+    pairing fails ("Paired lens: not detected"), so the real 67-year-old face is compared with the
+    old record and rejected; the door even estimates her real age (67).
+  restoration: >-
+    Theo brings new lenses. She puts one in (S10), and the blue ring powers on and turns steady. From
+    her point of view she is 37 again (S11), and her devices re-pair ("Lens paired ✓") and let her in.
+
 props:
   lens_glow: >-
     a very thin, softly glowing electric-blue ring around the outer edge of the iris, like a
     delicate digital halo on a contact lens
+  lens_case: a small white rounded contact-lens case holding two clear lenses with a faint blue rim
   phone: a plain black smartphone with a blank bright screen facing Elise (screen content not visible)
 
 locations:

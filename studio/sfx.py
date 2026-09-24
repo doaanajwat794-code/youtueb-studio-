@@ -21,6 +21,8 @@ RECIPES = {
     "door_click.wav": ("0.8*(random(0)-0.5)*exp(-120*t)+0.4*sin(2*PI*140*t)*exp(-40*t)", 0.15),
     # electrical crackle for the lens flicker
     "lens_crackle.wav": ("0.5*(random(0)-0.5)*gt(sin(2*PI*23*t),0.6)*exp(-1.5*t)+0.05*sin(2*PI*7000*t)*exp(-2*t)", 1.4),
+    # rising digital hum as a new lens powers on
+    "lens_boot.wav": ("0.3*sin(2*PI*(260*t+450*t*t))*min(1,t*3)*exp(-0.8*t)+0.08*sin(2*PI*3520*t)*gt(t,1.1)*exp(-4*(t-1.1))", 1.8),
     # elevator arrival ding
     "elevator_ding.wav": ("0.35*(sin(2*PI*880*t)+0.6*sin(2*PI*1320*t))*exp(-2.2*t)", 1.6),
     # low cinematic hit for the reveal (the Twist Villa sting)
