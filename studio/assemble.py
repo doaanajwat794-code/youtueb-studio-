@@ -113,12 +113,14 @@ def assemble(slug: str) -> dict:
         if shot.get("_native"):
             inputs += ["-i", str(shot["_native"])]
             sfx_labels.append((len(inputs) // 2, spans[shot["id"]][0], float(shot["native_audio_db"])))
-        for name in shot.get("sfx", []) or []:
-            wav = media / "audio" / "sfx" / name
+        for item in shot.get("sfx", []) or []:
+            spec = item if isinstance(item, dict) else {"file": item}
+            wav = media / "audio" / "sfx" / spec["file"]
             if not wav.exists():
                 raise AssemblyError(f"Missing SFX {wav}")
             inputs += ["-i", str(wav)]
-            sfx_labels.append((len(inputs) // 2, spans[shot["id"]][0], -8.0))
+            sfx_labels.append((len(inputs) // 2, spans[shot["id"]][0] + float(spec.get("offset", 0)),
+                               float(spec.get("gain_db", -8))))
 
     # 4. build the mix: voice bus, music bus ducked under voice, sfx bus, loudness-normalised master
     parts: list[str] = []
@@ -156,12 +158,19 @@ def assemble(slug: str) -> dict:
     srt = media / "final.en.srt"
     n_cues = build_srt(cues, srt, per_line=int(subs.get("max_chars_per_line", 42)))
     video_args = ["-map", "0:v", "-c:v", "copy"]
+    filters = []
     if subs.get("burn_in") and n_cues:
         style = (f"FontName={subs.get('font', 'DejaVu Sans')},FontSize={subs.get('font_size', 10)},"
                  f"PrimaryColour=&H00FFFFFF,OutlineColour=&H00000000,BorderStyle=1,Outline=2,Shadow=1,"
                  f"Bold=1,Alignment=2,MarginV={subs.get('margin_v', 70)}")
-        escaped = str(srt.resolve()).replace("\\", "/").replace(":", "\\:").replace("'", "\\'")
-        video_args = ["-filter_complex", f"[0:v]subtitles='{escaped}':force_style='{style}'[vout]",
+        filters.append(f"subtitles='{_ff_path(srt)}':force_style='{style}'")
+    overlays = board.get("overlays", [])
+    if overlays:
+        ass = work / "overlays.ass"
+        write_overlays(overlays, spans, ass, render, subs.get("font", "DejaVu Sans"))
+        filters.append(f"ass='{_ff_path(ass)}'")
+    if filters:
+        video_args = ["-filter_complex", f"[0:v]{','.join(filters)}[vout]",
                       "-map", "[vout]", "-c:v", render["video_codec"], "-crf", str(render["crf"]),
                       "-preset", render["preset"], "-pix_fmt", render["pixel_format"]]
         mixed = work / "mix.wav"
@@ -183,6 +192,47 @@ def assemble(slug: str) -> dict:
     if not report["ok"]:
         raise AssemblyError(f"Export failed checks: {json.dumps(report, indent=2)}")
     return report
+
+
+def _ff_path(path: Path) -> str:
+    return str(path.resolve()).replace("\\", "/").replace(":", "\\:").replace("'", "\\'")
+
+
+OVERLAY_STYLES = {  # ASS colours are &HAABBGGRR
+    "alert": "&H00FFFFFF,&H00FFFFFF,&H003030D0,&H40000000",    # white text on red box
+    "success": "&H00FFFFFF,&H00FFFFFF,&H0050A040,&H40000000",  # white text on green box
+    "info": "&H00FFFFFF,&H00FFFFFF,&H00302820,&H40000000",     # white text on dark box
+}
+
+
+def _ass_time(t: float) -> str:
+    cs = int(round(t * 100))
+    h, cs = divmod(cs, 360000)
+    m, cs = divmod(cs, 6000)
+    s, cs = divmod(cs, 100)
+    return f"{h}:{m:02}:{s:02}.{cs:02}"
+
+
+def write_overlays(overlays: list[dict], spans: dict, out: Path, render: dict, font: str) -> None:
+    """Precise interface text (phone/door screens) as boxed labels, e.g.
+    {text: "Face not recognized", style: alert, at_shot: S01, offset: 1.0, duration: 3.0, y: 0.30}"""
+    W, H = render["width"], render["height"]
+    head = ["[Script Info]", "ScriptType: v4.00+", f"PlayResX: {W}", f"PlayResY: {H}", "WrapStyle: 0", "",
+            "[V4+ Styles]",
+            "Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, "
+            "Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, "
+            "Alignment, MarginL, MarginR, MarginV, Encoding"]
+    for name, colours in OVERLAY_STYLES.items():
+        head.append(f"Style: {name},{font},58,{colours},1,0,0,0,100,100,1,0,3,18,0,5,40,40,0,1")
+    head += ["", "[Events]", "Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text"]
+    for o in overlays:
+        start = spans[o["at_shot"]][0] + float(o.get("offset", 0))
+        end = start + float(o.get("duration", 2.5))
+        x, y = int(W * float(o.get("x", 0.5))), int(H * float(o.get("y", 0.30)))
+        text = str(o["text"]).replace("\n", "\\N")
+        head.append(f"Dialogue: 0,{_ass_time(start)},{_ass_time(end)},{o.get('style', 'info')},,0,0,0,,"
+                    f"{{\\pos({x},{y})\\fad(120,180)}}{text}")
+    out.write_text("\n".join(head) + "\n", encoding="utf-8")
 
 
 def verify(final: Path, expected: float, render: dict) -> dict:

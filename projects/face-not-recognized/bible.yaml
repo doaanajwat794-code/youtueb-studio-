@@ -1,0 +1,80 @@
+# Face Not Recognized — story bible (continuity locks)
+# visual_lock text is pasted VERBATIM into every Flow prompt by `python -m studio flow-prompts`.
+# Never paraphrase it. Changing a lock means regenerating every shot that uses it.
+
+look:
+  style_lock: >-
+    Photorealistic cinematic live-action footage, shot on a 35mm anamorphic lens, shallow depth of
+    field, teal-and-amber colour grade, soft natural film grain, low-key night lighting motivated by
+    warm brass wall sconces with cool blue shadows, natural realistic human movement and subtle
+    facial expressions, smooth steady camera, 24 frames per second.
+  negative: >-
+    distorted or melting faces, asymmetrical eyes, extra fingers or limbs, unnatural or jerky
+    movement, shaky handheld camera, readable text, letters, numbers, subtitles, logos, watermarks,
+    sudden changes to the character's face, hair or clothing, cartoon, CGI or plastic look
+
+narrator:                       # Elise tells the story (voice-narrator.txt)
+  voice_direction: >-
+    Woman, warm and intimate, quiet and slightly unsettled, measured pace with short pauses,
+    neutral British or American English. Not dramatic, not breathy.
+
+characters:
+  - id: elise_young
+    name: Elise (as she sees herself, 37)
+    prompt_name: Elise
+    ref_views: [front portrait, three-quarter view]
+    visual_lock: >-
+      Elise, a 37-year-old woman, oval face with high cheekbones, a straight nose with a slight bump
+      at the bridge, a full lower lip, a small dark mole just above the left corner of her upper lip,
+      grey-green eyes, arched dark-brown eyebrows, fair skin with light freckles across the nose.
+      Dark chestnut-brown shoulder-length hair with soft natural waves, parted on the left.
+      Slim build, 168 cm tall. She wears a cream chunky cable-knit turtleneck sweater, charcoal-grey
+      wool trousers, small silver hoop earrings and a thin gold wedding band on her left ring finger.
+
+  - id: elise_old
+    name: Elise (her true age, 67)
+    prompt_name: Elise
+    ref_views: [front portrait]
+    ref_note: >-
+      Must look like the SAME woman as FNR_REF_ELISE_YOUNG_FRONT.png, thirty years older. If your
+      Flow image tool lets you add a reference image, add the young Elise portrait and paste the
+      prompt below. If it doesn't, use the prompt alone and compare side by side: same mole,
+      same nose, same eyes, same hair parting, same sweater.
+    visual_lock: >-
+      Elise at 67, the same woman thirty years older: the same oval face and high cheekbones, the
+      same straight nose with a slight bump at the bridge, the same small dark mole just above the
+      left corner of her upper lip, the same grey-green eyes, now with fine wrinkles around the eyes
+      and mouth, a softer jawline, thinner arched eyebrows, fair skin with faded freckles and light
+      age spots. Silver-white shoulder-length hair with soft natural waves, parted on the left.
+      Slim build, slightly softer posture. She wears the identical outfit: a cream chunky cable-knit
+      turtleneck sweater, charcoal-grey wool trousers, small silver hoop earrings and a thin gold
+      wedding band on her left ring finger.
+
+  - id: theo
+    name: Theo (Elise's son, 42)
+    prompt_name: Theo
+    ref_views: [front portrait]
+    voice_direction: >-
+      Man, early forties, soft and tired, very gentle, loving, as if he has said this many times.
+    visual_lock: >-
+      Theo, Elise's 42-year-old son: the same grey-green eyes and the same straight nose as his
+      mother, short dark-brown hair greying at the temples, a neatly trimmed short beard, tall and
+      lean. He wears a navy-blue wool overcoat over a grey crew-neck sweater and carries a small
+      white rounded contact-lens case.
+
+props:
+  lens_glow: >-
+    a very thin, softly glowing electric-blue ring around the outer edge of the iris, like a
+    delicate digital halo on a contact lens
+  phone: a plain black smartphone with a blank bright screen facing Elise (screen content not visible)
+
+locations:
+  - id: corridor
+    name: Elise's apartment corridor, night
+    visual_lock: >-
+      A quiet modern apartment-building corridor at night on an upper floor: teal-grey plaster
+      walls, warm brass wall sconces casting soft amber pools of light, charcoal carpet, a dark
+      walnut apartment door with a matte black handle and no visible number, a slim black
+      facial-recognition panel mounted at eye level beside the door with a round camera lens
+      encircled by a thin light ring and a small blank dark-glass screen below it, and at the far
+      end a brushed-steel elevator door next to a full-height mirrored wall panel.

@@ -18,13 +18,21 @@ anywhere else. Format: `YYYY-MM-DD · decision · (file updated)`.
 - 2026-09-24 · **Budget:** extra-spend target $0 per Short; safety caps $5/Short and $20/month for any separately approved paid call. Supersedes the $45/$150 caps. (config/budget.yaml)
 - 2026-09-24 · **Clip naming:** `CODE_SNN_vN.mp4` (e.g. `FNR_S03_v2.mp4`); references `CODE_REF_<NAME>_<VIEW>.png`; narration `CODE_VOICE_vN.*`. (SKILL.md, references/flow-handoff.md)
 
+- 2026-09-24 · **First Short = "Face Not Recognized"** (`projects/face-not-recognized/`, code FNR) is the *active* project, **not** a permanent story template; future Shorts get new original stories unless the owner asks. (CLAUDE.md, project.yaml)
+- 2026-09-24 · **Veo 3.1 Fast for ALL shots** in Google Flow; Quality only if the owner approves a change. (config/providers.yaml → video.primary.default_model, storyboard tiers)
+- 2026-09-24 · **Clip delivery = local project folder** `media/<CODE>/incoming/` through Claude Code on the owner's Windows 11 PC; never ask the owner to make Drive files public. (SKILL.md, references/windows-local-setup.md)
+- 2026-09-24 · **Voice = Google voice only if free** (Google Vids AI voiceover; Gemini free tier only with the owner's OK; never Cloud TTS billing); otherwise the owner's own recording. (config/providers.yaml → narration_and_dialogue)
+- 2026-09-24 · **Additional paid API spending: NOT approved.** Budget caps set to $0 so the code refuses any paid call. Supersedes the $5/$20 safety caps. (config/budget.yaml)
+- 2026-09-24 · **Public YouTube publishing: NOT approved.** Private only. (config/budget.yaml, studio/youtube.py)
+- 2026-09-24 · Owner confirmed: **Google Flow = active paid subscription, primary video tool; ShortsFaceless = 30 videos/month**; prefer existing subscriptions; the owner generates clips manually. (config/providers.yaml → owner_subscriptions)
+
 ## Pending owner approval
-- Choice of the first Short idea (state/ideas-backlog.md), recommended #1 "Face Not Recognized"
-- Hand-off method: Google Drive shared folder (needs a free GOOGLE_API_KEY) or Claude Code on your computer
-- Narration voice: A/B test on the first Short (ShortsFaceless voice vs free Google voice vs your own voice)
-- Flow model mix: all Fast (≈300 credits) or hook + twist on Quality (≈540 credits)
+- **FNR production package:** screenplay (`script.md`), character references (`bible.yaml`), storyboard (`storyboard.yaml`), Flow prompts (`flow-prompts.md`), packaging draft (`metadata.yaml`)
+- Flow account check (portrait with Fast, Ingredients to Video, image generation, credits, download sizes): PRODUCTION-GUIDE step 0
+- Voice route: Google Vids (preferred, unverified for the account) vs Gemini free tier vs own recording
 - Shorts framework "60 Seconds, One Twist" (config/storytelling-framework.md)
 
 ## Superseded
+- 2026-09-24 · ~~$5/Short and $20/month safety caps~~ → $0 (paid spending not approved).
 - 2026-09-24 · ~~Veo 3.1 via the Gemini API for footage (≈ $24–26.50 per Short)~~ → replaced by Google Flow (manual).
 - 2026-09-24 · ~~Caps $45 per Short / $150 per month~~ → replaced by the $0 target and $5/$20 safety caps.

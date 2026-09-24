@@ -1,5 +1,7 @@
 # Large media — keep in Google Drive / cloud storage, never in git
-media/
+media/**
+!media/**/
+!media/*/incoming/README.txt
 *.mp4
 *.mov
 *.wav

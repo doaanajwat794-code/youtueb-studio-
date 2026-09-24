@@ -29,15 +29,17 @@ you say "use S03 v1".
 ## 4. Hand the clips to Claude (choose one)
 | Option | How | Notes |
 |---|---|---|
-| **A. Google Drive folder** (recommended in the Claude app/web) | Upload all clips to a Drive folder, e.g. `Twist Villa/FNR/clips` → Share → *Anyone with the link: Viewer* → paste the folder link in the chat. Claude runs `fetch-drive`. | Needs a free `GOOGLE_API_KEY` with the Drive API enabled (one-time setup). Set the folder back to *Restricted* afterwards. **UNTESTED until the first real hand-off.** |
-| **B. Claude Code on your computer** | Put the clips in `media/<slug>/incoming/` inside the project folder. | Most reliable: no upload, no key. |
+| **A. Local folder (owner's approved method)** | Claude Code on your Windows PC; drop files in `media/<CODE>/incoming/` (see `windows-local-setup.md`). | Most reliable: no upload, no key, nothing public. |
+| B. Google Drive folder (**not used**: the owner declined public sharing) | Upload all clips to a Drive folder, e.g. `Twist Villa/FNR/clips` → Share → *Anyone with the link: Viewer* → paste the folder link in the chat. Claude runs `fetch-drive`. | Needs a free `GOOGLE_API_KEY` with the Drive API enabled (one-time setup). Set the folder back to *Restricted* afterwards. **UNTESTED until the first real hand-off.** |
 | C. Attach in the chat | Drag the files into the message. | Works only if the app accepts video attachments; large clips may fail. |
 
-## 5. Narration (first Short: choose your permanent voice)
-- **Option 1: ShortsFaceless voice.** Paste the text from `projects/<slug>/narration.txt` as a
+## 5. Narration (Google voice only if free)
+- **Option 0: Google Vids AI voiceover (preferred).** Paste `voice-<speaker>.txt`, download,
+  name it `CODE_VOICE_<SPEAKER>_v1.mp4`, and put it in `incoming/`. It's imported automatically.
+- **Option 1: ShortsFaceless voice.** Paste the text from `projects/<slug>/voice-<speaker>.txt` as a
   Custom Script, choose the voice, **turn off background music if possible**, download, and
-  hand it over like the clips. Name it `CODE_VOICE_v1.mp4`. (Uses 1 of your 30 monthly videos.)
-- **Option 2: Google voice (free tier).** Needs a free Google AI Studio key; Claude generates it.
+  hand it over like the clips. Name it `CODE_VOICE_<SPEAKER>_v1.mp4`. (Uses 1 of your 30 monthly videos.)
+- **Option 2: Gemini free tier.** Needs a free Google AI Studio key (no billing) and the owner's OK; Claude generates it.
 - **Option 3: your own voice.** Record the text on your phone, with a short pause between lines.
 
 Claude then splits the recording into lines and syncs it to the shots (`import-voice`).

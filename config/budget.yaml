@@ -8,10 +8,10 @@ additional_spend_target_usd_per_short: 0
 subscriptions_in_use: [Google Flow, ShortsFaceless (30 videos/month)]
 
 caps:
-  per_video_usd: 5          # safety net: max extra API spend per Short, only with approval
-  per_month_usd: 20         # safety net: max extra API spend per month, only with approval
+  per_video_usd: 0          # additional paid API spending NOT approved (owner, 2026-09-24)
+  per_month_usd: 0          # raise only when the owner explicitly approves a specific cost
   pilot_usd: 0              # pilots happen in Flow (subscription credits)
-  single_call_usd: 5        # any single API call estimated above this is refused (safety net)
+  single_call_usd: 0        # every paid call is refused while spending is not approved
 
 approval:
   required_for_every_paid_stage: true   # an approval must be recorded per stage

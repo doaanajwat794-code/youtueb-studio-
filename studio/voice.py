@@ -24,9 +24,12 @@ def _silences(src: Path, noise_db: float, min_len: float) -> list[tuple[float, f
     return list(zip(starts, ends))
 
 
-def import_narration(slug: str, src: Path, noise_db: float = -35, min_len: float = 0.3) -> list[str]:
+def import_narration(slug: str, src: Path, noise_db: float = -35, min_len: float = 0.3,
+                     speaker: str | None = None) -> list[str]:
+    """Split `src` into the storyboard lines of `speaker` (all lines if None), in storyboard order."""
     board = config.load_yaml(config.project_dir(slug) / "storyboard.yaml")
-    lines = [l for l in board.get("audio", {}).get("lines", [])]
+    lines = [l for l in board.get("audio", {}).get("lines", [])
+             if speaker is None or l.get("speaker", "narrator") == speaker]
     n = len(lines)
     if n == 0:
         raise SystemExit("Storyboard has no narration lines")

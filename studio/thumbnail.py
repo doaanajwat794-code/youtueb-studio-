@@ -31,13 +31,16 @@ def make_thumbnail(slug: str, at: float, text: str = "") -> Path:
     if text:
         words = text.upper().split()[:3]
         draw = ImageDraw.Draw(img)
-        font = _font(150)
+        size = 150
+        while size > 40 and max(draw.textlength(w, font=_font(size)) for w in words) > render["width"] * 0.88:
+            size -= 6   # shrink until the widest word fits with margins
+        font = _font(size)
         y = int(render["height"] * 0.16)
         for word in words:
             w = draw.textlength(word, font=font)
             draw.text(((render["width"] - w) / 2, y), word, font=font, fill=(255, 255, 255),
                       stroke_width=10, stroke_fill=(0, 0, 0))
-            y += 170
+            y += int(size * 1.13)
     out = media / "thumbnail.jpg"
     img.save(out, quality=92)
     return out

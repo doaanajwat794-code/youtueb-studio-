@@ -21,6 +21,10 @@ from .produce import compose_shot_prompt
 
 CLIP_RE = re.compile(r"^(?P<code>[A-Za-z0-9]+)[_-]S(?P<shot>\d{2})(?:[_-]v(?P<ver>\d+))?\.(mp4|mov|webm|m4v)$",
                      re.IGNORECASE)
+MUSIC_RE = re.compile(r"^(?P<code>[A-Za-z0-9]+)[_-]MUSIC[_-](?P<cue>M\d{2})\.(mp3|wav|m4a|aac|mp4|ogg|flac)$",
+                      re.IGNORECASE)
+VOICE_RE = re.compile(r"^(?P<code>[A-Za-z0-9]+)[_-]VOICE[_-](?P<speaker>[A-Za-z]+)(?:[_-]v(?P<ver>\d+))?"
+                      r"\.(mp3|wav|m4a|aac|mp4|ogg|flac|webm|mov)$", re.IGNORECASE)
 AUDIO_RULE = ("Audio: natural ambient sound and diegetic sound effects only. "
               "No music, no narration, no dialogue, no voices.")
 TEXT_RULE = "No on-screen text, no subtitles, no captions, no logos, no watermarks."
@@ -42,9 +46,12 @@ def _flow_cfg() -> dict:
 
 def flow_prompt(shot: dict, bible: dict) -> str:
     """One copy-paste prompt for Flow: story prompt + locks + vertical framing + audio/text rules."""
-    return " ".join([compose_shot_prompt(shot, bible),
-                     "Vertical 9:16 composition, subject in the upper two-thirds of the frame.",
-                     AUDIO_RULE, TEXT_RULE])
+    parts = [compose_shot_prompt(shot, bible),
+             "Vertical 9:16 composition, subject in the upper two-thirds of the frame.",
+             AUDIO_RULE, TEXT_RULE]
+    if bible.get("look", {}).get("negative"):
+        parts.append(f"Avoid: {bible['look']['negative']}.")
+    return " ".join(parts)
 
 
 def credits_estimate(shots: list[dict]) -> dict:
@@ -71,14 +78,17 @@ def write_prompt_sheet(slug: str) -> Path:
              "and run `python -m studio flow-prompts " + slug + "` again.", "",
              "## Flow settings for every clip",
              "- **Aspect ratio:** 9:16 (portrait) · **Duration:** 8 s · **Outputs per prompt:** 1",
-             "- **Model:** *Quality* for ⭐ hero shots, *Fast* for all others",
+             f"- **Model:** {_model_line(shots)}",
              "- **Download:** the highest resolution offered (1080p if available)",
              f"- **File name:** `{code}_S<NN>_v<take>.mp4`, e.g. `{code}_S01_v1.mp4` (rename after download)",
+             "- **Not every Flow account has every feature.** If a mode or setting named here isn't "
+             "available to you, tell Claude before generating; the prompts will be adapted.",
              "",
              f"**Credit estimate:** {est['generations']['quality']} Quality + {est['generations']['fast']} Fast shots "
              f"≈ **{est['credits']} credits** including {est['retake_rate']:.0%} retakes "
              f"(Quality {est['per_generation']['quality']}, Fast {est['per_generation']['fast']} credits each, "
-             "web-reported; check the credit number Flow shows before you click).", ""]
+             "web-reported; check the credit number Flow shows before you click). Reference images may cost "
+             "extra credits; check in Flow.", ""]
 
     chars = bible.get("characters", [])
     locs = bible.get("locations", [])
@@ -86,11 +96,14 @@ def write_prompt_sheet(slug: str) -> Path:
         lines += ["## Step 1: Reference images (make once, reuse as *Ingredients* in every clip)", ""]
         style = bible.get("look", {}).get("style_lock", "")
         for c in chars:
+            if c.get("ref_note"):
+                lines += [f"> **{c['name']}:** {c['ref_note']}", ""]
             for view in c.get("ref_views", ["front portrait", "three-quarter view", "full body"]):
                 fname = f"{code}_REF_{c['id'].upper()}_{view.split()[0].upper()}.png"
                 lines += [f"**{fname}**: {c['name']}, {view}", "```",
-                          f"Character reference photo, {view}, plain neutral grey background, soft even light. "
-                          f"{c['visual_lock']} {style}", "```", ""]
+                          f"Photorealistic character reference photo, {view}, plain neutral grey studio "
+                          f"background, soft even light, sharp focus on the face, natural skin texture. "
+                          f"{c['visual_lock']}", "```", ""]
         for l in locs:
             fname = f"{code}_REF_{l['id'].upper()}.png"
             lines += [f"**{fname}**: {l['name']}", "```",
@@ -99,9 +112,10 @@ def write_prompt_sheet(slug: str) -> Path:
     lines += ["## Step 2: Clips (generate in this order)", ""]
     t = 0.0
     for shot in shots:
-        star = "⭐ Quality" if shot.get("tier") == "hero" else "Fast"
+        star = "⭐ Veo 3.1 Quality" if shot.get("tier") == "hero" else "Veo 3.1 Fast"
         mode = shot.get("flow_mode", "Ingredients to Video" if shot.get("characters") else "Text to Video")
-        ingredients = [f"{code}_REF_{c.upper()}_FRONT.png" for c in shot.get("characters", [])]
+        ingredients = [f"{code}_REF_{c.upper()}_FRONT.png" for c in shot.get("characters", [])
+                       if c not in shot.get("no_ingredient", [])]
         if shot.get("location"):
             ingredients.append(f"{code}_REF_{shot['location'].upper()}.png")
         lines += [f"### {shot['id']} · {shot.get('beat', '').upper()} · {t:.1f}–{t + float(shot['seconds']):.1f} s "
@@ -116,10 +130,22 @@ def write_prompt_sheet(slug: str) -> Path:
         t += float(shot["seconds"])
     out = pdir / "flow-prompts.md"
     out.write_text("\n".join(lines), encoding="utf-8")
-    # narration script for ShortsFaceless / self-recording: one line per paragraph = one pause
-    narration = [str(l["text"]).strip() for l in board.get("audio", {}).get("lines", [])]
-    (pdir / "narration.txt").write_text("\n\n".join(narration) + "\n", encoding="utf-8")
+    # voice scripts (one per speaker): one paragraph per line = one pause when recorded
+    by_speaker: dict[str, list[str]] = {}
+    for l in board.get("audio", {}).get("lines", []):
+        by_speaker.setdefault(l.get("speaker", "narrator"), []).append(str(l["text"]).strip())
+    for speaker, texts in by_speaker.items():
+        (pdir / f"voice-{speaker}.txt").write_text("\n\n".join(texts) + "\n", encoding="utf-8")
+    media = config.media_dir(slug)
+    for sub in ("incoming", "audio/lines", "audio/music", "audio/sfx"):
+        (media / sub).mkdir(parents=True, exist_ok=True)
     return out
+
+
+def _model_line(shots: list[dict]) -> str:
+    if all(s.get("tier", "standard") != "hero" for s in shots):
+        return "**Veo 3.1 Fast** for every shot (owner-approved; don't use Quality)"
+    return "*Quality* for ⭐ hero shots, *Fast* for all others"
 
 
 # ------------------------------------------------------------------ import
@@ -133,7 +159,10 @@ def import_clips(slug: str, src: Path, picks: dict[str, int] | None = None) -> l
     wanted = {s["id"]: s for s in board["shots"]}
     found: dict[str, dict[int, Path]] = {}
     report, skipped = [], []
+    report += _import_audio(slug, Path(src), code)
     for f in sorted(Path(src).rglob("*")):
+        if MUSIC_RE.match(f.name) or VOICE_RE.match(f.name):
+            continue
         m = CLIP_RE.match(f.name)
         if not f.is_file() or not m:
             if f.is_file():
@@ -183,6 +212,35 @@ def import_clips(slug: str, src: Path, picks: dict[str, int] | None = None) -> l
         report.append(f"IGNORED  clips for shots not in the storyboard: {', '.join(extra)}")
     if skipped:
         report.append(f"IGNORED  files not matching {code}_SNN_vN.mp4: {', '.join(skipped[:10])}")
+    return report
+
+
+def _import_audio(slug: str, src: Path, code: str) -> list[str]:
+    """Music (CODE_MUSIC_M01.mp3 → audio/music/M01.wav) and voice recordings
+    (CODE_VOICE_NARRATOR_v1.mp4 → split into the speaker's lines with import-voice)."""
+    from .media_tools import run
+    from .voice import import_narration
+
+    media = config.media_dir(slug)
+    report: list[str] = []
+    voices: dict[str, dict[int, Path]] = {}
+    for f in sorted(src.rglob("*")):
+        if not f.is_file():
+            continue
+        if (m := MUSIC_RE.match(f.name)) and m["code"].upper() == code:
+            dst = media / "audio" / "music" / f"{m['cue'].upper()}.wav"
+            dst.parent.mkdir(parents=True, exist_ok=True)
+            run(["-i", str(f), "-vn", "-ac", "2", "-ar", "48000", str(dst)])
+            report.append(f"MUSIC    {m['cue'].upper()}: {f.name} ({probe(dst)['duration']:.1f}s)")
+        elif (m := VOICE_RE.match(f.name)) and m["code"].upper() == code:
+            voices.setdefault(m["speaker"].lower(), {})[int(m["ver"] or 1)] = f
+    for speaker, takes in voices.items():
+        f = takes[max(takes)]
+        try:
+            lines = import_narration(slug, f, speaker=speaker)
+            report += [f"VOICE    {speaker}: {f.name} → {line}" for line in lines]
+        except SystemExit as exc:
+            report.append(f"WARN     voice {speaker}: {f.name}: {exc}")
     return report
 
 

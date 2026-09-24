@@ -19,8 +19,18 @@ creative approval, money, publishing).
   Claude's prompts. **No paid video API.** Veo API adapters stay disabled.
 - **ShortsFaceless:** use it only where it genuinely helps (currently: a narration voice option).
   **Never** use its animated still images as footage.
-- **Extra spend target: $0 per Short.** Any paid API call still needs a written estimate and
-  explicit approval (`studio/budget.py` enforces this).
+- **Extra spend: not approved.** Budget caps are $0, so the code refuses any paid API call until
+  the owner explicitly raises them.
+- **Flow model:** Veo 3.1 Fast for every shot (`tier: standard`). Quality needs owner approval.
+- **Delivery:** the owner puts files in `media/<CODE>/incoming/` on their Windows 11 PC and runs
+  Claude Code locally (`references/windows-local-setup.md`). On Windows use `py -m studio ...`.
+- **Voice:** Google voice only if free: Google Vids AI voiceover (owner exports), else the Gemini free
+  tier (only with the owner's OK), else the owner's own recording. Never enable Google Cloud TTS billing.
+- **Stories:** each Short gets a new original story; the current one is just the active project.
+
+## Active project
+`projects/face-not-recognized/` (code FNR, media `media/FNR/`). The owner's guide is
+`PRODUCTION-GUIDE.md`, the prompts are in `flow-prompts.md`, and the screenplay is `script.md`.
 
 ## 1. Load memory first (every session)
 Read `state/STATUS.md` → `config/channel.yaml` → `config/budget.yaml` → `state/decisions.md`,
@@ -36,7 +46,8 @@ then as needed: `config/storytelling-framework.md`, `state/ideas-backlog.md`,
 | Import + QC clips, narration, SFX, music, captions, edit, export | Hands over clips (Drive folder or local folder) and records/exports the voice if chosen |
 | Title, description, hashtags, cover, private upload | Approves publishing |
 
-Owner's step-by-step guide: `references/flow-handoff.md`.
+Owner's step-by-step guides: `references/flow-handoff.md`, `references/windows-local-setup.md`,
+and the per-project `PRODUCTION-GUIDE.md`.
 
 ## 3. Pipeline (one Short = `projects/<slug>/`)
 | # | Step | Command / file | Who |
@@ -47,11 +58,11 @@ Owner's step-by-step guide: `references/flow-handoff.md`.
 | 4 | Storyboard: 10–12 shots, timed narration | `storyboard.yaml` | Claude |
 | 5 | Flow prompt sheet + credit estimate | `python -m studio flow-prompts <slug>` → `flow-prompts.md` | Claude |
 | 6 | Generate refs + clips in Flow, download, rename | `CODE_REF_*.png`, `CODE_SNN_vN.mp4` | Owner |
-| 7 | Hand-off | `fetch-drive <slug> <folderId>` or files in `media/<slug>/incoming/` | Owner → Claude |
-| 8 | Import + QC | `python -m studio import-clips <slug> [--pick S03=v1]` | Claude |
-| 9 | Narration | `import-voice <slug> <file>` (ShortsFaceless/own voice) or Gemini TTS free tier | Claude |
-| 10 | Music + SFX | YouTube Audio Library → `audio/music/M01.wav`; Flow native audio (`native_audio_db`); library SFX | Claude (+ owner download if needed) |
-| 11 | Assemble + export | `python -m studio assemble <slug>` → `final.mp4` 1080x1920, burned captions, sync report | Claude |
+| 7 | Hand-off | files in `media/<CODE>/incoming/` (local Claude Code) | Owner → Claude |
+| 8 | Import + QC | `import-clips <slug> [--pick S03=v1]` (also imports `CODE_MUSIC_M01.*` and splits `CODE_VOICE_<SPEAKER>_vN.*`) | Claude |
+| 9 | Voices | Google Vids export (free), or `import-voice <slug> <file> --speaker narrator` | Owner → Claude |
+| 10 | Music + SFX | YouTube Audio Library tracks; Flow native audio (`native_audio_db`); `make-sfx <slug>` (original, free) | Claude |
+| 11 | Assemble + export | `assemble <slug>` → `final.mp4` 1080x1920, burned captions + interface `overlays`, sync report | Claude |
 | 12 | Packaging | `metadata.yaml`; `python -m studio thumbnail <slug> --at 2.0 --text "..."` | Claude → owner approves |
 | 13 | Private upload | `python -m studio upload <slug>` (needs YouTube OAuth), or the owner uploads the MP4 manually | Owner decides on publishing |
 

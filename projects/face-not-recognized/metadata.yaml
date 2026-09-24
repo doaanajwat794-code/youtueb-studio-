@@ -1,0 +1,22 @@
+# Face Not Recognized — YouTube Short packaging (DRAFT → owner approval → PRIVATE upload only)
+title: "My Phone Stopped Recognizing My Face"      # 36 characters; honest curiosity gap
+title_alternatives:
+  - "Face Not Recognized"
+  - "The Door Said I Was 67"
+description: |-
+  Her phone, her front door, and then the mirror all stopped recognizing her. #Shorts
+
+  An original Twist Villa story about technology, memory, and the face we choose to see.
+  Made with AI tools (Google Flow). Original story, script and edit by Twist Villa.
+
+  Music: (track title and artist, YouTube Audio Library)
+
+  #SciFi #PlotTwist #Mystery #AIFilm
+tags: [shorts, sci-fi short, plot twist, psychological thriller, mystery, AI film, augmented reality, twist ending]
+category_id: 24                  # Entertainment
+contains_synthetic_media: true   # realistic AI humans → YouTube "altered or synthetic" disclosure ON
+cover:
+  frame_at_seconds: 1.8          # red-lit close-up from the hook (caption-free frame)
+  text: "NOT RECOGNIZED"         # ≤ 3 words
+privacy: private                 # public publishing NOT approved
+approved: false

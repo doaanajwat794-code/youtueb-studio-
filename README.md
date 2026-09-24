@@ -10,6 +10,8 @@ the clips in Google Flow (your subscription) and hand them over → Claude edits
 music, sound and captions, and exports the 1080x1920 MP4. Your step-by-step guide:
 `.claude/skills/twist-villa-studio/references/flow-handoff.md`.
 
+**Active Short:** Face Not Recognized → `projects/face-not-recognized/PRODUCTION-GUIDE.md`
+
 ## How to use it (no coding needed)
 Open this repository in Claude Code and say what you want, for example:
 - "Continue where we left off."

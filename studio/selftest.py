@@ -57,6 +57,8 @@ def _make_inputs(root) -> None:
     config.save_yaml(root / SLUG / "storyboard.yaml", {
         "shots": shots,
         "audio": {"lines": lines, "music": [{"id": "M01", "start_shot": "S01", "end_shot": "S06"}]},
+        "overlays": [{"text": "✕  Face not recognized", "style": "alert", "at_shot": "S01", "offset": 0.5,
+                      "duration": 2.0}],
     })
     config.save_yaml(root / SLUG / "bible.yaml", {
         "look": {"style_lock": "Test look."},
@@ -76,8 +78,12 @@ def run_selftest() -> list[str]:
     tmp = config.MEDIA / "_selftest"
     shutil.rmtree(tmp, ignore_errors=True)
     tmp.mkdir(parents=True)
-    real = (config.PROJECTS, config.MEDIA, config.LEDGER)
+    real = (config.PROJECTS, config.MEDIA, config.LEDGER, config.budget)
     config.PROJECTS, config.MEDIA, config.LEDGER = tmp / "projects", tmp / "media", tmp / "ledger.csv"
+    # test the guard with small non-zero caps (the real config has $0 = spending not approved)
+    config.budget = lambda: {"caps": {"per_video_usd": 45, "per_month_usd": 150, "pilot_usd": 10,
+                                      "single_call_usd": 5},
+                             "approval": {"overrun_tolerance_pct": 10}, "estimation": {"retake_rate": 0.3}}
     results = []
     try:
         _make_inputs(config.PROJECTS)
@@ -107,6 +113,8 @@ def run_selftest() -> list[str]:
         results.append(_expect_refusal("duplicate shot rejected", lambda: assemble.assemble(SLUG)))
 
         # budget guard
+        results.append(f"{'PASS' if (config.media_dir(SLUG) / 'work' / 'overlays.ass').exists() else 'FAIL'}"
+                       "  interface text overlay burned in")
         results.append(_expect_refusal("spend without approval", lambda: budget.SpendGuard(SLUG, "footage")))
         est = budget.estimate(SLUG, "footage")
         results.append(f"INFO  footage estimate for 6 test shots: ${est['usd']} ({est['detail']})")
@@ -119,5 +127,5 @@ def run_selftest() -> list[str]:
         results.append(_expect_refusal("approval above per-video cap",
                                        lambda: budget.record_approval(SLUG, "audio", 10_000)))
     finally:
-        config.PROJECTS, config.MEDIA, config.LEDGER = real
+        config.PROJECTS, config.MEDIA, config.LEDGER, config.budget = real
     return results

@@ -11,7 +11,7 @@ Originality check (web search, 2026-09-24):
 
 ---
 
-### #1 · FACE NOT RECOGNIZED — psychological thriller · ⭐ recommended
+### #1 · FACE NOT RECOGNIZED — psychological thriller · ✅ SELECTED 2026-09-24 → IN PRODUCTION (`projects/face-not-recognized/`)
 **Logline:** When every device in her home suddenly stops recognising Elise's face, she
 discovers her AR contact lenses have been showing her a face that stopped being hers
 decades ago.
@@ -26,7 +26,7 @@ decades ago.
 - **Why it works:** Instant, relatable hook (face unlock fails), a visual clue, and an emotional twist about identity and technology. Easy to loop.
 - **Risk:** Keeping the same woman at two ages consistent. Mitigated by two locked reference sheets.
 
-### #2 · STILL HERE — grief-tech mystery
+### #2 · STILL HERE — grief-tech mystery · PITCHED (available for a future Short)
 **Logline:** A father visits his daughter every night, until he realises no one else can
 see him, because he is the AI copy of himself that she can't turn off.
 - **Hook:** A man stands in rain at a grave. The rain passes *through* his coat. *"I come here every night."*
@@ -37,7 +37,7 @@ see him, because he is the AI copy of himself that she can't turn off.
 - **Echo:** The screen goes dark and reflects her face, echoing the grave shot's reflective puddle.
 - **Why it works:** Grief tech is a real, current debate, and the emotion drives shares. **Risk:** melancholy may retain less than suspense; the rain + VFX shots are harder.
 
-### #3 · REGENERATE — meta sci-fi mystery
+### #3 · REGENERATE — meta sci-fi mystery · PITCHED (available for a future Short)
 **Logline:** A man notices his life has started skipping like a badly edited video: then he
 sees the cursor.
 - **Hook:** A man lifts a coffee cup, and it is full, then empty, then full again, in three hard jump cuts. *"It started with the coffee."*

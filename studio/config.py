@@ -40,6 +40,12 @@ def project_dir(slug: str) -> Path:
 
 
 def media_dir(slug: str) -> Path:
+    """media/<media_folder from project.yaml> (e.g. media/FNR), else media/<slug>."""
+    project = project_dir(slug) / "project.yaml"
+    if project.exists():
+        folder = load_yaml(project).get("media_folder")
+        if folder:
+            return MEDIA / folder
     return MEDIA / slug
 
 

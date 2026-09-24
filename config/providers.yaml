@@ -16,6 +16,7 @@ providers:
       clip_seconds: 8
       outputs_per_prompt: 1
       models: {hero: "Veo 3.1 Quality", standard: "Veo 3.1 Fast"}
+      default_model: "Veo 3.1 Fast"   # APPROVED 2026-09-24: Fast for ALL shots; Quality only with owner approval
       credits_per_generation: {quality: 100, fast: 20}   # web-reported 2026 (Fast may be 10 on Ultra); check in Flow
       monthly_credits_note: "Google AI Pro ≈ 1,000 credits/month, Ultra 12,500–25,000 (web-reported). Check your balance in Flow."
       consistency_tools: [Ingredients to Video (up to 3 reference images), Frames to Video, same prompt locks]
@@ -45,7 +46,13 @@ providers:
     status: UNTESTED
 
   narration_and_dialogue:
-    plan: "APPROVED 2026-09-24: $0 narration. First Short = A/B test of options 1 and 2, the owner picks the permanent voice."
+    plan: "APPROVED 2026-09-24: Google voice ONLY if free. Order: google_vids → gemini free tier (owner OK) → owner's recording / ShortsFaceless."
+    google_vids:
+      how: "Owner pastes voice-<speaker>.txt into a Google Vids AI voiceover, downloads, names CODE_VOICE_<SPEAKER>_v1.mp4; import-clips splits it"
+      cost: "0 (Google account; usage limits depend on the owner's plan)"
+      status: UNVERIFIED_FOR_OWNER_ACCOUNT
+    google_cloud_tts:
+      status: NOT_ALLOWED   # needs a billing account + card and charges above the free quota
     option_1_shortsfaceless:
       how: "Owner pastes narration.txt as a Custom Script in ShortsFaceless, picks the chosen voice, downloads; we run import-voice"
       cost: "1 of the owner's 30 monthly ShortsFaceless videos"

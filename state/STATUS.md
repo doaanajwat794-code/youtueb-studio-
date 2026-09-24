@@ -1,55 +1,61 @@
 # Twist Villa Studio — Status
 
 **Last updated:** 2026-09-24 · **Format:** YouTube Shorts (55–60 s, 9:16, 1080x1920)
-**Production model:** owner generates footage in **Google Flow** from Claude's prompts; ShortsFaceless
-only for narration (optional). Extra spend target **$0**.
-**Phase:** 1 — Pick the first Short · **Active Short:** none yet
+**Production model:** the owner generates clips in **Google Flow** (Veo 3.1 **Fast** for all shots) from
+Claude's prompts and delivers them to the **local folder** via Claude Code on their Windows 11 PC.
+Extra paid spending: **not approved** ($0 caps). Public publishing: **not approved**.
+
+**Active Short:** `projects/face-not-recognized/` · code **FNR** · media `media/FNR/`
+**Phase:** 2 — Pre-production package ready, **waiting for owner approval**
 
 ## Next pending task
-**Owner picks one of the 3 ideas** in `state/ideas-backlog.md` (recommended: #1 "Face Not Recognized"),
-and answers 3 quick choices:
-1. Flow model mix: all Fast (≈300 credits) or hook + twist on Quality (≈540 credits)?
-2. Hand-off: a Google Drive shared folder (needs a free `GOOGLE_API_KEY`) or Claude Code on your computer?
-3. Narration A/B: try the ShortsFaceless voice and/or the free Google voice and/or your own voice?
+**Owner reviews and approves the FNR production package:**
+- `projects/face-not-recognized/script.md` (screenplay, 57.6 s)
+- `projects/face-not-recognized/bible.yaml` (Elise young/old, Theo, corridor, look)
+- `projects/face-not-recognized/storyboard.yaml` + `flow-prompts.md` (11 shots, copy-paste prompts)
+- `projects/face-not-recognized/PRODUCTION-GUIDE.md` (the owner's steps, Windows setup, voice, music)
+- `projects/face-not-recognized/metadata.yaml` (title/description/hashtags draft)
 
-Then Claude does (all free), in order:
-1. `python -m studio new "<title>" --code XXX`, then the screenplay (`script.md`, 58 s, 110–130 words)
-2. Bible: character references (young/old looks), locations, look, voice → `bible.yaml`
-3. Storyboard: 11 shots with timed narration → `storyboard.yaml`
-4. `python -m studio flow-prompts <slug>` → `flow-prompts.md` (copy-paste prompts, file names, credits) + `narration.txt`
-5. Owner generates in Flow → hand-off → `import-clips` → narration → music/SFX → `assemble` → cover → private upload (with approval)
+Then the owner:
+1. Does the Flow account check (PRODUCTION-GUIDE step 0) and reports back.
+2. Sets up Claude Code on Windows 11 (one time) and clones the repo.
+3. Generates 5 reference images + 11 clips in Flow (≈ 300 Fast credits incl. retakes; check in Flow).
+4. Makes the voices in Google Vids (if free for the account) and downloads 2 YouTube Audio Library tracks.
+5. Puts everything in `media\FNR\incoming\` and tells Claude "Import my Face Not Recognized clips."
+
+Then Claude (on the owner's PC): `import-clips` → frame QC → `make-sfx` → `assemble` → verify 55–60 s
+→ `thumbnail` → final `metadata.yaml` for approval. **No upload/publish without approval.**
 
 ## Done
 - 2026-09-23 · Initial long-form setup. **Archived** 2026-09-24 → `archive/longform/`.
-- 2026-09-24 · Pivot to Shorts (config, Skill, framework, research, templates).
-- 2026-09-24 · Shorts research saved (`research/shorts-research.md`, `research/shorts-sources.yaml`).
-- 2026-09-24 · ShortsFaceless investigated (web only): no public API; animated stills, so not usable for footage.
-- 2026-09-24 · **Switched to the Google Flow manual workflow** (owner-approved): new commands
-  `flow-prompts`, `import-clips`, `fetch-drive`, `import-voice`, `thumbnail`; owner guide
-  `.claude/skills/twist-villa-studio/references/flow-handoff.md`; paid Veo API disabled.
-- 2026-09-24 · **Tested (free, offline selftest, 15 checks):** Flow prompt sheet, clip import (naming,
-  latest take chosen, stray files ignored), one-recording narration split into lines, 1080x1920
-  export, audio, A/V sync ±0.10 s, runtime, burned captions, cover image, duplicate-footage rejection,
-  budget-guard refusals.
+- 2026-09-24 · Pivot to Shorts; Shorts research; ShortsFaceless investigated (not for footage).
+- 2026-09-24 · Google Flow manual workflow (prompt sheet, clip importer, voice split, cover).
+- 2026-09-24 · **Owner's final choices saved** (Fast only, local delivery, free Google voice only, $0 extra
+  spend, private only). Project **Face Not Recognized** created: screenplay, bible, 11-shot storyboard,
+  Flow prompt sheet, voice scripts, owner guide, packaging draft.
+- 2026-09-24 · New tools: interface text overlays, timed SFX, original synthesised SFX (`make-sfx`),
+  music/voice auto-import by file name, speaker-aware voice split, auto-fitting cover text.
+- 2026-09-24 · **Tested (free):** selftest 16/16 PASS; **dress rehearsal of the real FNR storyboard** with
+  dummy clips/voices/music: 57.6 s, 1080x1920, A/V in sync, 10 caption cues, 4 interface overlays
+  checked by eye, no voice overlaps after fixing N07/N08 timing, cover text fits.
 
 ## Integration test status
 | Integration | Status |
 |---|---|
-| FFmpeg assembly (vertical), mix, burned captions, sync check, cover | ✅ TESTED with synthetic media |
-| Flow prompt sheet + clip import + narration split | ✅ TESTED with synthetic files · ⏳ first real Flow clips pending |
-| Google Drive folder download (`fetch-drive`) | ⏳ UNTESTED — needs a free GOOGLE_API_KEY + a shared folder |
-| ShortsFaceless voice export → import-voice | ⏳ UNTESTED — does the export allow music off? |
-| Gemini TTS free tier (narration option 2) | ⏳ UNTESTED — needs a free GEMINI_API_KEY |
-| YouTube private upload (OAuth) | ⏳ UNTESTED — or the owner uploads manually in YouTube Studio |
-| Veo API | ⛔ DISABLED by the owner (Flow is used instead) |
+| Assembly (vertical), mix, burned captions, overlays, SFX, sync check, cover | ✅ TESTED with synthetic media (FNR rehearsal) |
+| Flow prompt sheet · clip/music/voice import by file name · voice split | ✅ TESTED with synthetic files · ⏳ real Flow clips pending |
+| Google Flow features in the owner's account (portrait + Fast, Ingredients, credits, 1080p download) | ⏳ UNVERIFIED — owner checks (guide step 0) |
+| Google Vids AI voiceover (free Google voice) | ⏳ UNVERIFIED for the owner's account |
+| Gemini TTS free tier | ⏳ UNTESTED — only with the owner's OK and a free key |
+| Local run on Windows 11 (ffmpeg, caption font, hook) | ⏳ UNTESTED — first local session |
+| YouTube private upload (OAuth) | ⏳ UNTESTED — or the owner uploads manually as Private |
+| Veo API · Google Cloud TTS | ⛔ NOT USED (paid) |
 
 ## Blockers / environment notes
-- The cloud environment can't open youtube.com, Flow, or ShortsFaceless websites; it can reach
-  `www.googleapis.com` (Drive/YouTube APIs). The Drive *connector* can't transfer large videos,
-  hence the shared-folder + API-key method, or local Claude Code.
-- Container storage is temporary: copy finished Shorts to Google Drive.
-- Repo: the only branch, `claude/gracious-feynman-hiut4e`, is also the GitHub **default branch**,
-  so new sessions load these files without any merge.
+- The cloud session can't see the owner's PC; production with real clips happens in local Claude Code.
+- The cloud environment can't open youtube.com, Flow, Vids, or ShortsFaceless.
+- Repo: the only branch `claude/gracious-feynman-hiut4e` is also the GitHub **default branch**, so
+  `git clone` on the PC gets everything without a merge.
 
 ## Spend to date
-$0.00 (see `state/spend-ledger.csv`) · Safety caps $5/Short, $20/month (only with approval)
+$0.00 (see `state/spend-ledger.csv`) · Caps $0 (additional paid spending not approved)

@@ -18,6 +18,18 @@ technology and human identity.
 - Claude does research, ideas, scripts, storyboards, Flow prompts, import, edit, narration,
   SFX, music, captions, export, and the title/description/hashtags/cover.
 
+**Owner preferences (approved 2026-09-24, permanent):**
+- Google Flow (active paid subscription) is the primary video tool; the owner generates clips manually.
+- ShortsFaceless: active subscription, 30 videos/month. Prefer existing subscriptions.
+- Default Flow model: **Veo 3.1 Fast for every shot.** Quality only if the owner approves a change.
+- Clip delivery: the **local project folder** `media/<CODE>/incoming/` via Claude Code on the owner's
+  Windows 11 PC (the cloud session can't see the owner's PC). Never ask the owner to make Drive files public.
+- Voice: a Google voice **only if it costs nothing extra** (Google Vids AI voiceover first; Gemini
+  free tier only with the owner's OK; never Cloud TTS billing). Otherwise the owner records it.
+- **No additional paid APIs** and **no public publishing** without explicit approval.
+- **Active Short:** `projects/face-not-recognized/` (code FNR). It is *not* a template: every future
+  Short gets a new, original story unless the owner asks otherwise.
+
 **Long-form is archived** (`archive/longform/`). Never produce long-form, and never use
 the archived files as the main reference, unless the owner explicitly asks.
 

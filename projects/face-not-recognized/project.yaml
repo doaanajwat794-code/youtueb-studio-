@@ -1,0 +1,18 @@
+title: Face Not Recognized
+slug: face-not-recognized
+code: FNR
+media_folder: FNR               # clips go in media/FNR/incoming/
+status: active                  # the current active Short (not a permanent story template)
+stage: preproduction_awaiting_owner_approval
+created: '2026-09-24'
+target_seconds: 57.6
+format: {type: youtube_short, aspect_ratio: '9:16', resolution: 1080x1920, language: en}
+production:
+  video: Google Flow (owner's subscription), generated manually by the owner
+  flow_model: Veo 3.1 Fast for ALL shots (Quality not approved)
+  clip_delivery: local project folder media/FNR/incoming/ (Claude Code on the owner's computer)
+  voice: Google voice only if free (Google Vids AI voiceover first); otherwise the owner's own recording
+  music: YouTube Audio Library (free), 2 cues
+  sfx: Flow native ambience + original synthesised SFX (python -m studio make-sfx)
+  paid_api_spend: not approved
+  publishing: private only; public NOT approved

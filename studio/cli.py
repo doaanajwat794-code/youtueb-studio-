@@ -101,13 +101,19 @@ def cmd_import_voice(args):
 
     from .voice import import_narration
 
-    print("\n".join(import_narration(args.slug, Path(args.file), noise_db=args.noise)))
+    print("\n".join(import_narration(args.slug, Path(args.file), noise_db=args.noise, speaker=args.speaker)))
 
 
 def cmd_thumbnail(args):
     from .thumbnail import make_thumbnail
 
     print(f"Wrote {make_thumbnail(args.slug, args.at, args.text or '')}")
+
+
+def cmd_make_sfx(args):
+    from .sfx import make_sfx
+
+    print("Wrote: " + ", ".join(make_sfx(args.slug)))
 
 
 def cmd_selftest(_):
@@ -185,12 +191,16 @@ def main(argv=None):
     s.add_argument("slug")
     s.add_argument("file")
     s.add_argument("--noise", type=float, default=-35, help="silence threshold in dB")
+    s.add_argument("--speaker", help="only lines of this speaker, e.g. narrator or theo")
     s.set_defaults(fn=cmd_import_voice)
     s = sub.add_parser("thumbnail", help="vertical cover from a frame of final.mp4 (free)")
     s.add_argument("slug")
     s.add_argument("--at", type=float, default=1.0, help="time in seconds")
     s.add_argument("--text", help="up to 3 words")
     s.set_defaults(fn=cmd_thumbnail)
+    s = sub.add_parser("make-sfx", help="synthesise original UI/cinematic sound effects (free)")
+    s.add_argument("slug")
+    s.set_defaults(fn=cmd_make_sfx)
     sub.add_parser("selftest", help="offline end-to-end test with fake media (free)").set_defaults(fn=cmd_selftest)
     sub.add_parser("research-stats", help="fill research/sources.yaml from the YouTube API") \
         .set_defaults(fn=cmd_research_stats)

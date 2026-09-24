@@ -21,7 +21,8 @@ def compose_shot_prompt(shot: dict, bible: dict) -> str:
     if shot.get("camera"):
         parts.append(f"Camera: {shot['camera']}.")
     for cid in shot.get("characters", []):
-        parts.append(f"{chars[cid]['name']}: {chars[cid]['visual_lock']}")
+        c = chars[cid]
+        parts.append(f"{c.get('prompt_name', c['name'])}: {c['visual_lock']}")
     if shot.get("location"):
         loc = locs[shot["location"]]
         parts.append(f"Location — {loc['name']}: {loc['visual_lock']}")
