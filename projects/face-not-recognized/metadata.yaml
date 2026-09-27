@@ -16,7 +16,7 @@ tags: [shorts, sci-fi short, plot twist, psychological thriller, mystery, AI fil
 category_id: 24                  # Entertainment
 contains_synthetic_media: true   # realistic AI humans → YouTube "altered or synthetic" disclosure ON
 cover:
-  frame_at_seconds: 1.8          # red-lit close-up from the hook (caption-free frame)
+  frame_at_seconds: 2.2          # red-lit close-up from the hook (caption-free frame)
   text: "NOT RECOGNIZED"         # ≤ 3 words
 privacy: private                 # public publishing NOT approved
 approved: false
