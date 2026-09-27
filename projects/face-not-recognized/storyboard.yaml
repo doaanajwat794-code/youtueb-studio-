@@ -148,7 +148,7 @@ shots:
   - id: S08
     beat: arrival
     seconds: 6.0
-    trim_start: 0.3
+    trim_start: 0.2   # FNR_S08_v1 (2026-09-27): doors already open at 0 s, Theo walks toward her with the white case; passes her after 7 s (excluded)
     tier: standard
     characters: [elise_young, theo]
     location: corridor
@@ -160,7 +160,7 @@ shots:
       quiet sadness as he walks slowly toward her.
     native_audio_db: -18
     sfx:
-      - {file: elevator_ding.wav, offset: 0.4, gain_db: -10}
+      - {file: elevator_ding.wav, offset: 0.05, gain_db: -10}
 
   - id: S09
     beat: twist
