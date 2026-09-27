@@ -6,7 +6,7 @@ Claude's prompts and delivers them to the **local folder** via Claude Code on th
 Extra paid spending: **not approved** ($0 caps). Public publishing: **not approved**.
 
 **Active Short:** `projects/face-not-recognized/` · code **FNR** · media `media/FNR/`
-**Phase:** 3 — References in Flow. ✅ `FNR_REF_ELISE_YOUNG_FRONT.png` approved (2026-09-27: owner's 2nd Nano Banana 2 image, cropped by Claude to 3:4 head-and-shoulders without hands). ✅ Flow Character **"Elise Young"** saved (portrait + full body: cream cable-knit turtleneck, charcoal trousers, black ankle boots). **Next: Flow Character "Elise Old" (67) made from the young portrait.**
+**Phase:** 3 — References in Flow. ✅ `FNR_REF_ELISE_YOUNG_FRONT.png` approved (2026-09-27: owner's 2nd Nano Banana 2 image, cropped by Claude to 3:4 head-and-shoulders without hands). ✅ Flow Character **"Elise Young"** saved (portrait + full body: cream cable-knit turtleneck, charcoal trousers, black ankle boots). ✅ Elise Old portrait approved (2026-09-27, 2nd edit: neutral expression, deeper wrinkles, mole on her right side; white background/landscape frame accepted). **Next: Elise Old full body (Create body), then Theo.**
 
 ## Next pending task
 **Owner reviews and approves the FNR production package:**
