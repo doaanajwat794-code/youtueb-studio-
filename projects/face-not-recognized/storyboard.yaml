@@ -73,7 +73,7 @@ shots:
   - id: S04
     beat: lens_intermittent
     seconds: 4.5
-    trim_start: 0.3
+    trim_start: 1.5   # FNR_S04_v1 (2026-09-27): stutters 1.6-2.9 s, off 3.7-5.7 s (slow blink), back weak at 5.75 s with fingertip
     tier: standard
     characters: [elise_young]
     location: corridor
@@ -88,7 +88,8 @@ shots:
     flow_notes: "Add ONLY the Elise Young character as ingredient (no corridor image) so Veo stays on the eye. The ring must come BACK on at the end (weak and flickering), not stay off. If the eye looks distorted, try Text to Video with the same prompt."
     native_audio_db: -24
     sfx:
-      - {file: lens_crackle.wav, offset: 0.3, gain_db: -8}
+      - {file: lens_crackle.wav, offset: 0.1, gain_db: -8}
+      - {file: lens_crackle.wav, offset: 4.2, gain_db: -12}
 
   - id: S05
     beat: mirror_young
