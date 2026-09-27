@@ -94,7 +94,7 @@ shots:
   - id: S05
     beat: mirror_young
     seconds: 3.5
-    trim_start: 0.3
+    trim_start: 0.0   # FNR_S05_v1 (2026-09-27): static, no hand until 3.5 s; end frame -> media/FNR/FNR_S05_ENDFRAME.png for S06
     tier: standard
     characters: [elise_young]
     location: corridor
@@ -120,7 +120,7 @@ shots:
       The reflection shows Elise at 67 with silver-white hair in the identical cream cable-knit
       turtleneck, standing in the same pose, staring back with wide, frightened eyes. There is no
       blue glow in her eyes. The brass sconce light flickers.
-    flow_notes: We use only 1 second of this clip (the sharpest moment). The woman in the foreground and the reflection are both the older Elise.
+    flow_notes: "Same framing as S05: in Flow IMAGE mode, upload FNR_S05_ENDFRAME.png, add the Elise Old character, and edit the frame so both the reflection and the foreground woman are Elise at 67 (see chat 2026-09-27). The edited still is used for 1 s with a flicker added in the edit; animate it with Frames to Video only if it looks too static."
     native_audio_db: null
     sfx:
       - {file: mirror_shimmer.wav, offset: 0.0, gain_db: -6}
