@@ -59,13 +59,15 @@ shots:
     tier: standard
     characters: [elise_young]
     location: corridor
-    camera: close-up over Elise's shoulder, static, gentle rack focus from her faint reflection in the dark glass to the camera lens
+    camera: static medium close-up from the side at eye level, Elise in three-quarter profile on the right of the frame, the small wall panel on the left; the camera does not move toward or through the panel
     prompt: >-
-      Close-up over Elise's shoulder of the slim black facial-recognition panel beside her door. The
-      amber light ring pulses slowly around the round camera lens. Her face is faintly reflected in
-      the small blank dark-glass screen below it. She leans closer and stares into the lens,
-      unblinking, confused.
-    flow_notes: "The panel's screen must stay blank; the 'Estimated age 67' text is added in the edit."
+      Elise stands beside her apartment door, facing the small doorbell-sized black facial-recognition
+      panel mounted on the teal-grey wall at eye level. The thin light ring around the panel's tiny
+      round camera glows a steady amber and pulses slowly. She leans a little closer to the panel and
+      stares into it, unblinking, confused, her lips slightly parted. Her face is faintly reflected in
+      the panel's small blank dark-glass screen. The panel stays small on the wall, about the size of
+      her hand; it is not a ring light, not a lamp and not a mirror.
+    flow_notes: "v2 prompt (2026-09-27): v1 turned the panel into a giant ring light and mirrored her face. The panel's screen must stay blank; the 'Estimated age 67' text is added in the edit."
     native_audio_db: -20
 
   - id: S04
