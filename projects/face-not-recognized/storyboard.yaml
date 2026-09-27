@@ -220,7 +220,7 @@ shots:
   - id: S12
     beat: echo
     seconds: 7.6
-    trim_start: 0.3
+    trim_start: 0.0   # v2 = FNR_S12_v1 (0.2-7.8 s) + Claude post: steady tracked lens ring (tools/lensring.py); green light arrives ~2.2 s
     tier: standard
     characters: [elise_young]
     location: corridor
@@ -233,8 +233,8 @@ shots:
     flow_notes: "Frames to Video: start frame = media/FNR/FNR_S01_STARTFRAME.png (S01 at 2.0 s) so the echo matches the opening exactly. No ingredients. The steady lens ring is added by Claude in post (tracked), like S07."
     native_audio_db: -20
     sfx:
-      - {file: ui_unlock.wav, offset: 1.2, gain_db: -10}
-      - {file: door_click.wav, offset: 2.0, gain_db: -8}
+      - {file: ui_unlock.wav, offset: 2.2, gain_db: -10}
+      - {file: door_click.wav, offset: 3.0, gain_db: -8}
 
 # Interface text added in the edit (Flow is told NOT to render text). This carries the world rule.
 overlays:
@@ -242,7 +242,7 @@ overlays:
   - {text: "Paired lens: not detected", style: info, at_shot: S02, offset: 1.2, duration: 1.4, y: 0.30}
   - {text: "Unknown visitor · Access denied", style: alert, at_shot: S02, offset: 2.6, duration: 3.2, y: 0.30}
   - {text: "Estimated age: 67", style: info, at_shot: S03, offset: 0.4, duration: 3.9, y: 0.30}
-  - {text: "✓  Lens paired\nWelcome home, Elise", style: success, at_shot: S12, offset: 1.2, duration: 3.8, y: 0.30}
+  - {text: "✓  Lens paired\nWelcome home, Elise", style: success, at_shot: S12, offset: 2.2, duration: 3.8, y: 0.30}
 
 audio:
   lines:        # narrator = Elise (voice-narrator.txt), theo = Theo (voice-theo.txt)
