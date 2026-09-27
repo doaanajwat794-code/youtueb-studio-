@@ -14,6 +14,21 @@
 # POV: we see Elise as SHE sees herself, except S06 (the lens drops out) and S09–S11 (her true age).
 
 shots:
+  - id: S00
+    beat: cold_open
+    seconds: 1.2
+    trim_start: 0.2   # 2026-09-27 hook: 1.2 s flash-forward of the mirror truth (FNR_S00_v1 = faster punch-in on FNR_S06_STILL.png), then hard cut to S01
+    tier: standard
+    characters: [elise_old]
+    location: corridor
+    camera: same as S06
+    prompt: >-
+      Flash-forward of the S06 mirror frame (no new generation).
+    native_audio_db: null
+    sfx:
+      - {file: sting.wav, offset: 0.0, gain_db: -3}
+      - {file: mirror_shimmer.wav, offset: 0.0, gain_db: -6}
+
   - id: S01
     beat: hook
     seconds: 5.0
@@ -238,6 +253,7 @@ shots:
 
 # Interface text added in the edit (Flow is told NOT to render text). This carries the world rule.
 overlays:
+  - {text: "SOMETHING IS WRONG\nWITH HER FACE", style: hook, at_shot: S00, offset: 0.0, duration: 2.6, y: 0.17}
   - {text: "✕  Face not recognized", style: alert, at_shot: S01, offset: 1.4, duration: 3.4, y: 0.30}
   - {text: "Paired lens: not detected", style: info, at_shot: S02, offset: 1.2, duration: 1.4, y: 0.30}
   - {text: "Unknown visitor · Access denied", style: alert, at_shot: S02, offset: 2.6, duration: 3.2, y: 0.30}

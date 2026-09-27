@@ -224,6 +224,8 @@ def write_overlays(overlays: list[dict], spans: dict, out: Path, render: dict, f
             "Alignment, MarginL, MarginR, MarginV, Encoding"]
     for name, colours in OVERLAY_STYLES.items():
         head.append(f"Style: {name},{font},58,{colours},1,0,0,0,100,100,1,0,3,18,0,5,40,40,0,1")
+    # big hook title: bold white, thick black outline, no box
+    head.append(f"Style: hook,{font},88,&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,1,0,0,0,100,100,1,0,1,7,3,5,40,40,0,1")
     head += ["", "[Events]", "Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text"]
     for o in overlays:
         start = spans[o["at_shot"]][0] + float(o.get("offset", 0))
