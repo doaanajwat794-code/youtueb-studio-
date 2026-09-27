@@ -165,7 +165,7 @@ shots:
   - id: S09
     beat: twist
     seconds: 7.0
-    trim_start: 0.3
+    trim_start: 1.0   # FNR_S09_v1 (2026-09-27): Theo's back hides her until ~2.2 s, she is revealed crying at 67, phone to chest; his profile edge only at the end
     tier: standard
     characters: [elise_old, theo]
     location: corridor
