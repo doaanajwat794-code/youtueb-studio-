@@ -113,3 +113,17 @@ Medium shot from a low angle: on the torch-lit stone throne balcony of the snowy
 ```
 Close-up: Orrin the Royal Herald, an old anthropomorphic snowy owl in a black-and-gold herald's robe with a gold chain of office, leans forward over the stone balcony rail of the snowy coliseum at night, his huge amber eyes gleaming in the torchlight, and says slowly with a sly, dramatic tone: "Next... the Iron Wall... faces the Frost Fang." Snow drifts past his face, the golden crown glows softly behind him. Camera: close-up, very slow push-in on his eyes. Audio: the herald speaks the quoted line clearly in English with matching beak movement, a low wind; no music. Photorealistic cinematic dark fantasy, highly detailed realistic feathers, dramatic torchlight and cool moonlight, 35mm anamorphic lens, 24 frames per second. Vertical 9:16 composition. No on-screen text, no subtitles, no logos. Avoid: morphing, extra limbs, cartoon or CGI look.
 ```
+
+## ENDING v3 (owner's idea, 2026-09-27) — replaces the herald ending
+After "One step closer.", the masked **Reigning Champion** appears on the throne balcony beside the crown
+and speaks down to Rajan: *"I'll be waiting for you... in the final."* Then end card
+**NEXT: BORIN vs VESSA · Who wins? 👇**. The champion becomes the season's recurring threat
+(he can close every episode). The herald idea is parked.
+
+### Champion body (Flow Character → Create body)
+Full-body standing photo of the same Reigning Champion, a tall, enormous heavily muscular anthropomorphic warrior about 2.3 metres tall, his face fully hidden behind the smooth polished obsidian-black mask with two narrow eye slits glowing faint gold, wearing matte black plate armour with thin gold filigree, a long black cloak with a high collar, black fur visible only at the neck and hands, holding a long straight obsidian-black sword point-down in front of him with both hands. Silent, menacing, heroic standing pose facing the camera. Plain dark grey studio background, photorealistic cinematic dark fantasy, dramatic torchlight, 35mm film look. No text, no logo.
+
+### M1 · The masked Champion speaks (Ingredients: Champion + arena)
+```
+Low-angle medium shot of the torch-lit stone throne balcony of the snowy coliseum at night: the masked Reigning Champion, a tall enormous muscular warrior in matte black plate armour with thin gold filigree and a long black high-collared cloak, his face hidden behind a smooth obsidian-black mask with two narrow eye slits glowing faint gold, steps slowly out of the shadows into the torchlight beside the golden crown on its red velvet stand. He points his long obsidian-black sword down toward the arena floor and says in a deep, calm, echoing voice from behind the mask: "I'll be waiting for you... in the final." The mask does not move; only his head tilts slightly. Snow falls, the full moon behind him, banners with the golden crown emblem move in the wind. Camera: low angle from the arena floor looking up, slow push-in. Audio: the deep masked voice speaks the quoted line clearly in English, slightly muffled and echoing, with wind and torch fire; no music. Photorealistic cinematic dark fantasy, dramatic torchlight and cool moonlight, 35mm anamorphic lens, 24 frames per second. Vertical 9:16 composition. No on-screen text, no subtitles, no logos. Avoid: showing the face, removing the mask, morphing, extra limbs, cartoon or CGI look.
+```

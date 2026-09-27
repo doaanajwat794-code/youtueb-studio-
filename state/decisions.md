@@ -35,6 +35,7 @@ anywhere else. Format: `YYYY-MM-DD · decision · (file updated)`.
 - 2026-09-27 · **New series (owner): The Crown Trial** (`projects/crown-trial/`, code CT): dark-fantasy tournament of 5 armoured animal swordsmen, one duel per Short, **25–40 s** (exception to the 55–60 s rule for this series), no narration, fast cuts. Owner's feedback on FNR: too slow. (projects/crown-trial/*)
 - 2026-09-27 · CT: Rajan is a **white tiger** (owner). Vessa changed to a **dark grey wolf** so two white fighters never clash on screen. (projects/crown-trial/*)
 - 2026-09-27 · CT style (owner): **fast real-speed fights** (no slow motion, no long blade-locks) and **fighters speak short lines with lip-sync** (Veo native dialogue; fixed voices via Flow Character 'Select a voice'); English subtitles burned in. (projects/crown-trial/episode-01.md)
+- 2026-09-27 · CT ending (owner): after each duel the **masked Reigning Champion** appears on the throne balcony and speaks to the winner (E01: "I'll be waiting for you... in the final."), then the NEXT card. Replaces the herald idea. (projects/crown-trial/episode-01.md)
 
 ## Pending owner approval
 - **FNR production package v2:** screenplay (`script.md`), character references (`bible.yaml`), storyboard (`storyboard.yaml`), Flow prompts (`flow-prompts.md`), packaging draft (`metadata.yaml`)
