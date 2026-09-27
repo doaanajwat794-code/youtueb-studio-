@@ -30,6 +30,7 @@ anywhere else. Format: `YYYY-MM-DD · decision · (file updated)`.
 - 2026-09-27 · **FNR story v3** (owner): lens insertion never shown; S10 approach → CUT → S11 blinks + ring powers on; 12 shots, 56.7 s. (projects/face-not-recognized/*)
 - 2026-09-27 · **Elise reference locked** to the generated face: mole above the **right** corner of the upper lip (her right side), hair parted slightly off-centre. Bible + prompts updated to match. (projects/face-not-recognized/bible.yaml)
 - 2026-09-27 · **Flow Characters locked:** Elise Young, Elise Old (67, approved after 1 edit), Theo (42), each with portrait + full body. **Corridor plate locked:** `FNR_REF_CORRIDOR.png` (mirror beside the elevator). Never regenerate a reference mid-project. (state/STATUS.md)
+- 2026-09-27 · **S06 mirror flash:** only the reflection shows Elise at 67; the foreground back of her head stays young (brown) so the twist is kept for S09. S06 is an edited still of S05's end frame, animated by Claude. (script.md, storyboard.yaml)
 
 ## Pending owner approval
 - **FNR production package v2:** screenplay (`script.md`), character references (`bible.yaml`), storyboard (`storyboard.yaml`), Flow prompts (`flow-prompts.md`), packaging draft (`metadata.yaml`)

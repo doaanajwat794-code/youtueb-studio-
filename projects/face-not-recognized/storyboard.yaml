@@ -110,7 +110,7 @@ shots:
   - id: S06
     beat: mirror_truth
     seconds: 1.0
-    trim_start: 1.5
+    trim_start: 0.0   # FNR_S06_v1 = Claude-built 2 s clip from FNR_S06_STILL.png (Flow edit A of the S05 end frame + S05's brown foreground hair), slow push-in, sconce flicker
     tier: standard
     characters: [elise_old]
     location: corridor

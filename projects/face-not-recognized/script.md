@@ -64,7 +64,7 @@ blue ring** in the reflected eyes.
 
 ### S06 · THE MIRROR (LENS OFF) · 23.5–24.5 s
 **Same framing, one second:** the blue glow is gone, and the reflection is **ELISE AT 67**, silver hair,
-the same sweater, the same pose, eyes wide.
+the same sweater, the same pose, eyes wide. Only the reflection changes: the back of her head in the foreground stays chestnut-brown, so the audience doesn't yet know the reflection is the truth (owner's note, 2026-09-27).
 **SFX:** glass shimmer · the music dips
 
 ### S07 · LENS FLICKERS BACK · 24.5–28.5 s
