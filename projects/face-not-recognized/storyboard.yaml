@@ -37,7 +37,7 @@ shots:
   - id: S02
     beat: rule
     seconds: 6.0
-    trim_start: 0.3
+    trim_start: 0.7   # FNR_S02_v1 (2026-09-27): ring blue at 1.8 s, amber at 3.3 s, she turns away at 6.7 s
     tier: standard
     characters: [elise_young]
     location: corridor
@@ -49,8 +49,8 @@ shots:
       amber. She presses the matte black door handle; it does not move. She frowns and tries once more.
     native_audio_db: -20
     sfx:
-      - {file: ui_scan.wav, offset: 0.8, gain_db: -12}
-      - {file: ui_deny.wav, offset: 3.6, gain_db: -10}
+      - {file: ui_scan.wav, offset: 1.1, gain_db: -12}
+      - {file: ui_deny.wav, offset: 2.6, gain_db: -10}
 
   - id: S03
     beat: clue
@@ -230,8 +230,8 @@ shots:
 # Interface text added in the edit (Flow is told NOT to render text). This carries the world rule.
 overlays:
   - {text: "✕  Face not recognized", style: alert, at_shot: S01, offset: 1.4, duration: 3.4, y: 0.30}
-  - {text: "Paired lens: not detected", style: info, at_shot: S02, offset: 1.4, duration: 2.0, y: 0.30}
-  - {text: "Unknown visitor · Access denied", style: alert, at_shot: S02, offset: 3.6, duration: 2.3, y: 0.30}
+  - {text: "Paired lens: not detected", style: info, at_shot: S02, offset: 1.2, duration: 1.4, y: 0.30}
+  - {text: "Unknown visitor · Access denied", style: alert, at_shot: S02, offset: 2.6, duration: 3.2, y: 0.30}
   - {text: "Estimated age: 67", style: info, at_shot: S03, offset: 0.4, duration: 3.9, y: 0.30}
   - {text: "✓  Lens paired\nWelcome home, Elise", style: success, at_shot: S12, offset: 1.2, duration: 3.8, y: 0.30}
 
