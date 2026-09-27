@@ -29,8 +29,8 @@ Make these 5 images and keep the best of each (generate again until the face loo
 | `FNR_REF_THEO_FRONT.png` | Theo, her son, 42 |
 | `FNR_REF_CORRIDOR.png` | The corridor, no people |
 
-**Same-person check (young vs old Elise):** the mole above the left corner of the lip, the nose bump,
-grey-green eyes, left hair parting, cream cable-knit turtleneck, silver hoops, gold ring.
+**Same-person check (young vs old Elise):** the mole above the **right** corner of the lip (her right side), the nose bump,
+grey-green eyes, off-centre hair parting, cream cable-knit turtleneck, silver hoops, gold ring.
 Save the images in `media\FNR\incoming\` too. Claude uses them to check the clips.
 
 **How to reuse them:** in every clip, add the images listed under "Ingredients" in `flow-prompts.md`.

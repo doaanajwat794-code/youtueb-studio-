@@ -28,6 +28,7 @@ anywhere else. Format: `YYYY-MM-DD · decision · (file updated)`.
 
 - 2026-09-24 · **FNR story v2** (owner's continuity notes): intermittent lens malfunction, lens replaced on camera before the final transformation, and the biometric rule (devices trust the paired lens; their cameras see the real face). (projects/face-not-recognized/*)
 - 2026-09-27 · **FNR story v3** (owner): lens insertion never shown; S10 approach → CUT → S11 blinks + ring powers on; 12 shots, 56.7 s. (projects/face-not-recognized/*)
+- 2026-09-27 · **Elise reference locked** to the generated face: mole above the **right** corner of the upper lip (her right side), hair parted slightly off-centre. Bible + prompts updated to match. (projects/face-not-recognized/bible.yaml)
 
 ## Pending owner approval
 - **FNR production package v2:** screenplay (`script.md`), character references (`bible.yaml`), storyboard (`storyboard.yaml`), Flow prompts (`flow-prompts.md`), packaging draft (`metadata.yaml`)

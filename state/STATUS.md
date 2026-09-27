@@ -6,7 +6,7 @@ Claude's prompts and delivers them to the **local folder** via Claude Code on th
 Extra paid spending: **not approved** ($0 caps). Public publishing: **not approved**.
 
 **Active Short:** `projects/face-not-recognized/` · code **FNR** · media `media/FNR/`
-**Phase:** 3 — Owner set up Google Flow; **next: first reference image `FNR_REF_ELISE_YOUNG_FRONT.png`** (owner sends it for review)
+**Phase:** 3 — References in Flow. ✅ `FNR_REF_ELISE_YOUNG_FRONT.png` approved (2026-09-27: owner's 2nd Nano Banana 2 image, cropped by Claude to 3:4 head-and-shoulders without hands). **Next: save Elise as a Flow Character, then make `FNR_REF_ELISE_OLD_FRONT.png` from it.**
 
 ## Next pending task
 **Owner reviews and approves the FNR production package:**
