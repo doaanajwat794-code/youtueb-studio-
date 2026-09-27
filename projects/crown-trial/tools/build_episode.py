@@ -98,6 +98,8 @@ def main(cfg_path):
 
     hits = [seg_t(h) for h in cfg.get("drum_hits", [])]
     mus = score(total, hits, calm_from=seg_t(cfg["calm_from"]) if cfg.get("calm_from") else None)
+    if cfg.get("mute_from"):  # sudden silence of the score (e.g. when the masked Champion appears)
+        i = int(seg_t(cfg["mute_from"]) * SR); mus[i:] *= np.exp(-np.arange(len(mus) - i) / (0.08 * SR))
     fx = np.zeros(len(mus))
     for e in cfg.get("sfx", []):
         clip = boom() if e["type"] == "boom" else whoosh()

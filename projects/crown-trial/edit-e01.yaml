@@ -1,7 +1,7 @@
 # Episode 1 — Claude's cut (director's edit). Times are seconds inside each 8 s Flow clip.
 clips_dir: media/CT/incoming
 work_dir: media/CT/work_e01
-output: media/CT/CT_E01_cut_v1.mp4
+output: media/CT/CT_E01_FINAL.mp4
 music_gain: 0.55
 segments:
   - {file: CT_E01_C01_v1.mp4, in: 0.2, out: 2.6, speed: 1.2, note: "HOOK fast exchange"}
@@ -20,12 +20,16 @@ segments:
   - {file: CT_E01_C09_v1.mp4, in: 6.0, out: 8.0, note: "Rajan: 'Yield.'"}
   - {file: CT_E01_C10_v1.mp4, in: 4.2, out: 8.0, note: "Kael kneels: 'You earned it... this time.'"}
   - {file: CT_E01_C11_v1.mp4, in: 5.0, out: 8.0, note: "Rajan raises sabre to the crown: 'One step closer.'"}
+  - {file: CT_E01_M1_v1.mp4, in: 1.8, out: 8.0, gain: 1.3, note: "masked Champion: 'I'll be waiting for you... in the final.'", flash: true}
 drum_hits: ["1", "4", "6", "8", "10", "12"]
 calm_from: "13"
+mute_from: "16"
 sfx:
   - {type: whoosh, at: "11", gain: 0.9}
   - {type: boom, at: "12", gain: 1.0}
   - {type: boom, at: "0", gain: 0.6}
+  - {type: boom, at: "16", gain: 0.8}
+  - {type: boom, at: "16+4.9", gain: 1.1}
 text:
   - {at: "0", dur: 2.3, style: hook, text: "ONLY ONE\nWEARS THE CROWN", y: 0.17}
   - {at: "1+0.2", dur: 2.2, style: sub, text: "That crown is mine."}
@@ -40,3 +44,7 @@ text:
   - {at: "14+0.3", dur: 3.3, style: sub, text: "You earned it... this time."}
   - {at: "15+0.2", dur: 1.6, style: sub, text: "One step closer."}
   - {at: "15+1.4", dur: 1.6, style: end, text: "RAJAN ADVANCES", y: 0.16}
+  - {at: "16+2.6", dur: 2.2, style: sub, text: "I'll be waiting for you..."}
+  - {at: "16+4.8", dur: 1.4, style: sub, text: "...in the final."}
+  - {at: "16+4.9", dur: 1.3, style: end, text: "NEXT: BORIN vs VESSA", y: 0.14}
+  - {at: "16+4.9", dur: 1.3, style: title, text: "WHO TAKES THE CROWN?", y: 0.19}
