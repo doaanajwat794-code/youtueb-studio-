@@ -132,12 +132,13 @@ shots:
     tier: standard
     characters: [elise_young]
     location: corridor
-    camera: close-up at eye level, very slow gentle pull-back
+    camera: tight close-up at eye level, very slow gentle pull-back
     prompt: >-
-      Close-up of Elise stepping back from the mirror, her breath catching. The thin electric-blue
-      ring around her irises flickers back on, weak and unstable. One hand rises to cover her mouth,
-      and the thin gold wedding band on her finger catches the amber light. Her eyes glisten with
-      shock as she keeps staring at the mirror.
+      Tight close-up of Elise's face, her eyes large in the frame, as she steps back from the mirror,
+      her breath catching. In both eyes a thin, clearly visible glowing electric-blue neon ring around
+      the edge of the iris flickers back on, weak and unstable, like a tiny digital halo. One hand
+      rises to cover her mouth, and the thin gold wedding band on her finger catches the amber light.
+      Her eyes glisten with shock as she keeps staring at the mirror.
     native_audio_db: -20
     sfx:
       - {file: lens_crackle.wav, offset: 0.2, gain_db: -14}
