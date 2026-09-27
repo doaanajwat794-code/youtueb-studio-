@@ -128,7 +128,7 @@ shots:
   - id: S07
     beat: lens_returns
     seconds: 4.0
-    trim_start: 0.3   # v1 rejected 2026-09-27: whole-eye neon glow, nose piercing, pulls back to a wide shot with a round mirror
+    trim_start: 0.0   # v1 rejected (neon glow, nose piercing, pull-back). v3 = v2 (2.0-6.0 s) + Claude post: tracked faint lens ring, misplaced mole removed (tools/s07_lensfx.py)
     tier: standard
     characters: [elise_young]
     location: corridor
@@ -143,7 +143,7 @@ shots:
       the gold wedding band.
     native_audio_db: -20
     sfx:
-      - {file: lens_crackle.wav, offset: 0.2, gain_db: -14}
+      - {file: lens_crackle.wav, offset: 0.25, gain_db: -14}
 
   - id: S08
     beat: arrival
