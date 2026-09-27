@@ -1,0 +1,20 @@
+title: The Crown Trial
+slug: crown-trial
+code: CT
+media_folder: CT
+status: active   # 2026-09-27 experiment: dark-fantasy duel series (owner's request)
+stage: characters
+created: '2026-09-27'
+target_seconds: [25, 40]
+format: {type: youtube_short_series, aspect_ratio: '9:16', resolution: 1080x1920, language: en}
+episodes:
+  - {n: 1, duel: 'Kael (lion) vs Rajan (tiger)'}
+  - {n: 2, duel: 'Borin (bear) vs Vessa (wolf)'}
+  - {n: 3, duel: 'Final: winner 1 vs winner 2'}
+  - {n: 4, duel: 'Crown Duel: Trial winner vs the masked Reigning Champion'}
+production:
+  video: Google Flow (owner), Veo 3.1 Fast
+  characters: Flow Characters (portrait + body), see character-prompts.md
+  narration: none (on-screen text only)
+  music: epic original score (Claude) or YouTube Audio Library
+  paid_api_spend: not approved
