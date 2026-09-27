@@ -226,10 +226,11 @@ shots:
     location: corridor
     camera: extreme close-up at eye level, very slow push-in, framed exactly like the opening shot, face in the upper third
     prompt: >-
-      Extreme close-up of Elise's face at night, lit from below by her smartphone held at face
-      height, exactly like the opening shot. The thin electric-blue ring around her irises glows
-      steady and bright. The phone's light turns a soft calm green on her skin. A single tear runs
-      down her cheek and a faint, peaceful smile forms.
+      Continue from the start frame: the same woman, the same framing and the same corridor, lit by
+      the phone she holds at face height. She looks calmly into the phone. The phone's cold white glow
+      turns a soft calm green on her skin. A single tear runs down her cheek and a faint, peaceful
+      smile forms. Her eyes stay natural, with no glow. The camera stays still, a very slow push-in.
+    flow_notes: "Frames to Video: start frame = media/FNR/FNR_S01_STARTFRAME.png (S01 at 2.0 s) so the echo matches the opening exactly. No ingredients. The steady lens ring is added by Claude in post (tracked), like S07."
     native_audio_db: -20
     sfx:
       - {file: ui_unlock.wav, offset: 1.2, gain_db: -10}
