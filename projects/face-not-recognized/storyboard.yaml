@@ -17,7 +17,7 @@ shots:
   - id: S01
     beat: hook
     seconds: 5.0
-    trim_start: 0.3
+    trim_start: 2.6   # FNR_S01_v1 (2026-09-27): red light hits at 4.0 s in the clip -> 1.4 s into the shot, on the error overlay
     tier: standard
     characters: [elise_young]
     location: corridor
