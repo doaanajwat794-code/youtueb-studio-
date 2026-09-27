@@ -202,7 +202,7 @@ shots:
   - id: S11
     beat: lens_power_on
     seconds: 3.4
-    trim_start: 0.5
+    trim_start: 2.1   # FNR_S11_v1 (2026-09-27): blinks ~2.6 s and ~4.0 s, spark in the pupil 5.0 s, clean ring on the iris 5.4 s; glow spills onto the lids after 5.6 s -> cut at 5.5
     tier: standard
     characters: [elise_old]
     location: corridor
@@ -215,7 +215,7 @@ shots:
     flow_notes: "v3: no fingers in this shot. The key moment is the blue ring switching ON after the two blinks."
     native_audio_db: -24
     sfx:
-      - {file: lens_boot.wav, offset: 1.4, gain_db: -10}
+      - {file: lens_boot.wav, offset: 2.8, gain_db: -10}
 
   - id: S12
     beat: echo
