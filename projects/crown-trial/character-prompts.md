@@ -27,3 +27,11 @@ Portrait of the same Reigning Champion unmasked: a sleek anthropomorphic black p
 
 ## Location plate — the arena (Image mode, not a character)
 Location photo, vertical 9:16, no people. A vast moonlit circular stone coliseum in a snowy mountain kingdom at night, a packed-snow fighting floor ringed by tall iron torches, black and gold banners with a golden crown emblem hanging from the walls, tiered stone stands in shadow, and a raised throne balcony where a golden crown rests on a red velvet stand. Full moon, falling snow, mist, photorealistic cinematic dark fantasy, torchlight and cool moonlight, 35mm film look. No people, no text, no logos.
+
+## BODY prompts (Flow → character → Create body) — owner 2026-09-27: bodies must be huge and muscular
+Shared body lock (inside every body prompt): enormous, heavily muscular humanoid body, broad chest
+and shoulders, thick powerful arms and legs, about 2.2 m tall; the armour leaves the massive
+muscular upper arms bare; heroic standing pose, facing the camera, plain dark grey studio
+background, photorealistic cinematic dark fantasy, highly detailed realistic fur, 35mm film look, no text.
+
+- **Kael:** Full-body standing photo of the same lion warrior Kael, an enormous heavily muscular humanoid body with a broad chest and shoulders, thick powerful arms and legs, about 2.2 metres tall. He wears the identical ornate gold and black plate armour with sun motifs, the lion-head pauldron on his right shoulder and the short crimson cape; the armour leaves his massive muscular upper arms bare, with gold bracers on his forearms, armoured greaves and black boots. He holds a long gold-hilted longsword point-down in front of him with both hands. Heroic standing pose facing the camera. Plain dark grey studio background, photorealistic cinematic dark fantasy, highly detailed realistic fur, dramatic torchlight, 35mm film look. No text, no logo.

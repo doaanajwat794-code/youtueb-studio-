@@ -17,6 +17,7 @@ providers:
       outputs_per_prompt: 1
       models: {hero: "Veo 3.1 Quality", standard: "Veo 3.1 Fast"}
       default_model: "Veo 3.1 Fast"   # APPROVED 2026-09-24: Fast for ALL shots; Quality only with owner approval
+      image_credits: {nano_banana_2: 0}   # VERIFIED 2026-09-27 in Flow ('Generating will use 0 AI credits', x2, 9:16)
       credits_per_generation: {quality: 100, fast: 20}   # fast = 20 VERIFIED 2026-09-27 in the owner's Flow (Veo 3.1 Fast, 8 s, 720p, x1); quality web-reported
       monthly_credits_note: "Google AI Pro ≈ 1,000 credits/month, Ultra 12,500–25,000 (web-reported). Check your balance in Flow."
       consistency_tools: [Ingredients to Video (up to 3 reference images), Frames to Video, same prompt locks]
