@@ -58,7 +58,7 @@ Then Claude (on the owner's PC): `import-clips` → frame QC → `make-sfx` → 
 |---|---|
 | Assembly (vertical), mix, burned captions, overlays, SFX, sync check, cover | ✅ TESTED with synthetic media (FNR rehearsal) |
 | Flow prompt sheet · clip/music/voice import by file name · voice split | ✅ TESTED with synthetic files · ⏳ real Flow clips pending |
-| Google Flow features in the owner's account | ✅ 2026-09-27 (owner screenshots): plan **PRO**; video models Omni 1.1 Flash / Veo 3.1 Lite / **Veo 3.1 Fast** / Veo 3.1 Quality; **9:16 portrait** available; image model Nano Banana 2; a **Characters** section exists; defaults set to video 9:16 · x1 · Veo 3.1 Fast and image 9:16 · x2 · Nano Banana 2; confirm-before-generating = Always. ⏳ Still unknown: credits per clip, Ingredients to Video, download sizes |
+| Google Flow features in the owner's account | ✅ 2026-09-27 (owner screenshots): plan **PRO**; video models Omni 1.1 Flash / Veo 3.1 Lite / **Veo 3.1 Fast** / Veo 3.1 Quality; **9:16 portrait** available; image model Nano Banana 2; a **Characters** section exists; defaults set to video 9:16 · x1 · Veo 3.1 Fast and image 9:16 · x2 · Nano Banana 2; confirm-before-generating = Always. ✅ **Veo 3.1 Fast clip = 20 credits** (8 s, 720p, x1; shown in Flow 2026-09-27) → 12 clips ≈ 240 credits + retakes. ✅ **Ingredients** mode exists (Video → Frames / Ingredients). ⏳ Still unknown: 1080p download option, image credit cost |
 | Google Vids AI voiceover (free Google voice) | ⏳ UNVERIFIED for the owner's account |
 | Gemini TTS free tier | ⏳ UNTESTED — only with the owner's OK and a free key |
 | Local run on Windows 11 (ffmpeg, caption font, hook) | ⏳ UNTESTED — first local session |
