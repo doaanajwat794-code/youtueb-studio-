@@ -79,12 +79,13 @@ shots:
     location: corridor
     camera: extreme macro close-up of one eye, locked off, perfectly still
     prompt: >-
-      Extreme macro close-up of Elise's left grey-green eye in warm amber corridor light. The very
-      thin, softly glowing electric-blue ring around the outer edge of her iris stutters like a
-      failing screen: it blinks off, struggles back on, blinks off again, then returns weaker and
-      unstable, flickering. She blinks slowly and a fingertip rises into frame to touch the corner of
-      her eye.
-    flow_notes: The ring must come BACK on at the end (weak and flickering), not stay off. If the eye looks distorted, try Text to Video with the same prompt.
+      Extreme macro close-up of Elise's left grey-green eye in warm amber corridor light, the eye
+      filling most of the frame. She wears a smart contact lens: a thin, clearly visible glowing
+      electric-blue neon ring traces the outer edge of her iris, like a tiny digital halo. The blue
+      ring stutters like a failing screen: it blinks off, struggles back on, blinks off again, then
+      returns weaker and unstable, flickering. She blinks slowly and a fingertip rises into frame to
+      touch the outer corner of her eye, without touching the eyeball.
+    flow_notes: "Add ONLY the Elise Young character as ingredient (no corridor image) so Veo stays on the eye. The ring must come BACK on at the end (weak and flickering), not stay off. If the eye looks distorted, try Text to Video with the same prompt."
     native_audio_db: -24
     sfx:
       - {file: lens_crackle.wav, offset: 0.3, gain_db: -8}
