@@ -75,6 +75,8 @@ def main(cfg_path):
         f = src / s["file"]; a, b = s["in"], s["out"]; sp = s.get("speed", 1.0)
         dur = (b - a) / sp
         vf = [f"setpts=(PTS-STARTPTS)/{sp}", f"scale={W}:{H}:flags=lanczos", "unsharp=5:5:0.6", f"fps={FPS}"]
+        if s.get("push"):  # slow push-in so a dialogue hold never looks frozen
+            vf.append(f"zoompan=z='1+{s['push']}*on':x='iw/2-(iw/zoom/2)':y='ih*0.4-(ih/zoom*0.4)':d=1:s={W}x{H}:fps={FPS}")
         if s.get("flash"):
             vf.append("eq=brightness='if(lt(t,0.07),0.35,0)':eval=frame")
         at = []
