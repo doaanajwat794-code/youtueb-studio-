@@ -128,17 +128,19 @@ shots:
   - id: S07
     beat: lens_returns
     seconds: 4.0
-    trim_start: 0.3
+    trim_start: 0.3   # v1 rejected 2026-09-27: whole-eye neon glow, nose piercing, pulls back to a wide shot with a round mirror
     tier: standard
     characters: [elise_young]
     location: corridor
-    camera: tight close-up at eye level, very slow gentle pull-back
+    camera: tight close-up at eye level, static, stays close for the whole shot; no pull-back, no zoom out, the mirror is not visible
     prompt: >-
-      Tight close-up of Elise's face, her eyes large in the frame, as she steps back from the mirror,
-      her breath catching. In both eyes a thin, clearly visible glowing electric-blue neon ring around
-      the edge of the iris flickers back on, weak and unstable, like a tiny digital halo. One hand
-      rises to cover her mouth, and the thin gold wedding band on her finger catches the amber light.
-      Her eyes glisten with shock as she keeps staring at the mirror.
+      Tight close-up of Elise's face, shoulders up, in shock after looking in the mirror, her breath
+      catching. In both eyes a very thin, faint electric-blue line flickers back on around the outer
+      edge of the iris only, weak and unstable, subtle like a contact lens reflection; the rest of the
+      eye stays natural grey-green and does not glow. One hand rises into the close-up to cover her
+      mouth, and the thin gold wedding band on her finger catches the amber light. Her eyes glisten.
+      No nose piercing, no facial piercings, no jewellery other than small silver hoop earrings and
+      the gold wedding band.
     native_audio_db: -20
     sfx:
       - {file: lens_crackle.wav, offset: 0.2, gain_db: -14}
