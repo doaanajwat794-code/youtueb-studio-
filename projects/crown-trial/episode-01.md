@@ -7,6 +7,19 @@
 **Ingredients (all clips):** Characters **Kael** + **Rajan** + image **CT_REF_ARENA**.
 **Save as:** `CT_E01_C01_v1.mp4` … `CT_E01_C11_v1.mp4`.
 
+## C08b · INSERT: THE SWORD FLIES (new, director's cut)
+- **Ingredients:** Kael + arena · ⚔ no speech
+```
+Dramatic slow-motion insert shot: Kael's gold-hilted longsword spins end over end high through the night air, its blade flashing gold in the torchlight, silhouetted against the huge full moon and the falling snow, then drops out of frame; a second later it plunges point-first and stands upright in the snow of the arena floor with a spray of snow. No people in focus, only the sword. Camera: low angle looking up at the spinning sword against the moon, then a quick tilt down to the snow as it lands. Kael: a huge heavily muscular anthropomorphic lion warrior with a dark-golden mane and amber eyes, ornate black plate armour with gold sun engravings, a gold lion-head pauldron on his left shoulder, a short crimson cape, bare muscular upper arms with gold bracers, wielding one long gold-hilted longsword. Audio: a deep whoosh of the spinning blade, then a heavy metallic thud into the snow and wind; no music, no speech. Photorealistic cinematic dark fantasy action. The moonlit snowy stone coliseum at night from the reference image: a packed-snow fighting floor ringed by iron torches, black banners with a golden crown emblem, snow-covered stone stands, a throne balcony with a golden crown, full moon, falling snow. Dramatic torchlight and cool moonlight, 35mm anamorphic lens, 24 frames per second. Vertical 9:16 composition. No on-screen text, no subtitles, no logos, no watermarks. Avoid: extra or duplicated weapons, morphing, blood, gore, cartoon or CGI look.
+```
+
+## Director's edit plan (continuity + drama)
+- **Kael holds his sword until C08.** In every earlier clip (C03–C07) the cut comes BEFORE any moment where he drops or loses it.
+- **The disarm is one continuous beat:** C08 (the twist of the sabres, sword leaves his hands) → C08b (sword spinning against the moon, speed ramp 1.0x→0.35x) → C08b landing (sword stabs into the snow, bass hit) → C09 (sabre at Kael's chin, "Yield.").
+- C09 and C10 are cut so the longsword is already in the snow beside them, never back in his hand.
+- Rhythm: fight clips cut to 1.2–2.2 s and sped up 1.15–1.25x; every hit gets a 2-frame white spark flash, a short camera-shake and a steel impact + low boom; dialogue clips play at real speed.
+- Speed ramp only once (the sword flight) so it feels special.
+
 ## Dialogue
 - C01 Rajan: "That crown is mine." · C02 Kael: "Then come and take it." · C04 Rajan: "Too slow, old lion."
 - C05 Kael: "I will break you!" · C09 Rajan: "Yield." · C10 Kael: "You earned it... this time." · C11 Rajan: "One step closer."
