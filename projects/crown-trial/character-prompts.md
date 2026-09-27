@@ -16,7 +16,7 @@ Portrait of Rajan, a lean muscular anthropomorphic white Bengal tiger warrior wi
 ## 3. Borin — grizzly bear, "The Iron Wall"
 Portrait of Borin, a massive anthropomorphic grizzly bear warrior with thick dark-brown fur greying on the muzzle, small dark eyes and a heavy brow. He wears heavy dark iron plate armour with riveted bands, a thick brown fur mantle over the shoulders and a round iron gorget. Head-and-shoulders, facing the camera, calm immovable expression. Photorealistic cinematic dark fantasy, highly detailed realistic fur, dramatic torchlight and cool moonlight, plain dark grey studio background, 35mm film look. No text, no logo.
 
-## 4. Vessa — white wolf, "The Frost Fang"
+## 4. Vessa — dark grey wolf, "The Frost Fang"
 Portrait of Vessa, a sleek female anthropomorphic grey wolf warrior with dark charcoal-grey fur, a silver-white muzzle and chest, pale yellow eyes and a single thin white stripe of fur down her forehead. She wears fitted silver-blue scale armour with frost-pattern engravings, a high collar and a pale grey hooded cloak. Head-and-shoulders, facing the camera, cold focused expression. Photorealistic cinematic dark fantasy, highly detailed realistic fur, dramatic torchlight and cool moonlight, plain dark grey studio background, 35mm film look. No text, no logo.
 
 ## 5. The Reigning Champion — masked (black panther)
