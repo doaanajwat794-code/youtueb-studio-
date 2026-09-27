@@ -1,4 +1,4 @@
-# Face Not Recognized — storyboard v2 (edit order). Total 56.7 s. ALL shots: Veo 3.1 Fast in Flow, 9:16, 8 s.
+# Face Not Recognized — storyboard v3 (edit order, 12 shots). Total 56.7 s. ALL shots: Veo 3.1 Fast in Flow, 9:16, 8 s.
 # `seconds` = what we use from each 8-second clip; `trim_start` skips the first frames.
 #
 # THE RULE THE AUDIENCE LEARNS VISUALLY (v2, owner continuity fixes 2026-09-24):
@@ -9,8 +9,9 @@
 #     the real 67-year-old face doesn't match → "Face not recognized". (Shown by the on-screen
 #     interface text "Paired lens: not detected" / "Lens paired ✓", plus Theo's line.)
 #   • The lens malfunctions INTERMITTENTLY (S01 weak → S04 stutters → S06 drops out → S07 flickers
-#     back) and is REPLACED on camera in S10, so the young face in S11 is logically restored.
-# POV: we see Elise as SHE sees herself, except S06 (the lens drops out) and S09–S10 (Theo's view).
+#     back) and is REPLACED in S10–S11 (v3: fingertip approaches the eye → CUT → two blinks → ring
+#     powers on; the insertion itself is never shown), so the young face in S12 is logically restored.
+# POV: we see Elise as SHE sees herself, except S06 (the lens drops out) and S09–S11 (her true age).
 
 shots:
   - id: S01
@@ -174,26 +175,41 @@ shots:
       - {file: sting.wav, offset: 0.0, gain_db: -4}
 
   - id: S10
-    beat: lens_replaced
-    seconds: 7.6
+    beat: lens_approach
+    seconds: 4.2
     trim_start: 0.3
     tier: standard
     characters: [elise_old]
     location: corridor
-    camera: close-up at eye level, static, shallow focus on her eyes, the lens case soft in the foreground
+    camera: close-up at eye level, static, shallow focus on her face, the lens case soft in the foreground
     prompt: >-
       Close-up of Elise at 67 in the warm corridor light, tears in her grey-green eyes. In the
       soft-focus foreground a man's hand in a navy wool coat sleeve holds open a small white
-      contact-lens case with two clear lenses that have a faint blue rim. She takes one lens on her
-      fingertip, tilts her head back slightly and places it in her eye, then blinks twice. A very thin
-      electric-blue ring lights up around her iris, traces all the way around it, and glows steady and
-      bright. Her breathing calms.
-    flow_notes: The key moment is the blue ring switching on AFTER she puts the lens in. If the lens insertion looks unnatural, keep the hand movement small and slow.
+      contact-lens case with two clear lenses that have a faint blue rim. She lifts one lens on the
+      tip of her index finger and slowly raises it toward her eye, her gaze following it. The lens
+      stays a few centimetres away from her eye.
+    flow_notes: "v3: the lens must NOT touch the eye. We cut away while her fingertip is still approaching (that cut hides the insertion)."
     native_audio_db: -22
-    sfx:
-      - {file: lens_boot.wav, offset: 4.6, gain_db: -10}
 
   - id: S11
+    beat: lens_power_on
+    seconds: 3.4
+    trim_start: 0.5
+    tier: standard
+    characters: [elise_old]
+    location: corridor
+    camera: extreme macro close-up of one eye, locked off, perfectly still
+    prompt: >-
+      Extreme macro close-up of Elise's left grey-green eye at 67, fine wrinkles around it, in warm
+      amber corridor light. No hands or fingers in frame. She blinks slowly twice. Then a very thin
+      electric-blue ring lights up around the outer edge of her iris, traces all the way around it,
+      and glows steady and bright. Her eye relaxes.
+    flow_notes: "v3: no fingers in this shot. The key moment is the blue ring switching ON after the two blinks."
+    native_audio_db: -24
+    sfx:
+      - {file: lens_boot.wav, offset: 1.4, gain_db: -10}
+
+  - id: S12
     beat: echo
     seconds: 7.6
     trim_start: 0.3
@@ -217,7 +233,7 @@ overlays:
   - {text: "Paired lens: not detected", style: info, at_shot: S02, offset: 1.4, duration: 2.0, y: 0.30}
   - {text: "Unknown visitor · Access denied", style: alert, at_shot: S02, offset: 3.6, duration: 2.3, y: 0.30}
   - {text: "Estimated age: 67", style: info, at_shot: S03, offset: 0.4, duration: 3.9, y: 0.30}
-  - {text: "✓  Lens paired\nWelcome home, Elise", style: success, at_shot: S11, offset: 1.2, duration: 3.8, y: 0.30}
+  - {text: "✓  Lens paired\nWelcome home, Elise", style: success, at_shot: S12, offset: 1.2, duration: 3.8, y: 0.30}
 
 audio:
   lines:        # narrator = Elise (voice-narrator.txt), theo = Theo (voice-theo.txt)
@@ -229,8 +245,8 @@ audio:
     - {id: N06, type: narration, speaker: narrator, at_shot: S07, offset: 0.6, text: "That woman wore my sweater. My ring. My eyes."}
     - {id: D01, type: dialogue, speaker: theo, at_shot: S09, offset: 0.8, text: "Mum… the lenses died again."}
     - {id: D02, type: dialogue, speaker: theo, at_shot: S09, offset: 3.3, text: "Everything's still set to the face you remember."}
-    - {id: N07, type: narration, speaker: narrator, at_shot: S11, offset: 0.4, text: "Thirty years ago, I chose the face I'd keep."}
-    - {id: N08, type: narration, speaker: narrator, at_shot: S11, offset: 4.6, text: "Tonight, I chose it again."}
+    - {id: N07, type: narration, speaker: narrator, at_shot: S12, offset: 0.4, text: "Thirty years ago, I chose the face I'd keep."}
+    - {id: N08, type: narration, speaker: narrator, at_shot: S12, offset: 4.6, text: "Tonight, I chose it again."}
   music:        # free YouTube Audio Library tracks (owner downloads; see production guide)
     - {id: M01, start_shot: S01, end_shot: S08, gain_db: -18}   # tense, minimal, pulsing; fades out before the twist
-    - {id: M02, start_shot: S10, end_shot: S11, gain_db: -17}   # soft, emotional piano from the moment she takes the lens
+    - {id: M02, start_shot: S10, end_shot: S12, gain_db: -17}   # soft, emotional piano from the moment she takes the lens

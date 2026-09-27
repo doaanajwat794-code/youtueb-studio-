@@ -1,9 +1,10 @@
-# FACE NOT RECOGNIZED: screenplay (v2)
+# FACE NOT RECOGNIZED: screenplay (v3)
 
 **Twist Villa Short #1** · 56.7 seconds · 9:16 · English · original story
 **Logline:** When her phone and her front door stop recognizing her face, Elise catches a glimpse
 of an old woman in the mirror, and learns the lenses in her eyes have kept her 37 for thirty years.
 
+**v3 (2026-09-27):** the lens insertion is never shown (fingertip approaches → CUT → two blinks → ring powers on), so Veo never has to draw a finger touching an eye.
 **v2 continuity fixes (2026-09-24):** the lens fails *intermittently*; the mirror sequence follows
 the lens (ring on = young, ring off = truth); the lens is *replaced on camera* before she's young
 again; the face-recognition rule is shown with interface text and one line from Theo.
@@ -19,12 +20,12 @@ again; the face-recognition rule is shown with interface text and one line from 
 **Clues → payoff**
 | Clue | Planted | Paid off |
 |---|---|---|
-| Weak, flickering blue ring in her iris | S01 · S04 (stutters) · S07 (flickers back) | S10 new lens: the ring powers on steady · S11 |
-| `Paired lens: not detected` | S02 | S11 `✓ Lens paired · Welcome home, Elise` |
+| Weak, flickering blue ring in her iris | S01 · S04 (stutters) · S07 (flickers back) | S11 new lens: the ring powers on steady · S12 |
+| `Paired lens: not detected` | S02 | S12 `✓ Lens paired · Welcome home, Elise` |
 | `Estimated age: 67` vs. "I'm thirty-seven." | S03 | S09 we see her at 67 |
 | Ring drops out → old face in the mirror | S05 → S06 | S09 Theo sees the same woman |
 | "That woman wore my sweater. My ring. My eyes." | S07 | S09 the same sweater, ring, eyes |
-| Theo carries a small white lens case | S08 | S10 she takes a lens from it |
+| Theo carries a small white lens case | S08 | S10 she takes a lens from it; S11 it powers on |
 
 **Word count:** narration 50 words · dialogue 13 words.
 
@@ -84,13 +85,18 @@ phone clutched to her chest. The faint blue flicker in her eyes **dies**.
 **THEO** *(35.3 s, gently, as if he's said it many times)*: Mum… the lenses died again.
 **THEO** *(37.8 s)*: Everything's still set to the face you remember.
 
-### S10 · NEW LENS · 41.5–49.1 s
+### S10 · NEW LENS · 41.5–45.7 s
 Close-up on Elise at 67, eyes wet. Theo's hand holds the open case: two clear lenses with a faint blue
-rim. She takes one on her fingertip, **places it in her eye**, blinks twice, and a **blue ring powers
-on, traces around the iris, and glows steady**. Her breathing calms.
-**SFX:** rising digital hum as the lens powers on (46.1 s) · **MUSIC:** M02, soft piano, enters
+rim. She lifts one on her fingertip and **slowly raises it toward her eye**, and we **CUT** before it
+touches.
+**MUSIC:** M02, soft piano, enters
 
-### S11 · ECHO · 49.1–56.7 s
+### S11 · THE LENS POWERS ON · 45.7–49.1 s
+Macro on her eye (67, fine wrinkles, no fingers in frame). She **blinks twice**, then the **blue ring
+lights up, traces around the iris, and glows steady**.
+**SFX:** rising digital hum as the lens powers on (47.1 s)
+
+### S12 · ECHO · 49.1–56.7 s
 The opening framing again, now from **her** point of view: Elise at 37, lit by her phone, the blue ring
 **steady and bright**. The phone's light turns soft green. A single tear, a small peaceful smile.
 **ON SCREEN:** `✓ Lens paired · Welcome home, Elise` (50.3 s)

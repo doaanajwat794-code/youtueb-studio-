@@ -12,14 +12,14 @@ Extra paid spending: **not approved** ($0 caps). Public publishing: **not approv
 **Owner reviews and approves the FNR production package:**
 - `projects/face-not-recognized/script.md` (screenplay v2, 56.7 s)
 - `projects/face-not-recognized/bible.yaml` (Elise young/old, Theo, corridor, look)
-- `projects/face-not-recognized/storyboard.yaml` + `flow-prompts.md` (11 shots, copy-paste prompts)
+- `projects/face-not-recognized/storyboard.yaml` + `flow-prompts.md` (12 shots, copy-paste prompts)
 - `projects/face-not-recognized/PRODUCTION-GUIDE.md` (the owner's steps, Windows setup, voice, music)
 - `projects/face-not-recognized/metadata.yaml` (title/description/hashtags draft)
 
 Then the owner:
 1. Does the Flow account check (PRODUCTION-GUIDE step 0) and reports back.
 2. Sets up Claude Code on Windows 11 (one time) and clones the repo.
-3. Generates 5 reference images + 11 clips in Flow (≈ 300 Fast credits incl. retakes; check in Flow).
+3. Generates 5 reference images + 12 clips in Flow (≈ 320 Fast credits incl. retakes; check in Flow).
 4. Makes the voices in Google Vids (if free for the account) and downloads 2 YouTube Audio Library tracks.
 5. Puts everything in `media\FNR\incoming\` and tells Claude "Import my Face Not Recognized clips."
 
@@ -47,6 +47,11 @@ Then Claude (on the owner's PC): `import-clips` → frame QC → `make-sfx` → 
   `lens_boot`. Prompt sheet regenerated (11 shots, all Fast, ≈ 300 credits).
 - 2026-09-24 · **Re-tested (free):** selftest 16/16 PASS; FNR v2 dress rehearsal: 56.7 s, 1080x1920,
   A/V in sync, 10 caption cues, 5 overlays incl. the 2-line "Lens paired" card checked by eye, no voice overlaps.
+
+- 2026-09-27 · **Story v3 (owner's production note):** S10 split so Veo never draws a finger touching an eye:
+  S10 fingertip lifts the lens toward the eye → CUT → S11 macro eye, two blinks, blue ring powers on →
+  S12 echo. Now 12 shots, still 56.7 s; prompt sheet regenerated (12 Fast, ≈ 320 credits). Rehearsal:
+  56.7 s, 1080x1920, A/V in sync, no voice overlaps; selftest 16/16 PASS.
 
 ## Integration test status
 | Integration | Status |
