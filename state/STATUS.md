@@ -6,7 +6,7 @@ Claude's prompts and delivers them to the **local folder** via Claude Code on th
 Extra paid spending: **not approved** ($0 caps). Public publishing: **not approved**.
 
 **Active Short:** `projects/face-not-recognized/` · code **FNR** · media `media/FNR/`
-**Phase:** 2 — Pre-production package **v2** (continuity fixes) ready, **waiting for owner approval**
+**Phase:** 3 — Owner set up Google Flow; **next: first reference image `FNR_REF_ELISE_YOUNG_FRONT.png`** (owner sends it for review)
 
 ## Next pending task
 **Owner reviews and approves the FNR production package:**
@@ -53,7 +53,7 @@ Then Claude (on the owner's PC): `import-clips` → frame QC → `make-sfx` → 
 |---|---|
 | Assembly (vertical), mix, burned captions, overlays, SFX, sync check, cover | ✅ TESTED with synthetic media (FNR rehearsal) |
 | Flow prompt sheet · clip/music/voice import by file name · voice split | ✅ TESTED with synthetic files · ⏳ real Flow clips pending |
-| Google Flow features in the owner's account (portrait + Fast, Ingredients, credits, 1080p download) | ⏳ UNVERIFIED — owner checks (guide step 0) |
+| Google Flow features in the owner's account | ✅ 2026-09-27 (owner screenshots): plan **PRO**; video models Omni 1.1 Flash / Veo 3.1 Lite / **Veo 3.1 Fast** / Veo 3.1 Quality; **9:16 portrait** available; image model Nano Banana 2; a **Characters** section exists; defaults set to video 9:16 · x1 · Veo 3.1 Fast and image 9:16 · x2 · Nano Banana 2; confirm-before-generating = Always. ⏳ Still unknown: credits per clip, Ingredients to Video, download sizes |
 | Google Vids AI voiceover (free Google voice) | ⏳ UNVERIFIED for the owner's account |
 | Gemini TTS free tier | ⏳ UNTESTED — only with the owner's OK and a free key |
 | Local run on Windows 11 (ffmpeg, caption font, hook) | ⏳ UNTESTED — first local session |
