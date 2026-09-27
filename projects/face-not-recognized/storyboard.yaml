@@ -55,7 +55,7 @@ shots:
   - id: S03
     beat: clue
     seconds: 4.5
-    trim_start: 0.3
+    trim_start: 2.0   # FNR_S03_v2 (2026-09-27): she leans in 3-6 s; cooler grade than S01/S02 (match in the edit)
     tier: standard
     characters: [elise_young]
     location: corridor
