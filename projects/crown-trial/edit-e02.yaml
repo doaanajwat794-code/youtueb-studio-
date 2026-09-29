@@ -1,13 +1,13 @@
 # Episode 2 — Claude's cut. Borin in full plate everywhere (v2 retakes for C01, C03, C09, C11).
 clips_dir: media/CT/incoming
 work_dir: media/CT/work_e02
-output: media/CT/CT_E02_FINAL_v2.mp4
+output: media/CT/CT_E02_FINAL_v3.mp4
 music_gain: 0.55
 segments:
   - {file: CT_E02_C01_v2.mp4, in: 3.8, out: 4.3, flash: true, note: "HOOK hammer hits the ground"}
   - {file: CT_E02_C01_v2.mp4, in: 4.6, out: 5.7, speed: 1.1, note: "Vessa already flying over the blast (reaction gap removed)"}
   - {file: CT_E02_C02_v1.mp4, in: 6.0, out: 7.9, push: 0.003, note: "Vessa: 'Big... and blind.'"}
-  - {file: CT_E02_C03_v2.mp4, in: 0.4, out: 2.5, push: 0.003, note: "Borin: 'I don't need eyes to crush you.'"}
+  - {file: CT_E02_C03_v2.mp4, in: 0.6, out: 2.5, push: 0.003, note: "Borin: 'I don't need eyes to crush you.'"}
   - {file: CT_E02_C03_v2.mp4, in: 3.3, out: 4.4, speed: 1.15, flash: true, note: "hammer swing (wind-up trimmed)"}
   - {file: CT_E02_C04_v1.mp4, in: 1.0, out: 3.0, speed: 1.2, flash: true, note: "Vessa flurry"}
   - {file: CT_E02_C05_v1.mp4, in: 3.0, out: 3.9, speed: 1.15, note: "vault take-off (hover removed)"}
@@ -16,13 +16,13 @@ segments:
   - {file: CT_E02_C07_v1.mp4, in: 3.6, out: 4.1, flash: true, note: "HE CATCHES THE GLAIVE (hold trimmed)"}
   - {file: CT_E02_C07_v1.mp4, in: 5.0, out: 6.3, push: 0.004, note: "Vessa shocked"}
   - {file: CT_E02_C08_v1.mp4, in: 4.9, out: 5.8, speed: 0.6, flash: true, note: "the snap (slow-mo) + roar"}
-  - {file: CT_E02_C08_v1.mp4, in: 7.0, out: 7.9, note: "broken glaive in the snow"}
-  - {file: CT_E02_C09_v2.mp4, in: 3.0, out: 5.2, push: 0.003, note: "Borin: 'Iron... doesn't fall.'"}
+  - {file: CT_E02_C08_v1.mp4, in: 7.1, out: 7.8, note: "broken glaive in the snow"}
+  - {file: CT_E02_C09_v2.mp4, in: 3.2, out: 5.0, push: 0.003, note: "Borin: 'Iron... doesn't fall.'"}
   - {file: CT_E02_C09_v2.mp4, in: 5.5, out: 5.95, flash: true, note: "slam"}
   - {file: CT_E02_C09_v2.mp4, in: 6.65, out: 7.8, note: "Vessa thrown instantly (0.7 s delay removed)"}
   - {file: CT_E02_C10_v1.mp4, in: 6.0, out: 8.0, push: 0.003, note: "Vessa: '...Enough.'"}
   - {file: CT_E02_C11_v2.mp4, in: 5.3, out: 8.0, note: "Borin raises the hammer to the crown"}
-  - {file: CT_E02_M2_v1.mp4, in: 2.5, out: 8.0, gain: 1.3, push: 0.0015, flash: true, note: "Champion: 'Two left... then me.'"}
+  - {file: CT_E02_M2_v1.mp4, in: 3.8, out: 8.0, gain: 1.3, push: 0.0015, flash: true, note: "Champion: 'Two left... then me.'"}
 drum_hits: ["0", "4", "5", "7", "9", "11", "12", "14"]
 calm_from: "16"
 mute_from: "18"
@@ -32,9 +32,9 @@ sfx:
   - {type: boom, at: "11", gain: 1.0}
   - {type: boom, at: "14", gain: 0.9}
   - {type: boom, at: "18", gain: 0.8}
-  - {type: boom, at: "18+4.4", gain: 1.1}
+  - {type: boom, at: "18+2.9", gain: 1.1}
 text:
-  - {at: "0", dur: 1.9, style: hook, text: "THE WALL\nvs THE FANG", y: 0.17}
+  - {at: "0", dur: 1.35, style: hook, text: "THE WALL\nvs THE FANG", y: 0.17}
   - {at: "2", dur: 1.4, style: name, text: "VESSA", y: 0.15}
   - {at: "2", dur: 1.4, style: title, text: "THE FROST FANG", y: 0.205}
   - {at: "2+0.3", dur: 1.5, style: sub, text: "Big... and blind."}
@@ -42,10 +42,10 @@ text:
   - {at: "3", dur: 1.4, style: title, text: "THE IRON WALL", y: 0.205}
   - {at: "3+0.1", dur: 2.0, style: sub, text: "I don't need eyes to crush you."}
   - {at: "8+0.5", dur: 1.4, style: sub, text: "Stay down."}
-  - {at: "13+0.3", dur: 1.9, style: sub, text: "Iron... doesn't fall."}
+  - {at: "13+0.2", dur: 1.6, style: sub, text: "Iron... doesn't fall."}
   - {at: "16+0.4", dur: 1.5, style: sub, text: "...Enough."}
   - {at: "17+1.2", dur: 1.4, style: end, text: "BORIN ADVANCES", y: 0.16}
-  - {at: "18+2.6", dur: 1.6, style: sub, text: "Two left..."}
-  - {at: "18+4.2", dur: 1.3, style: sub, text: "...then me."}
-  - {at: "18+4.4", dur: 1.1, style: end, text: "FINAL: RAJAN vs BORIN", y: 0.14}
-  - {at: "18+4.4", dur: 1.1, style: title, text: "WHO TAKES THE CROWN?", y: 0.19}
+  - {at: "18+1.3", dur: 1.5, style: sub, text: "Two left..."}
+  - {at: "18+2.9", dur: 1.3, style: sub, text: "...then me."}
+  - {at: "18+2.9", dur: 1.3, style: end, text: "FINAL: RAJAN vs BORIN", y: 0.14}
+  - {at: "18+2.9", dur: 1.3, style: title, text: "WHO TAKES THE CROWN?", y: 0.19}
