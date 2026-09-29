@@ -16,9 +16,12 @@ def fit(img, w, h, cx=0.5, cy=0.5):
 
 
 top = Image.open(top_p).convert("RGB").crop((110, 60, 610, 620))
-bot = Image.open(bot_p).convert("RGB").crop((0, 120, 720, 1100))
+import os
+BC = tuple(int(v) for v in os.environ.get("BOT_CROP", "0,120,720,1100").split(","))
+bot = Image.open(bot_p).convert("RGB").crop(BC)
 top = ImageEnhance.Contrast(fit(top, W, 1100, 0.5, 0.0)).enhance(1.15)
-bot = ImageEnhance.Contrast(fit(bot, W, 1100, 0.5, 0.4)).enhance(1.12)
+bot = ImageEnhance.Contrast(fit(bot, W, 1100, 0.5, 0.4)).enhance(1.25)
+top = ImageEnhance.Color(top).enhance(1.15)
 
 canvas = Image.new("RGB", (W, H)); canvas.paste(top.resize((W, 1100)).filter(ImageFilter.GaussianBlur(30)), (0, 0)); canvas.paste(top.crop((0, 0, W, 870)), (0, 170))
 mask = Image.new("L", (W, H), 0)
@@ -27,7 +30,7 @@ lower = Image.new("RGB", (W, H)); lower.paste(bot, (0, H - 1100))
 canvas = Image.composite(lower, canvas, mask).convert("RGBA")
 
 glow = Image.new("RGBA", (W, H), (0, 0, 0, 0))
-ImageDraw.Draw(glow).line([(0, 1040), (W, 860)], fill=(255, 190, 60, 255), width=16)
+ImageDraw.Draw(glow).line([(0, 1040), (W, 860)], fill=(255, 90, 20, 255), width=22)
 canvas = Image.alpha_composite(canvas, glow.filter(ImageFilter.GaussianBlur(10)))
 line = Image.new("RGBA", (W, H), (0, 0, 0, 0))
 ImageDraw.Draw(line).line([(0, 1040), (W, 860)], fill=(255, 235, 170, 255), width=5)
@@ -39,6 +42,16 @@ for y in range(H):
     grad.putpixel((0, y), int(min(255, a)))
 dark = Image.new("RGBA", (W, H), (0, 0, 0, 255)); dark.putalpha(grad.resize((W, H)))
 canvas = Image.alpha_composite(canvas, dark)
+import random
+random.seed(7)
+red = Image.new("RGBA", (W, H), (0, 0, 0, 0)); rd = ImageDraw.Draw(red)
+rd.rectangle([0, 0, W, H], outline=(200, 20, 10, 255), width=60)
+canvas = Image.alpha_composite(canvas, red.filter(ImageFilter.GaussianBlur(45)))
+emb = Image.new("RGBA", (W, H), (0, 0, 0, 0)); ed = ImageDraw.Draw(emb)
+for _ in range(140):
+    x, y, r = random.randint(0, W), random.randint(300, H - 200), random.choice([2, 3, 4, 5])
+    ed.ellipse([x - r, y - r, x + r, y + r], fill=(255, random.randint(120, 200), 40, random.randint(150, 255)))
+canvas = Image.alpha_composite(canvas, emb.filter(ImageFilter.GaussianBlur(1.2)))
 dr = ImageDraw.Draw(canvas)
 
 
