@@ -18,7 +18,7 @@ text, epic music, fast cuts). All names, characters, kingdom and designs are ori
 | 1 | Kael | lion | The Golden Blade | gold longsword | proud, powerful, direct |
 | 2 | Rajan | white tiger | The Crimson Claw | twin curved sabres | fast, aggressive, reckless |
 | 3 | Borin | grizzly bear (scar, blind left eye) | The Iron Wall | giant spiked war hammer | colossal, unbreakable, every hit shakes the arena |
-| 4 | Vessa | dark grey wolf (female, claw scars) | The Frost Fang | long silver glaive | fastest, acrobatic, long reach |
+| 4 | Vessa | white arctic wolf (female, claw scars, dark-blue armour) | The Frost Fang | long silver glaive | fastest, acrobatic, long reach |
 | 5 | ??? | masked (black panther, revealed in the final) | The Reigning Champion | obsidian sword | silent, undefeated |
 
 ## Bracket (4 episodes)
