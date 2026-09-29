@@ -1,0 +1,49 @@
+# Episode 2 — Claude's cut. Borin in full plate everywhere (v2 retakes for C01, C03, C09, C11).
+clips_dir: media/CT/incoming
+work_dir: media/CT/work_e02
+output: media/CT/CT_E02_FINAL.mp4
+music_gain: 0.55
+segments:
+  - {file: CT_E02_C01_v2.mp4, in: 3.6, out: 6.1, speed: 1.1, flash: true, note: "HOOK hammer blast + Vessa flip"}
+  - {file: CT_E02_C02_v1.mp4, in: 6.0, out: 7.9, push: 0.003, note: "Vessa: 'Big... and blind.'"}
+  - {file: CT_E02_C03_v2.mp4, in: 0.4, out: 2.5, push: 0.003, note: "Borin: 'I don't need eyes to crush you.'"}
+  - {file: CT_E02_C03_v2.mp4, in: 2.6, out: 4.4, speed: 1.15, flash: true, note: "hammer swing"}
+  - {file: CT_E02_C04_v1.mp4, in: 1.0, out: 3.0, speed: 1.2, flash: true, note: "Vessa flurry"}
+  - {file: CT_E02_C05_v1.mp4, in: 3.0, out: 5.4, speed: 1.15, note: "pole-vault strike"}
+  - {file: CT_E02_C05_v1.mp4, in: 7.0, out: 7.9, flash: true, note: "Borin on one knee"}
+  - {file: CT_E02_C06_v1.mp4, in: 4.2, out: 6.2, note: "Vessa raises glaive: 'Stay down.'"}
+  - {file: CT_E02_C07_v1.mp4, in: 3.8, out: 4.9, flash: true, note: "HE CATCHES THE GLAIVE"}
+  - {file: CT_E02_C07_v1.mp4, in: 5.0, out: 6.3, push: 0.004, note: "Vessa shocked"}
+  - {file: CT_E02_C08_v1.mp4, in: 4.9, out: 5.8, speed: 0.6, flash: true, note: "the snap (slow-mo) + roar"}
+  - {file: CT_E02_C08_v1.mp4, in: 7.0, out: 7.9, note: "broken glaive in the snow"}
+  - {file: CT_E02_C09_v2.mp4, in: 3.0, out: 5.2, push: 0.003, note: "Borin: 'Iron... doesn't fall.'"}
+  - {file: CT_E02_C09_v2.mp4, in: 5.3, out: 7.9, speed: 1.1, flash: true, note: "slam, Vessa thrown"}
+  - {file: CT_E02_C10_v1.mp4, in: 6.0, out: 8.0, push: 0.003, note: "Vessa: '...Enough.'"}
+  - {file: CT_E02_C11_v2.mp4, in: 5.3, out: 8.0, note: "Borin raises the hammer to the crown"}
+  - {file: CT_E02_M2_v1.mp4, in: 2.5, out: 8.0, gain: 1.3, push: 0.0015, flash: true, note: "Champion: 'Two left... then me.'"}
+drum_hits: ["0", "3", "4", "6", "8", "10", "11", "13"]
+calm_from: "14"
+mute_from: "16"
+sfx:
+  - {type: boom, at: "0", gain: 0.8}
+  - {type: whoosh, at: "5", gain: 0.7}
+  - {type: boom, at: "10", gain: 1.0}
+  - {type: boom, at: "13", gain: 0.9}
+  - {type: boom, at: "16", gain: 0.8}
+  - {type: boom, at: "16+4.4", gain: 1.1}
+text:
+  - {at: "0", dur: 2.3, style: hook, text: "THE WALL\nvs THE FANG", y: 0.17}
+  - {at: "1", dur: 1.4, style: name, text: "VESSA", y: 0.15}
+  - {at: "1", dur: 1.4, style: title, text: "THE FROST FANG", y: 0.205}
+  - {at: "1+0.3", dur: 1.5, style: sub, text: "Big... and blind."}
+  - {at: "2", dur: 1.4, style: name, text: "BORIN", y: 0.15}
+  - {at: "2", dur: 1.4, style: title, text: "THE IRON WALL", y: 0.205}
+  - {at: "2+0.1", dur: 2.0, style: sub, text: "I don't need eyes to crush you."}
+  - {at: "7+0.5", dur: 1.4, style: sub, text: "Stay down."}
+  - {at: "12+0.3", dur: 1.9, style: sub, text: "Iron... doesn't fall."}
+  - {at: "14+0.4", dur: 1.5, style: sub, text: "...Enough."}
+  - {at: "15+1.2", dur: 1.4, style: end, text: "BORIN ADVANCES", y: 0.16}
+  - {at: "16+2.6", dur: 1.6, style: sub, text: "Two left..."}
+  - {at: "16+4.2", dur: 1.3, style: sub, text: "...then me."}
+  - {at: "16+4.4", dur: 1.1, style: end, text: "FINAL: RAJAN vs BORIN", y: 0.14}
+  - {at: "16+4.4", dur: 1.1, style: title, text: "WHO TAKES THE CROWN?", y: 0.19}
