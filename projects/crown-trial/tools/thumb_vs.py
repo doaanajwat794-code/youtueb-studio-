@@ -15,12 +15,12 @@ def fit(img, w, h, cx=0.5, cy=0.5):
     return img.crop((x, y, x + w, y + h))
 
 
-top = Image.open(top_p).convert("RGB").crop((0, 80, 720, 900))
+top = Image.open(top_p).convert("RGB").crop((110, 60, 610, 620))
 bot = Image.open(bot_p).convert("RGB").crop((0, 120, 720, 1100))
-top = ImageEnhance.Contrast(fit(top, W, 1100, 0.5, 0.35)).enhance(1.15)
+top = ImageEnhance.Contrast(fit(top, W, 1100, 0.5, 0.0)).enhance(1.15)
 bot = ImageEnhance.Contrast(fit(bot, W, 1100, 0.5, 0.4)).enhance(1.12)
 
-canvas = Image.new("RGB", (W, H)); canvas.paste(top, (0, 0))
+canvas = Image.new("RGB", (W, H)); canvas.paste(top.resize((W, 1100)).filter(ImageFilter.GaussianBlur(30)), (0, 0)); canvas.paste(top.crop((0, 0, W, 870)), (0, 170))
 mask = Image.new("L", (W, H), 0)
 ImageDraw.Draw(mask).polygon([(0, 1040), (W, 860), (W, H), (0, H)], fill=255)
 lower = Image.new("RGB", (W, H)); lower.paste(bot, (0, H - 1100))
@@ -51,10 +51,10 @@ def text(t, y, size, fill, stroke):
 
 text(big, 70, 170, (255, 255, 255), 12)
 text(sub, 265, 64, (255, 200, 70), 7)
-cx, cy = W // 2, 950
-dr.ellipse([cx - 150, cy - 150, cx + 150, cy + 150], fill=(15, 10, 5, 235), outline=(255, 200, 70), width=10)
-f = ImageFont.truetype(F, 200); w = dr.textlength("VS", font=f)
-dr.text((cx - w / 2, cy - 125), "VS", font=f, fill=(255, 200, 70), stroke_width=6, stroke_fill=(0, 0, 0))
+cx = W - 190; cy = int(1040 - 180 * cx / W)
+dr.ellipse([cx - 135, cy - 135, cx + 135, cy + 135], fill=(15, 10, 5, 235), outline=(255, 200, 70), width=10)
+f = ImageFont.truetype(F, 175); w = dr.textlength("VS", font=f)
+dr.text((cx - w / 2, cy - 110), "VS", font=f, fill=(255, 200, 70), stroke_width=6, stroke_fill=(0, 0, 0))
 text(foot, 1780, 70, (255, 255, 255), 7)
 canvas.convert("RGB").save(out, quality=93)
 print("wrote", out)
