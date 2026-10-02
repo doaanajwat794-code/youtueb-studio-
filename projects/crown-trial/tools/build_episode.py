@@ -114,7 +114,7 @@ def main(cfg_path):
         at.append(f"atempo={rem:.4f}")
         out = work / f"seg{i:02d}.mp4"
         run(["-ss", str(a), "-t", str(b - a), "-i", str(f), "-vf", ",".join(vf),
-             "-af", ",".join(at) + f",volume={s.get('gain', 1.0)},aresample={SR}", "-t", f"{dur:.3f}",
+             "-af", ",".join(at) + f",volume={s.get('gain', cfg.get('clip_gain', 1.0))},aresample={SR}", "-t", f"{dur:.3f}",
              "-c:v", "libx264", "-crf", "16", "-preset", "medium", "-pix_fmt", "yuv420p", "-c:a", "aac", "-ar", str(SR), "-ac", "2", str(out)])
         parts.append(out); starts.append(t); t += dur
     total = t
@@ -165,7 +165,7 @@ def main(cfg_path):
     fx = np.zeros(len(mus))
     for at, kind in cfg.get("_sfx_auto", []):  # soft whoosh on every whip/zoom transition
         clip = whoosh(0.4) * 0.6; i = max(0, int(at * SR)); fx[i:i + len(clip)] += clip[: max(0, len(fx) - i)]
-    if cfg.get("smooth"):
+    if cfg.get("smooth") and cfg.get("ambience_gain", 1.0) > 0:
         fx += wind(len(fx) / SR) * cfg.get("ambience_gain", 1.0)
     for e in cfg.get("sfx", []):
         clip = boom() if e["type"] == "boom" else whoosh()
