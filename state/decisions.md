@@ -49,3 +49,4 @@ anywhere else. Format: `YYYY-MM-DD · decision · (file updated)`.
 - 2026-09-24 · ~~Caps $45 per Short / $150 per month~~ → replaced by the $0 target and $5/$20 safety caps.
 
 - 2026-10-02: CT edits use the editor's `smooth: true` mode (colour-matched shots, one grade, continuous ambience, a transition on every cut) so Flow clips never read as clips stacked side by side.
+- 2026-10-02: No whoosh/swish SFX on transitions in CT (owner heard a 'shh' on every cut); editor `transition_sfx: false`.

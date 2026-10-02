@@ -163,7 +163,7 @@ def main(cfg_path):
     if cfg.get("mute_from"):  # sudden silence of the score (e.g. when the masked Champion appears)
         i = int(seg_t(cfg["mute_from"]) * SR); mus[i:] *= np.exp(-np.arange(len(mus) - i) / (0.08 * SR))
     fx = np.zeros(len(mus))
-    for at, kind in cfg.get("_sfx_auto", []):  # soft whoosh on every whip/zoom transition
+    for at, kind in (cfg.get("_sfx_auto", []) if cfg.get("transition_sfx", True) else []):  # soft whoosh on every whip/zoom transition
         clip = whoosh(0.4) * 0.6; i = max(0, int(at * SR)); fx[i:i + len(clip)] += clip[: max(0, len(fx) - i)]
     if cfg.get("smooth") and cfg.get("ambience_gain", 1.0) > 0:
         fx += wind(len(fx) / SR) * cfg.get("ambience_gain", 1.0)

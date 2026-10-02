@@ -1,10 +1,11 @@
 # Episode 3 — THE FINAL. Retakes v2 for C05, C06, C08 (white tiger, full armour).
 clips_dir: media/CT/incoming
 work_dir: media/CT/work_e03v2
-output: media/CT/CT_E03_FINAL_v3.mp4  # v3: no wind bed, action-shot crowd audio at 50%
+output: media/CT/CT_E03_FINAL_v4.mp4  # v4: no whoosh on cuts; v3: no wind bed, action-shot crowd audio at 50%
 # v2 (owner: cuts felt like clips stacked side by side) -> smooth mode: shot colour-matching, one grade,
 # handheld drift, grain, continuous wind bed, audio crossfades, and a chosen transition on every cut.
 smooth: true
+transition_sfx: false # owner 2026-10-02: no 'shh' whoosh on cuts
 ambience_gain: 0      # owner 2026-10-02: no wind bed
 clip_gain: 0.5        # owner: crowd/arena noise in the Flow audio lower on action shots; dialogue shots keep gain 1
 music_gain: 0.55
@@ -39,7 +40,6 @@ sfx:
   - {type: boom, at: "1", gain: 0.9}
   - {type: boom, at: "2", gain: 0.9}
   - {type: boom, at: "8", gain: 0.9}
-  - {type: whoosh, at: "15", gain: 0.9}
   - {type: boom, at: "15+1.0", gain: 1.0}
   - {type: boom, at: "21", gain: 0.8}
   - {type: boom, at: "21+3.9", gain: 1.1}
