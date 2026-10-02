@@ -4,6 +4,8 @@ work_dir: media/CT/work_e03
 output: media/CT/CT_E03_draft.mp4
 music_gain: 0.55
 segments:
+  - {file: CT_E03_C08_v1.mp4, in: 6.5, out: 7.0, speed: 0.55, flash: true, note: "COLD OPEN flash-forward: the hammer falls"}
+  - {file: CT_E03_C10_v1.mp4, in: 5.3, out: 5.9, flash: true, note: "COLD OPEN: sabres crossed over Borin"}
   - {file: CT_E03_C01_v1.mp4, in: 2.8, out: 3.7, flash: true, note: "HOOK hammer smashes, Rajan spins away"}
   - {file: CT_E03_C01_v1.mp4, in: 5.0, out: 5.8, speed: 1.1, flash: true, note: "sabres spark on the hammer"}
   - {file: CT_E03_C02_v1.mp4, in: 0.8, out: 2.8, push: 0.003, note: "Borin: 'Speed won't save you, tiger.'"}
@@ -22,27 +24,31 @@ segments:
   - {file: CT_E03_C11_v1.mp4, in: 4.9, out: 6.9, note: "Rajan: 'The crown is MINE!'"}
   - {file: CT_E03_C11_v1.mp4, in: 7.1, out: 8.0, note: "the crown"}
   - {file: CT_E03_M3_v1.mp4, in: 2.4, out: 8.0, gain: 1.3, push: 0.0015, flash: true, note: "Champion draws: 'Not yet. First... you face me.'"}
-drum_hits: ["0", "1", "3", "5", "6", "9", "11", "13"]
-calm_from: "14"
-mute_from: "17"
+drum_hits: ["2", "3", "5", "7", "8", "11", "13", "15"]
+calm_from: "16"
+mute_from: "19"
 sfx:
-  - {type: boom, at: "0", gain: 0.9}
-  - {type: boom, at: "6", gain: 0.9}
-  - {type: whoosh, at: "12", gain: 0.9}
-  - {type: boom, at: "12+1.0", gain: 1.0}
-  - {type: boom, at: "17", gain: 0.8}
-  - {type: boom, at: "17+3.9", gain: 1.1}
+  - {type: boom, at: "0", gain: 1.1}
+  - {type: boom, at: "1", gain: 0.9}
+  - {type: boom, at: "2", gain: 0.9}
+  - {type: boom, at: "8", gain: 0.9}
+  - {type: whoosh, at: "14", gain: 0.9}
+  - {type: boom, at: "14+1.0", gain: 1.0}
+  - {type: boom, at: "19", gain: 0.8}
+  - {type: boom, at: "19+3.9", gain: 1.1}
 text:
-  - {at: "0", dur: 1.5, style: hook, text: "THE FINAL", y: 0.17}
-  - {at: "2", dur: 1.4, style: name, text: "BORIN", y: 0.15}
-  - {at: "2", dur: 1.4, style: title, text: "THE IRON WALL", y: 0.205}
-  - {at: "2+0.3", dur: 1.7, style: sub, text: "Speed won't save you, tiger."}
-  - {at: "5", dur: 1.4, style: name, text: "RAJAN", y: 0.15}
-  - {at: "5", dur: 1.4, style: title, text: "THE CRIMSON CLAW", y: 0.205}
-  - {at: "14+0.6", dur: 1.6, style: sub, text: "...Go. Take your crown."}
-  - {at: "15+0.3", dur: 1.6, style: sub, text: "The crown is MINE!"}
-  - {at: "16", dur: 0.9, style: end, text: "RAJAN WINS THE TRIAL", y: 0.16}
-  - {at: "17+1.2", dur: 2.2, style: sub, text: "Not yet. First..."}
-  - {at: "17+3.8", dur: 1.7, style: sub, text: "...you face me."}
-  - {at: "17+3.9", dur: 1.7, style: end, text: "NEXT: THE CROWN DUEL", y: 0.14}
-  - {at: "17+3.9", dur: 1.7, style: title, text: "WHO IS BEHIND THE MASK?", y: 0.19}
+  - {at: "0", dur: 1.0, style: hook, text: "HE NEVER\nLOST A FIGHT...", y: 0.17}
+  - {at: "1", dur: 0.6, style: hook, text: "...UNTIL TONIGHT", y: 0.17}
+  - {at: "2", dur: 1.2, style: hook, text: "THE FINAL", y: 0.17}
+  - {at: "4", dur: 1.4, style: name, text: "BORIN", y: 0.15}
+  - {at: "4", dur: 1.4, style: title, text: "THE IRON WALL", y: 0.205}
+  - {at: "4+0.3", dur: 1.7, style: sub, text: "Speed won't save you, tiger."}
+  - {at: "7", dur: 1.4, style: name, text: "RAJAN", y: 0.15}
+  - {at: "7", dur: 1.4, style: title, text: "THE CRIMSON CLAW", y: 0.205}
+  - {at: "16+0.6", dur: 1.6, style: sub, text: "...Go. Take your crown."}
+  - {at: "17+0.3", dur: 1.6, style: sub, text: "The crown is MINE!"}
+  - {at: "18", dur: 0.9, style: end, text: "RAJAN WINS THE TRIAL", y: 0.16}
+  - {at: "19+1.2", dur: 2.2, style: sub, text: "Not yet. First..."}
+  - {at: "19+3.8", dur: 1.7, style: sub, text: "...you face me."}
+  - {at: "19+3.9", dur: 1.7, style: end, text: "NEXT: THE CROWN DUEL", y: 0.14}
+  - {at: "19+3.9", dur: 1.7, style: title, text: "WHO IS BEHIND THE MASK?", y: 0.19}
