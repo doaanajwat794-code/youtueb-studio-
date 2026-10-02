@@ -47,3 +47,5 @@ anywhere else. Format: `YYYY-MM-DD · decision · (file updated)`.
 - 2026-09-24 · ~~$5/Short and $20/month safety caps~~ → $0 (paid spending not approved).
 - 2026-09-24 · ~~Veo 3.1 via the Gemini API for footage (≈ $24–26.50 per Short)~~ → replaced by Google Flow (manual).
 - 2026-09-24 · ~~Caps $45 per Short / $150 per month~~ → replaced by the $0 target and $5/$20 safety caps.
+
+- 2026-10-02: CT edits use the editor's `smooth: true` mode (colour-matched shots, one grade, continuous ambience, a transition on every cut) so Flow clips never read as clips stacked side by side.
