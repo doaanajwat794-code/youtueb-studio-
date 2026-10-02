@@ -1,6 +1,6 @@
 # Split "VS" cover for a Crown Trial episode.
-# Usage: python thumb_vs.py TOP.png BOTTOM.png OUT.jpg "BIG TEXT" "SUB TEXT" "FOOTER"
-import sys
+# Usage: [TOP_CROP=x0,y0,x1,y1] [BOT_CROP=x0,y0,x1,y1] python thumb_vs.py TOP.png BOTTOM.png OUT.jpg "BIG TEXT" "SUB TEXT" "FOOTER"
+import sys, os
 from PIL import Image, ImageDraw, ImageFont, ImageFilter, ImageEnhance
 
 W, H = 1080, 1920
@@ -15,8 +15,8 @@ def fit(img, w, h, cx=0.5, cy=0.5):
     return img.crop((x, y, x + w, y + h))
 
 
-top = Image.open(top_p).convert("RGB").crop((110, 60, 610, 620))
-import os
+TC = tuple(int(v) for v in os.environ.get("TOP_CROP", "110,60,610,620").split(","))
+top = Image.open(top_p).convert("RGB").crop(TC)
 BC = tuple(int(v) for v in os.environ.get("BOT_CROP", "0,120,720,1100").split(","))
 bot = Image.open(bot_p).convert("RGB").crop(BC)
 top = ImageEnhance.Contrast(fit(top, W, 1100, 0.5, 0.0)).enhance(1.15)
