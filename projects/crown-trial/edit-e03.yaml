@@ -1,7 +1,7 @@
 # Episode 3 — THE FINAL. Retakes v2 for C05, C06, C08 (white tiger, full armour).
 clips_dir: media/CT/incoming
 work_dir: media/CT/work_e03v2
-output: media/CT/CT_E03_FINAL_v2.mp4
+output: media/CT/CT_E03_FINAL_v3.mp4  # v3: no wind bed, action-shot crowd audio at 50%
 # v2 (owner: cuts felt like clips stacked side by side) -> smooth mode: shot colour-matching, one grade,
 # handheld drift, grain, continuous wind bed, audio crossfades, and a chosen transition on every cut.
 smooth: true
