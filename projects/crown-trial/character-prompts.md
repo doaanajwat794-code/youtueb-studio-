@@ -42,3 +42,7 @@ background, photorealistic cinematic dark fantasy, highly detailed realistic fur
 ## Borin ARMOUR LOCK (2026-09-29)
 Veo drew Borin two ways in E02 (full plate vs bare arms + fur cape). Canon from now on = FULL plate (majority of E02 clips). Use this sentence in every Borin prompt:
 he wears FULL dark iron plate armour that completely covers his chest, belly, shoulders and arms: a riveted breastplate, large spiked pauldrons, articulated iron arm plates and heavy gauntlets, an armoured skirt and greaves; no bare skin or bare fur on his arms, chest or belly; only a short brown fur collar at the neck and no fur cape. He wields a gigantic two-handed iron war hammer with a spiked square head.
+
+## Rajan LOCK (2026-10-02)
+Veo drew Rajan orange and/or without armour in E03 C05, C06, C08. Use in every Rajan prompt:
+Rajan: a huge heavily muscular anthropomorphic WHITE tiger warrior: snow-white fur with bold black stripes (never orange, never golden), ice-blue eyes, a notch in his left ear. RAJAN ARMOUR LOCK: he always wears the same dark crimson and black lacquered armour covering his chest, belly, shoulders, hips and legs: a crimson breastplate with silver claw-shaped trim, layered crimson pauldrons, a crimson armoured skirt, dark greaves and boots, and a black scarf around his neck; only his muscular white-and-black striped arms are bare. He wields two curved silver sabres, one in each hand, at all times.
