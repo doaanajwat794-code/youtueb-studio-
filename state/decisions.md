@@ -51,3 +51,4 @@ anywhere else. Format: `YYYY-MM-DD · decision · (file updated)`.
 - 2026-10-02: CT edits use the editor's `smooth: true` mode (colour-matched shots, one grade, continuous ambience, a transition on every cut) so Flow clips never read as clips stacked side by side.
 - 2026-10-02: No whoosh/swish SFX on transitions in CT (owner heard a 'shh' on every cut); editor `transition_sfx: false`.
 - 2026-10-03: CT E04 (finale) is 5 continuous 8 s clips (not 12 short ones), edited to 32–36 s; Rajan wins; the masked Champion is revealed as a silverback gorilla, Kharun "The Last King" (replaces the black panther), built as a Flow Character for a possible season 2.
+- 2026-10-03: CT E04 finale arena has a packed crowd of anthropomorphic animal spectators (lions, leopards, deer, wolves, foxes, bears) — Nano Banana edit of the arena plate (`CT_REF_ARENA_CROWD`); E01–E03 unchanged.
