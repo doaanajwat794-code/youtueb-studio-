@@ -113,7 +113,13 @@ def main(cfg_path):
         while rem < 0.5: at.append("atempo=0.5"); rem /= 0.5
         at.append(f"atempo={rem:.4f}")
         out = work / f"seg{i:02d}.mp4"
-        run(["-ss", str(a), "-t", str(b - a), "-i", str(f), "-vf", ",".join(vf),
+        if f.suffix.lower() in (".jpg", ".jpeg", ".png"):  # still image (e.g. a closing wide shot) + silent audio
+            src_in = ["-loop", "1", "-framerate", str(FPS), "-t", f"{dur:.3f}", "-i", str(f),
+                      "-f", "lavfi", "-t", f"{dur:.3f}", "-i", f"anullsrc=r={SR}:cl=stereo"]
+            vf[0] = "setpts=PTS-STARTPTS"; at = ["anull"]
+        else:
+            src_in = ["-ss", str(a), "-t", str(b - a), "-i", str(f)]
+        run([*src_in, "-vf", ",".join(vf),
              "-af", ",".join(at) + f",volume={s.get('gain', cfg.get('clip_gain', 1.0))},aresample={SR}", "-t", f"{dur:.3f}",
              "-c:v", "libx264", "-crf", "16", "-preset", "medium", "-pix_fmt", "yuv420p", "-c:a", "aac", "-ar", str(SR), "-ac", "2", str(out)])
         parts.append(out); starts.append(t); t += dur
