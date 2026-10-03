@@ -16,11 +16,11 @@ mystery is the series' hook since E03 ("WHO IS BEHIND THE MASK?"), and he remove
 ## Beats
 | Clip | 0–8 s, one continuous shot | Line |
 |---|---|---|
-| C01 | Champion leaps from the balcony, lands; charges; crossed-sabre block; Rajan right-left-right, all parried | Champion: "Kneel, tiger." |
-| C02 | Champion's heavy chain high-low-high; low sweep, Rajan jumps; kick in mid-air; crash, roll, springs up | — |
-| C03 | Rajan sprints, leaps spinning, double-sabre strike from the air; flurry right-left-right-left; spin slash | Rajan: "I don't kneel." |
-| C04 | Rajan ducks a head strike, knocks the black sword away, cracks the mask; Champion drops to one knee | — |
-| C05 | Frames to Video: beaten, he pulls the cracked mask off himself → silverback gorilla; looks up | Kharun: "Finally... a worthy king." |
+| C01 | Drops from the balcony, floor cracks; overhead smash caught on crossed sabres; Rajan's spin double-slash parried; elbow to the chest | Champion: "Kneel, tiger." |
+| C02 | Three-strike combo (thrust sparks on the breastplate); low sweep, backflip; grabs Rajan's ankle mid-air and slams him into the snow; Rajan springs up | — |
+| C03 | Sprint, spinning leap, double-sabre crash (floor cracks); six-strike flurry; back-kick | Rajan: "I kneel to no one." |
+| C04 | Overhead strike misses into the stone; Rajan stamps the blade, disarms; 360° slash cracks the mask; kneel; sabres crossed at the throat; crowd silent | — |
+| C05 | He rips the cracked mask off himself → silverback gorilla Kharun; looks up | Kharun: "Finally... a worthy king." |
 
 ## Steps for the owner
 1. Rajan: update the Flow Character body with **Rajan BODY v2 (full armour)** from `character-prompts.md`.
