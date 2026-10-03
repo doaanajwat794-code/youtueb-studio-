@@ -19,13 +19,13 @@ text, epic music, fast cuts). All names, characters, kingdom and designs are ori
 | 2 | Rajan | white tiger | The Crimson Claw | twin curved sabres | fast, aggressive, reckless |
 | 3 | Borin | grizzly bear (scar, blind left eye) | The Iron Wall | giant spiked war hammer | colossal, unbreakable, every hit shakes the arena |
 | 4 | Vessa | white arctic wolf (female, claw scars, dark-blue armour) | The Frost Fang | long silver glaive | fastest, acrobatic, long reach |
-| 5 | ??? | masked (black panther, revealed in the final) | The Reigning Champion | obsidian sword | silent, undefeated |
+| 5 | ??? | masked (silverback gorilla **Kharun, "The Last King"**, revealed in the final; owner 2026-10-03) | The Reigning Champion | obsidian sword | silent, undefeated |
 
 ## Bracket (4 episodes)
 - **Ep 1 — Semi-final 1:** Kael (lion) vs Rajan (tiger)
 - **Ep 2 — Semi-final 2:** Borin (bear) vs Vessa (wolf)
 - **Ep 3 — The Final:** winner Ep 1 vs winner Ep 2
-- **Ep 4 — The Crown Duel:** the Trial winner vs the masked Reigning Champion (mask falls: black panther)
+- **Ep 4 — The Crown Duel:** the Trial winner vs the masked Reigning Champion (Rajan wins; the mask falls: silverback gorilla Kharun)
 Winners are decided per episode (option: let comments vote "who wins?" for engagement).
 
 ## Episode formula (25–40 s, 10–14 shots of 2–3 s)
