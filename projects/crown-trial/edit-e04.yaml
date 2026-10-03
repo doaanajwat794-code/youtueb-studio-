@@ -1,7 +1,7 @@
 # Episode 4 — THE CROWN DUEL (finale). 5 continuous Flow clips (10 s each) + closing wide still.
 clips_dir: media/CT/incoming
 work_dir: media/CT/work_e04
-output: media/CT/CT_E04_FINAL.mp4
+output: media/CT/CT_E04_FINAL_v2.mp4  # v2: fighter-swap in C02 cut out
 smooth: true
 transition_sfx: false
 ambience_gain: 0
@@ -10,21 +10,23 @@ music_gain: 0.55
 segments:
   - {file: CT_E04_C04_v2.mp4, in: 4.4, out: 5.3, speed: 0.6, flash: true, note: "COLD OPEN: the mask cracks (flash-forward)"}
   - {tr: flash, gain: 0.8, file: CT_E04_C01_v2.mp4, in: 0.3, out: 8.3, note: "Champion drops in: 'Kneel, tiger.' + first exchange"}
-  - {tr: whip, file: CT_E04_C02_v2.mp4, in: 0.0, out: 7.0, note: "combo, backflip, mid-air slam, Rajan springs up"}
+  - {tr: whip, file: CT_E04_C02_v2.mp4, in: 0.0, out: 2.7, note: "three-strike combo"}
+  # owner 2026-10-03: at 2.75-3.6 s Veo swaps the fighters mid-flip (Champion turns into the tiger) -> cut out
+  - {tr: whip, trd: 0.1, file: CT_E04_C02_v2.mp4, in: 3.75, out: 7.0, note: "Rajan leaps, grabbed mid-air, slammed, springs up"}
   - {tr: cut, gain: 0.8, file: CT_E04_C03_v1.mp4, in: 0.0, out: 7.4, note: "Rajan: 'I kneel to no one.' leap, flurry, back-kick"}
   - {tr: whip, file: CT_E04_C04_v2.mp4, in: 0.0, out: 5.3, note: "strike into the stone, spin slash, the mask cracks"}
   - {tr: flash, gain: 1.3, file: CT_E04_C05_v1a.mp4, in: 0.5, out: 8.4, push: 0.0008, note: "kneeling, rips off the mask: Kharun 'Finally... a worthy king.'"}
   - {tr: dissolve, trd: 0.5, file: CT_E04_WIDE_KHARUN.jpg, in: 0, out: 3.2, push: 0.0012, note: "closing wide: the new king"}
-drum_hits: ["1+0.4", "1+2.6", "2+1.0", "2+4.6", "3+1.8", "4+1.5", "4+4.6"]
-calm_from: "4+4.6"
-mute_from: "5"
+drum_hits: ["1+0.4", "1+2.6", "2+1.0", "3+0.85", "4+1.8", "5+1.5", "5+4.6"]
+calm_from: "5+4.6"
+mute_from: "6"
 sfx:
   - {type: boom, at: "0", gain: 1.1}
   - {type: boom, at: "1+0.4", gain: 1.0}
-  - {type: boom, at: "2+4.6", gain: 0.9}
-  - {type: boom, at: "4+1.5", gain: 0.8}
-  - {type: boom, at: "5", gain: 1.1}
-  - {type: boom, at: "6+0.3", gain: 1.0}
+  - {type: boom, at: "3+0.85", gain: 0.9}
+  - {type: boom, at: "5+1.5", gain: 0.8}
+  - {type: boom, at: "6", gain: 1.1}
+  - {type: boom, at: "7+0.3", gain: 1.0}
 text:
   - {at: "0", dur: 1.4, style: hook, text: "NO ONE HAS EVER\nSEEN HIS FACE...", y: 0.17}
   - {at: "1+0.5", dur: 1.1, style: hook, text: "THE CROWN DUEL", y: 0.17}
@@ -33,10 +35,10 @@ text:
   - {at: "1+1.7", dur: 1.2, style: sub, text: "Kneel, tiger."}
   - {at: "1+3.1", dur: 1.3, style: name, text: "RAJAN", y: 0.15}
   - {at: "1+3.1", dur: 1.3, style: title, text: "THE CRIMSON CLAW", y: 0.205}
-  - {at: "3+0.1", dur: 1.4, style: sub, text: "I kneel to no one."}
-  - {at: "5+3.0", dur: 1.9, style: name, text: "KHARUN", y: 0.15}
-  - {at: "5+3.0", dur: 1.9, style: title, text: "THE LAST KING", y: 0.205}
-  - {at: "5+5.1", dur: 2.8, style: sub, text: "Finally... a worthy king."}
-  - {at: "6+0.4", dur: 1.4, style: end, text: "RAJAN", y: 0.14}
-  - {at: "6+0.4", dur: 1.4, style: title, text: "KING OF AURUMVALE", y: 0.185}
-  - {at: "6+1.9", dur: 1.2, style: end, text: "THE END... ?", y: 0.16}
+  - {at: "4+0.1", dur: 1.4, style: sub, text: "I kneel to no one."}
+  - {at: "6+3.0", dur: 1.9, style: name, text: "KHARUN", y: 0.15}
+  - {at: "6+3.0", dur: 1.9, style: title, text: "THE LAST KING", y: 0.205}
+  - {at: "6+5.1", dur: 2.8, style: sub, text: "Finally... a worthy king."}
+  - {at: "7+0.4", dur: 1.4, style: end, text: "RAJAN", y: 0.14}
+  - {at: "7+0.4", dur: 1.4, style: title, text: "KING OF AURUMVALE", y: 0.185}
+  - {at: "7+1.9", dur: 1.2, style: end, text: "THE END... ?", y: 0.16}
