@@ -61,3 +61,20 @@ Each estimate is for 11 clips with 30 % retakes. Extra money spent: **$0** (subs
 **Recommendation:** #1, all Fast except the hook (S01) and the mirror reveal (twist) on Quality.
 On Google AI Pro (≈ 1,000 credits/month, web-reported) that's about 1–2 Shorts a month, or ~3 if
 all shots are Fast. Your plan tier sets the real number.
+
+## 2026-10-05 — After The Crown Trial (owner-reported views: E01 ≈ 1,000 · E04 ≈ 5 on YouTube)
+Lesson (Claude's read, not verified analytics): each Short is shown to strangers. "Lion vs tiger" is understood in
+one second; "episode 4 of a series you never saw" is not. → Every new Short must work **standalone**: a clear
+"A vs B" match-up in the first second and a complete ending. Series links stay light (same world, a number, a teaser).
+
+1. **DRAGON THRONE ⭐ (recommended pilot)** — five element dragons (Fire, Ice, Storm, Shadow, Gold); each Short is
+   one complete duel ("FIRE vs ICE — who wins?"), clear winner, the next challenger appears at the end.
+   Flow risks: two similar dragons swap identity (seen in CT E04 C02) → make every dragon different in colour,
+   size, silhouette and breath element; keep them apart in frame (aerial passes, breath clashes), avoid tangled
+   grappling close-ups; state limbs ("four legs and two wings"). Dragons don't lip-sync well → no dialogue,
+   2–3 word on-screen text only. Pilot first, judge after 48–72 h, then decide on more.
+2. **Dragon conspiracy / betrayal saga** (owner's idea) — strong story, but it needs dialogue or narration and
+   prior episodes; weaker for Shorts discovery and harder for Veo (talking dragons). Better later as a compiled
+   long video, if ever.
+3. **Animal "Who would win?" one-offs** — the format that got ~1,000 views; reuse existing Flow Characters
+   (e.g. Kharun vs Borin) for near-zero setup.
