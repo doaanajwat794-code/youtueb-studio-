@@ -36,3 +36,15 @@ Portrait of NYXARA, a lean, sharp-angled shadow dragon with a long spiked tail, 
 
 ### MORVATH — The Ancient (Ancient boss)
 Portrait of MORVATH, an ancient, gigantic old dragon, far larger than any other, with a massive scarred skull, four tree-trunk legs and two enormous torn wings; ash-grey and dark bronze scales cracked like old stone, covered in centuries of battle scars, broken horns and a missing tooth, deep ember-red eyes glowing in the dark, slow smoke rising from his nostrils. Head, neck and chest, three-quarter view, terrifying and ancient. Photorealistic cinematic dark fantasy, highly detailed realistic scales and wing membranes, dramatic lighting, plain dark grey studio background, 35mm film look. No text, no logo, no rider, no saddle.
+
+## Approved portraits (2026-10-05)
+- ✅ IGNAR (`media/DT/DT_REF_IGNAR_FRONT.jpg`): lava-cracked crimson-black scales, black horn crown, fire in the jaws, gold eyes.
+  Note: drawn standing upright like a biped → the body prompt forces a four-legged dragon stance.
+- ✅ SYLVRA (`media/DT/DT_REF_SYLVRA_FRONT.jpg`): white-blue frost scales, icicle crown, cyan eyes, freezing breath.
+
+## Body prompts (Flow → character → Create body)
+- **IGNAR:** Full-body side view of the same fire dragon IGNAR, standing on ALL FOUR legs like a real dragon (not upright, not on two legs), a colossal heavy muscular body, thick neck, long spiked tail, two huge bat-like wings half spread; jagged crimson and black scales with glowing lava-orange cracks, black obsidian horn crown, molten gold eyes, embers at the jaws. Plain dark grey studio background, photorealistic cinematic dark fantasy, highly detailed scales, 35mm film look. No text, no rider, no saddle.
+- **SYLVRA:** Full-body side view of the same ice dragon SYLVRA, standing on all four legs, a sleek lean agile body clearly smaller and slimmer than a heavy dragon, long elegant neck, long thin tail, two wide wings with translucent frosted membranes half spread; pearl-white and glacier-blue frosted scales, icicle crown of crystal spines, glowing cyan eyes, freezing mist at the jaws. Plain dark grey studio background, photorealistic cinematic dark fantasy, highly detailed scales, 35mm film look. No text, no rider, no saddle.
+
+## Location plate — FIRE vs ICE (Image mode, no dragons)
+Location photo, vertical 9:16, no creatures. A jagged mountain range at dusk where an erupting volcano with glowing lava rivers on the left meets a vast blue glacier and frozen cliffs on the right; a sky split between orange fire-lit smoke and cold blue storm clouds, falling ash mixing with snow, a high rocky summit ledge in the centre. Photorealistic cinematic dark fantasy, epic scale, 35mm film look. No people, no creatures, no text, no logos.
