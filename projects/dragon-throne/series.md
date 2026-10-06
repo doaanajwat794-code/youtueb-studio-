@@ -48,3 +48,14 @@ Portrait of MORVATH, an ancient, gigantic old dragon, far larger than any other,
 
 ## Location plate — FIRE vs ICE (Image mode, no dragons)
 Location photo, vertical 9:16, no creatures. A jagged mountain range at dusk where an erupting volcano with glowing lava rivers on the left meets a vast blue glacier and frozen cliffs on the right; a sky split between orange fire-lit smoke and cold blue storm clouds, falling ash mixing with snow, a high rocky summit ledge in the centre. Photorealistic cinematic dark fantasy, epic scale, 35mm film look. No people, no creatures, no text, no logos.
+
+## Approved portraits (2026-10-06)
+- ✅ THRAXIS (`DT_REF_THRAXIS_FRONT.jpg`): slate-grey serpentine neck with glowing blue lightning veins, pale bone frills, glowing white-blue eye, lightning in the jaws.
+- ✅ NYXARA (`DT_REF_NYXARA_FRONT.jpg`): matte black scales, glowing violet runes, violet eye, violet smoke, blade-like black horns.
+- ✅ AURYN (`DT_REF_AURYN_FRONT.jpg`): polished gold scales, crown of golden horns, glowing amber wing membranes, gold fire in the throat.
+
+## E02 plan (owner 2026-10-06): real natural landscape (nature-documentary drone look, no fantasy arena) + connected clips
+(each clip continues from the previous clip's last frame: Flow "Extend", or Frames to Video from a last frame Claude extracts).
+Proposed: SYLVRA vs THRAXIS, THRAXIS wins (the champion falls), AURYN teaser. Location until the owner's reference video
+arrives: a real Icelandic black-sand coast in a storm.
+- **Location plate:** Real landscape photograph, vertical 9:16, no creatures, no people. The black sand beach and towering basalt sea stacks of Iceland's south coast in a violent storm: huge Atlantic waves crashing white against the black rocks, sea spray, green moss-covered cliffs, a dark low storm sky with lightning striking the sea. Shot like real drone footage for a nature documentary, natural light, photorealistic, highly detailed, 35mm. No text, no logos, no fantasy elements.
