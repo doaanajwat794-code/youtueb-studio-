@@ -165,9 +165,22 @@ def main(cfg_path):
         return starts[int(k)] + float(off)
 
     hits = [seg_t(h) for h in cfg.get("drum_hits", [])]
-    mus = score(total, hits, calm_from=seg_t(cfg["calm_from"]) if cfg.get("calm_from") else None)
-    if cfg.get("mute_from"):  # sudden silence of the score (e.g. when the masked Champion appears)
-        i = int(seg_t(cfg["mute_from"]) * SR); mus[i:] *= np.exp(-np.arange(len(mus) - i) / (0.08 * SR))
+    if cfg.get("music_file"):  # a real track supplied by the owner (licensed/royalty-free) replaces the synth score
+        raw = subprocess.run([FF, "-loglevel", "error", "-ss", str(cfg.get("music_start", 0)), "-i", str(cfg["music_file"]),
+                              "-ac", "1", "-ar", str(SR), "-f", "s16le", "-"], capture_output=True, check=True).stdout
+        mus = np.frombuffer(raw, np.int16).astype(float) / 32768
+        n = int(total * SR); mus = np.pad(mus, (0, max(0, n - len(mus))))[:n]
+        tt = np.arange(n) / SR
+        mus = mus * np.clip(tt / 0.15, 0, 1) * np.clip((total - tt) / 1.5, 0, 1)
+        mus = 0.9 * mus / (np.abs(mus).max() + 1e-9)
+    else:
+        mus = score(total, hits, calm_from=seg_t(cfg["calm_from"]) if cfg.get("calm_from") else None)
+    if cfg.get("mute_from"):  # sudden silence of the music (a "drop" before the big moment)
+        i = int(seg_t(cfg["mute_from"]) * SR); env = np.exp(-np.arange(len(mus) - i) / (0.08 * SR))
+        if cfg.get("music_resume"):  # bring the music back after the drop
+            j = int(seg_t(cfg["music_resume"]) * SR) - i
+            if 0 < j < len(env): env[j:] = np.clip(np.arange(len(env) - j) / (0.25 * SR), 0, 1)
+        mus[i:] *= env
     fx = np.zeros(len(mus))
     for at, kind in (cfg.get("_sfx_auto", []) if cfg.get("transition_sfx", True) else []):  # soft whoosh on every whip/zoom transition
         clip = whoosh(0.4) * 0.6; i = max(0, int(at * SR)); fx[i:i + len(clip)] += clip[: max(0, len(fx) - i)]

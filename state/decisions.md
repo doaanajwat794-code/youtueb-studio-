@@ -54,3 +54,4 @@ anywhere else. Format: `YYYY-MM-DD · decision · (file updated)`.
 - 2026-10-03: CT E04 finale arena has a packed crowd of anthropomorphic animal spectators (lions, leopards, deer, wolves, foxes, bears) — Nano Banana edit of the arena plate (`CT_REF_ARENA_CROWD`); E01–E03 unchanged.
 - 2026-10-03: Flow now returns 10 s Veo 3.1 Fast clips (verified: E04 clips are 240 frames at 24 fps). Rajan's armour lock goes at the START of every prompt.
 - 2026-10-05: New series DRAGON THRONE (code DT): original dragons inspired by the qualities of the owner's House of the Dragon moodboard, never their names or designs (copyright/originality); standalone duels; pilot IGNAR (fire) vs SYLVRA (ice).
+- 2026-10-06: No more synthesized music scores for DT — the owner supplies a royalty-free epic track (YouTube Audio Library / Pixabay); never copyrighted soundtracks such as the Game of Thrones theme (Content ID).
