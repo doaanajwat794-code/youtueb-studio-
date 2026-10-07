@@ -1,11 +1,11 @@
 # DRAGON THRONE E02 — STORM vs ICE. Keyframe-to-keyframe clips (v2). No music: the owner adds licensed music in-app.
 clips_dir: media/DT/incoming
-work_dir: media/DT/work_e02
-output: media/DT/DT_E02_FINAL_nomusic.mp4  # v2: slowed (warped) hook audio muted, opening boom removed
+work_dir: media/DT/work_e02s
+output: media/DT/DT_E02_FINAL_silent.mp4  # v2: slowed (warped) hook audio muted, opening boom removed
 smooth: true
 transition_sfx: false
 ambience_gain: 0
-clip_gain: 0.85
+clip_gain: 0
 music_gain: 0
 final_eq: "highpass=f=45,bass=g=-6:f=140,treble=g=3:f=3000"
 segments:
@@ -17,7 +17,7 @@ segments:
   - {tr: whip, file: DT_E02_C4_v2.mp4, in: 4.0, out: 7.9, speed: 1.15, flash: true, note: "veins glow, he bursts free"}
   - {tr: cut, file: DT_E02_C5_v2.mp4, in: 0.0, out: 5.2, speed: 1.2, flash: true, note: "lightning bite, she falls, he flies to the stack"}
   - {tr: dissolve, trd: 0.25, file: DT_E02_C5_v2.mp4, in: 5.6, out: 7.9, speed: 0.85, push: 0.0012, note: "the new champion on the sea stack"}
-sfx:
+sfx_off:
   - {type: boom, at: "1+1.7", gain: 0.8}
   - {type: boom, at: "5+3.0", gain: 0.9}
   - {type: boom, at: "6+0.8", gain: 0.9}
