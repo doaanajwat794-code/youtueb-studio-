@@ -3,14 +3,16 @@
 # afftdn strips the steady wind bed. No synthetic booms (they read as thunder). No music (owner adds in-app).
 clips_dir: media/DT/incoming
 work_dir: media/DT/work_e03
-output: media/DT/DT_E03_FINAL_sfx.mp4
+output: media/DT/DT_E03_FINAL_sfx_soft.mp4
+# v2 (owner): fire, roars and SFX softer -> peaks compressed, whole track 12 dB quieter (-26 LUFS) so in-app music sits on top
+target_lufs: -26
 smooth: true
 transition_sfx: false
 ambience_gain: 0
 clip_gain: 1.0
 music_gain: 0
 clip_af: "highpass=f=160,lowpass=f=5500,afftdn=nr=24:nf=-28:tn=1"
-final_eq: "bass=g=-3:f=150,treble=g=2:f=3000"
+final_eq: "bass=g=-3:f=150,treble=g=-2:f=3000,acompressor=threshold=0.05:ratio=4:attack=5:release=200,alimiter=limit=0.5"
 segments:
   - {gain: 0, file: DT_E03_C3.mp4, in: 6.2, out: 7.0, speed: 0.6, flash: true, note: "HOOK: the golden tail smashes THRAXIS (slow-mo, silent)"}
   - {tr: flash, file: DT_E03_C1.mp4, in: 0.0, out: 2.0, speed: 1.25, note: "AURYN breathes fire at THRAXIS"}

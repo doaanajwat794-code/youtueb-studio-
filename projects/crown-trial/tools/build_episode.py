@@ -296,7 +296,7 @@ def main(cfg_path):
          "-filter_complex",
          f"[0:v]{look}ass='{ass}',format=yuv420p[v];"
          f"[0:a]volume=1.0[d];[1:a]volume=1.0[m];[2:a]volume=1.0[x];"
-         f"[d][m][x]amix=inputs=3:normalize=0,{cfg.get('final_eq', 'anull')},loudnorm=I=-14:TP=-1.5:LRA=11,aresample={SR}[a]",
+         f"[d][m][x]amix=inputs=3:normalize=0,{cfg.get('final_eq', 'anull')},loudnorm=I={cfg.get('target_lufs', -14)}:TP=-1.5:LRA=11,aresample={SR}[a]",
          "-map", "[v]", "-map", "[a]", "-c:v", "libx264", "-crf", "18", "-preset", "slow", "-pix_fmt", "yuv420p",
          "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart", "-t", f"{total:.3f}", str(final)])
     print(f"built {final}  {total:.2f} s  {len(parts)} segments")
