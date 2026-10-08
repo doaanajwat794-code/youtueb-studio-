@@ -78,3 +78,11 @@ one second; "episode 4 of a series you never saw" is not. → Every new Short mu
    long video, if ever.
 3. **Animal "Who would win?" one-offs** — the format that got ~1,000 views; reuse existing Flow Characters
    (e.g. Kharun vs Borin) for near-zero setup.
+
+## 2026-10-08 — Owner idea: AI FRUIT DRAMA (viral trend)
+"The poor husband was a billionaire": a rich fruit hides his wealth to find true love, marries, his wife leaves him
+for a rich fruit, he returns as the real owner and gets his revenge. Claude: strong, proven emotional hook (fake-poor
+billionaire + betrayal + revenge), works standalone, needs dialogue (Veo lip-sync worked in The Crown Trial).
+Plan: test ONE standalone Short (50–60 s) on this channel; if it beats the dragon Shorts, open a dedicated series.
+Cast (draft): MANGO (the hidden billionaire), STRAWBERRY (the wife), PINEAPPLE (the flashy rich rival).
+Alt: "fruit war" = fruit kingdoms fighting (reuses the battle format).
