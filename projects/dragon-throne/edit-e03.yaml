@@ -1,0 +1,33 @@
+# DRAGON THRONE E03 — GOLD vs STORM on the castle. Owner: fast, strong edit; keep roars, hits, breaking stone, wingbeats;
+# NO thunder / lightning crackle / wind. clip_af: highpass removes thunder + wind rumble, lowpass removes crackle/hiss,
+# afftdn strips the steady wind bed. No synthetic booms (they read as thunder). No music (owner adds in-app).
+clips_dir: media/DT/incoming
+work_dir: media/DT/work_e03
+output: media/DT/DT_E03_FINAL_sfx.mp4
+smooth: true
+transition_sfx: false
+ambience_gain: 0
+clip_gain: 1.0
+music_gain: 0
+clip_af: "highpass=f=160,lowpass=f=5500,afftdn=nr=24:nf=-28:tn=1"
+final_eq: "bass=g=-3:f=150,treble=g=2:f=3000"
+segments:
+  - {gain: 0, file: DT_E03_C3.mp4, in: 6.2, out: 7.0, speed: 0.6, flash: true, note: "HOOK: the golden tail smashes THRAXIS (slow-mo, silent)"}
+  - {tr: flash, file: DT_E03_C1.mp4, in: 0.0, out: 2.0, speed: 1.25, note: "AURYN breathes fire at THRAXIS"}
+  - {tr: whip, file: DT_E03_C1.mp4, in: 5.0, out: 7.9, speed: 1.25, note: "claws face to face"}
+  - {tr: cut, file: DT_E03_C2.mp4, in: 0.0, out: 2.2, speed: 1.3, note: "claw exchange"}
+  - {tr: whip, file: DT_E03_C2.mp4, in: 5.6, out: 6.4, speed: 1.2, flash: true, note: "lightning tail strike"}
+  - {tr: cut, file: DT_E03_C2.mp4, in: 7.0, out: 7.9, speed: 1.2, note: "AURYN hit"}
+  - {tr: cut, file: DT_E03_C3.mp4, in: 0.2, out: 7.9, speed: 1.3, flash: true, note: "AURYN charges, claws, tail smash"}
+  - {tr: whip, file: DT_E03_C4.mp4, in: 0.4, out: 7.9, speed: 1.3, flash: true, note: "lightning back, slammed, pinned, fire builds"}
+  - {tr: cut, file: DT_E03_C5.mp4, in: 0.0, out: 3.4, speed: 1.2, note: "fire beside his head"}
+  - {tr: dissolve, trd: 0.25, file: DT_E03_C5.mp4, in: 5.8, out: 7.9, speed: 0.85, push: 0.0012, note: "the Sun King on the tower, violet smoke"}
+text:
+  - {at: "0", dur: 1.4, style: hook, text: "GOLD vs STORM", y: 0.17}
+  - {at: "1+0.2", dur: 1.4, style: name, text: "AURYN", y: 0.15}
+  - {at: "1+0.2", dur: 1.4, style: title, text: "THE SUN KING", y: 0.205}
+  - {at: "2+0.2", dur: 1.4, style: name, text: "THRAXIS", y: 0.15}
+  - {at: "2+0.2", dur: 1.4, style: title, text: "STORM SERPENT · CHAMPION", y: 0.205}
+  - {at: "6+1.5", dur: 1.3, style: hook, text: "WHO WINS?", y: 0.17}
+  - {at: "9+0.2", dur: 1.0, style: end, text: "AURYN WINS", y: 0.15}
+  - {at: "9+1.2", dur: 1.0, style: end, text: "NEXT:\nTHE SHADOW", y: 0.15}

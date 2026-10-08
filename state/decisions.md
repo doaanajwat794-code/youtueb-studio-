@@ -58,3 +58,4 @@ anywhere else. Format: `YYYY-MM-DD · decision · (file updated)`.
 - 2026-10-06: Claude stops generating music for DT (owner rejected two synth scores). Episodes are delivered without music; the owner adds licensed music in-app (YouTube Shorts / Instagram / Facebook libraries) or sends a royalty-free track.
 - 2026-10-06: DT clips are made from keyframes created in Nano Banana WITH character references, then Frames to Video first→last frame (identity locked at both ends, clips connect exactly). No more Extend-only chains (identities drift). Every episode gets a different fight style.
 - 2026-10-07: Never keep audio on slow-motion hook segments (it warps and sounds annoying); deliver DT episodes in two versions: with dragon SFX and fully silent, for in-app music.
+- 2026-10-08: DT sound rule (owner): keep dragon roars, hits, breaking stone and wingbeats; remove thunder, lightning crackle and wind (editor `clip_af` band-limit + denoise); no synthetic booms.

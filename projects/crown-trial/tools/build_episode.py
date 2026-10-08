@@ -192,7 +192,7 @@ def main(cfg_path):
         else:
             src_in = ["-ss", str(a), "-t", str(b - a), "-i", str(f)]
         run([*src_in, "-vf", ",".join(vf),
-             "-af", ",".join(at) + f",volume={s.get('gain', cfg.get('clip_gain', 1.0))},aresample={SR}", "-t", f"{dur:.3f}",
+             "-af", ",".join(at) + f",volume={s.get('gain', cfg.get('clip_gain', 1.0))}" + (("," + cfg["clip_af"]) if cfg.get("clip_af") else "") + f",aresample={SR}", "-t", f"{dur:.3f}",
              "-c:v", "libx264", "-crf", "16", "-preset", "medium", "-pix_fmt", "yuv420p", "-c:a", "aac", "-ar", str(SR), "-ac", "2", str(out)])
         parts.append(out); starts.append(t); t += dur
     total = t
