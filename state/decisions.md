@@ -60,3 +60,4 @@ anywhere else. Format: `YYYY-MM-DD · decision · (file updated)`.
 - 2026-10-07: Never keep audio on slow-motion hook segments (it warps and sounds annoying); deliver DT episodes in two versions: with dragon SFX and fully silent, for in-app music.
 - 2026-10-08: DT sound rule (owner): keep dragon roars, hits, breaking stone and wingbeats; remove thunder, lightning crackle and wind (editor `clip_af` band-limit + denoise); no synthetic booms.
 - 2026-10-08: DT SFX versions are delivered soft (target_lufs -26, compressed peaks) so in-app music stays on top.
+- 2026-10-10: Fruit drama style = 3D animated fruit-head characters (whole head is the fruit with a cartoon face, human-shaped body); all female characters wear long, loose, fully covering modest clothing (owner, permanent).
