@@ -52,3 +52,6 @@ Full-body standing photo of the same BLUEBERRY, a photorealistic anthropomorphic
 ```
 
 Note: MANGO's poor look (plain grey hoodie, worn jeans) is written into the Part 1 keyframes; the reference body keeps the suit.
+
+## Review log
+- 2026-10-10 MANGO portrait v1 (`media/FD/FD_REF_MANGO_FRONT_v1.jpg`): strong concept (mango head, navy suit, gold watch), but the face reads as a real middle-aged man (~50) pasted on the fruit — too old for the 30s hero (COCONUT must read clearly older) and too human-photo. → Edit: younger (late 20s), features formed from glossy mango skin, generic face (no real-person resemblance).
