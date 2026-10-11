@@ -19,7 +19,8 @@ he returns and takes revenge. Strong drama, never boring, short. Split in two pa
 | 24–32 | Small flat. She scrolls PINEAPPLE's luxury photos; a gold sports car outside; she gets in | — |
 | 32–42 | MANGO comes home with cheap flowers: she is packing, PINEAPPLE at the door | PINEAPPLE: "She deserves better than a juice seller." STRAWBERRY: "You will never be anything." |
 | 42–48 | Rain, MANGO alone on a bench; BLUEBERRY (waitress) holds her umbrella over him | BLUEBERRY: "Nobody should be alone in the rain." |
-| 48–55 | MANGO puts the gold watch back on; a black car and bodyguards arrive | MANGO: "You'll regret this." TEXT: "PART 2: THE REVENGE" |
+| 48–52 | MANGO puts the gold watch back on; a black car and bodyguards arrive | — |
+| 52–60 | (owner 2026-10-11) MANGO walks to the camera, close-up, speaks to the viewer | MANGO: "She left me because I was poor. Watch Part Two… and see how I take everything back." TEXT: "PART 2: THE REVENGE" |
 
 ## PART 2 — "He came back… as the owner" (≈55 s)
 | s | beat | line / on-screen text |
