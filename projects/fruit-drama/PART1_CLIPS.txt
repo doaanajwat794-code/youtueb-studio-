@@ -1,0 +1,24 @@
+# FRUIT DRAMA · PART 1 — clip prompts (Frames to Video, Veo 3.1 Fast, 8 s each) · 2026-10-11
+# Each clip: START image = S#_start, END image = S#_end. S8 is in PART1_KEYFRAMES.txt.
+# Audio rules: dialogue + natural sounds only; no music, no thunder. Only the named speaker's mouth moves.
+
+== S1 · mansion ==
+In the luxury mansion study, COCONUT keeps his hand on MANGO's shoulder and speaks in a warm, old, deep male voice, his mouth moving in sync: "Everyone loves your money, son. Nobody loves you." MANGO looks down, then slowly takes off his gold wristwatch and places it on the marble table, and says in a calm, deep adult male voice, his mouth moving in sync: "Then I'll find someone who loves me without it." Slow cinematic push-in. Sound: crackling fireplace, the soft clink of the watch on marble. No music, no text.
+
+== S2 · juice stand ==
+At the small juice stand on a sunny market street, MANGO squeezes oranges as STRAWBERRY walks up; he pours a cup of fresh juice and hands it to her; she sips and says in a sweet young female voice, her mouth moving in sync: "Mmm… this is the best juice in the city!" MANGO laughs and says in a calm adult male voice, his mouth moving in sync: "Made with love." They both laugh; she smiles shyly. Gentle handheld camera. Sound: market chatter, juice pouring, light laughter. No music, no text.
+
+== S3 · tiny wedding ==
+In the tiny candle-lit room, MANGO and STRAWBERRY hold hands facing each other; STRAWBERRY says softly in a sweet young female voice, her mouth moving in sync: "I'll love you forever." MANGO smiles and slides the simple thin ring onto her finger; her eyes fill with happy tears. Slow camera move closer, warm candle flicker. Sound: candle flicker, soft breathing, quiet room. No music, no text.
+
+== S4 · poor flat ==
+In the shabby flat, STRAWBERRY sits on the old sofa scrolling luxury photos on her phone, sighs and whispers bitterly in a young female voice, her mouth moving in sync: "Why can't this be my life?" A car horn honks outside; she stands up, walks to the small window and looks down at PINEAPPLE leaning on his gold sports car, smiling up and waving at her; a slow smile spreads on her face. Sound: a ticking old clock, a flashy car horn, distant street noise. No music, no text.
+
+== S5 · betrayal in the rain ==
+Night, heavy rain (no thunder). MANGO stands frozen holding cheap flowers. PINEAPPLE, holding the umbrella over STRAWBERRY, smirks and says in an arrogant male voice, his mouth moving in sync: "She deserves better than a juice seller." STRAWBERRY pulls off her wedding ring and throws it at MANGO's feet, it splashes into a puddle, and she says coldly in a young female voice, her mouth moving in sync: "You will never be anything." The flowers slip from MANGO's hand into the puddle; PINEAPPLE laughs and opens the car door for her. Dramatic slow push-in on MANGO's heartbroken face at the end. Sound: steady rain, the ring splash, a car door opening. No music, no thunder, no text.
+
+== S6 · alone on the bench ==
+Night, steady rain (no thunder). MANGO sits alone on the bench under the street lamp, head down, turning the wet ring in his fingers. The rain stops falling on him as BLUEBERRY steps in and holds her umbrella over him; he looks up, surprised; she smiles kindly and says in a soft, gentle young female voice, her mouth moving in sync: "Nobody should be alone in the rain." Slow camera move, warm lamp light. Sound: rain on the umbrella, rain on the street. No music, no thunder, no text.
+
+== S7 · the watch ==
+Night after the rain, wet reflections. MANGO stands up from the bench, takes the gold wristwatch out of his hoodie pocket, looks at it for a moment, then fastens it on his wrist; his face turns from sad to cold and determined. Headlights sweep across him as a long black luxury car pulls up behind him and two bodyguards in black suits step out and open the door. Low-angle slow camera move, powerful mood. Sound: the click of the watch clasp, a deep engine purr, car doors, footsteps on wet asphalt. No music, no thunder, no dialogue, no text.
