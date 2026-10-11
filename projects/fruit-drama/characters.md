@@ -53,3 +53,4 @@ Full-body standing image of the same BLUEBERRY: a round deep blue-purple blueber
 ```
 
 - 2026-10-11 · Poor outfits v1: STRAWBERRY_POOR ✅ kept (beige blouse with high collar, loose grey trousers, flat shoes, modest; `media/FD/FD_STRAWBERRY_POOR_v1.jpg`). MANGO_POOR v1 ❌ (owner: looks like a 15-year-old and shorter than STRAWBERRY; cause: oversized head, narrow shoulders, short legs, shy face). v2 prompt in PART1_KEYFRAMES.txt: adult ~30, 185 cm, broad shoulders, head ~1/7 of height, stubble dots. Height (owner 2026-10-11): same height as STRAWBERRY or slightly taller, not much taller; written into S2, S3, S5.
+- 2026-10-11 · MANGO_POOR v2 ✅ approved by owner (adult ~30, stubble dots, head ~1/7 of height, same hoodie/jeans/sneakers). Image was sent inline; not on disk — owner keeps it in Flow as the MANGO poor reference.
