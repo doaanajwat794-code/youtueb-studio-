@@ -1,0 +1,39 @@
+# FRUIT DRAMA PART 1 — "She left him because he was poor…" (2026-10-11)
+# Clip review: S1 cut at 6.0 (mansion -> library, kept: reads as an edit cut); S2 cut at 5.2 (kept);
+# S3 after 5.2 she changes into the beige blouse and they swap sides -> use 0-5.2 only;
+# S5 last 3 frames are a jump -> out 7.8; S6 and S7 drift from night to day -> S6 gets a night grade.
+# Dialogue lives in the clip audio: keep it, no music (owner adds in-app), no thunder.
+clips_dir: media/FD/clips
+work_dir: media/FD/work_p1
+output: media/FD/FD_PART1_v1.mp4
+target_lufs: -16
+smooth: true
+transition_sfx: false
+ambience_gain: 0
+clip_gain: 1.0
+music_gain: 0
+segments:
+  - {file: S5.mp4, in: 3.5, out: 6.45, note: "HOOK: ring thrown, flowers fall"}
+  - {tr: flash, file: S1.mp4, in: 0.0, out: 7.95, note: "father's warning, watch off"}
+  - {tr: dissolve, trd: 0.3, file: S2.mp4, in: 0.0, out: 7.95, note: "juice stand"}
+  - {tr: dissolve, trd: 0.3, file: S3.mp4, in: 0.0, out: 5.2, note: "small wedding"}
+  - {tr: dip, file: S4.mp4, in: 0.0, out: 7.95, note: "poor flat, PINEAPPLE outside"}
+  - {tr: whip, file: S5.mp4, in: 0.0, out: 7.8, note: "betrayal in the rain"}
+  - {tr: dissolve, trd: 0.3, file: S6.mp4, in: 0.0, out: 7.95, vf_extra: "eq=brightness='-0.17*min(max((t-2.0)/1.5\\,0)\\,1)':saturation=0.8:gamma_b=1.12:eval=frame", note: "BLUEBERRY's umbrella (graded back to night)"}
+  - {tr: dip, file: S7.mp4, in: 0.3, out: 7.95, note: "the watch, the black car"}
+  - {tr: cut, file: S8.mp4, in: 0.0, out: 7.95, note: "MANGO to camera: watch Part Two"}
+text:
+  - {at: "0", dur: 2.9, style: hook, text: "SHE LEFT HIM\nFOR BEING POOR…", y: 0.15}
+  - {at: "1+0.1", dur: 2.6, style: sub, text: "Everyone loves your money, son.\nNobody loves you."}
+  - {at: "1+4.4", dur: 2.9, style: sub, text: "Then I'll find someone\nwho loves me without it."}
+  - {at: "2+0.3", dur: 2.0, style: hook, text: "HE HID EVERYTHING.", y: 0.15}
+  - {at: "2+2.6", dur: 2.2, style: sub, text: "This is the best juice in the city!"}
+  - {at: "2+5.2", dur: 2.0, style: sub, text: "Made with love."}
+  - {at: "3+1.3", dur: 2.2, style: sub, text: "I'll love you forever."}
+  - {at: "4+1.4", dur: 2.0, style: sub, text: "Why can't this be my life?"}
+  - {at: "5+0.5", dur: 2.6, style: sub, text: "She deserves better\nthan a juice seller."}
+  - {at: "5+4.4", dur: 2.4, style: sub, text: "You will never be anything."}
+  - {at: "6+5.0", dur: 2.4, style: sub, text: "Nobody should be alone in the rain."}
+  - {at: "8+1.0", dur: 2.6, style: sub, text: "She left me because I was poor."}
+  - {at: "8+4.0", dur: 2.6, style: sub, text: "Watch Part Two…\nand see how I take everything back."}
+  - {at: "8+6.65", dur: 1.3, style: end, text: "PART 2:\nTHE REVENGE", y: 0.80}

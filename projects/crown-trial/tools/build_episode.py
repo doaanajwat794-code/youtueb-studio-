@@ -179,6 +179,8 @@ def main(cfg_path):
             vf.append(f"zoompan=z='1+{s['push']}*on':x='iw/2-(iw/zoom/2)':y='ih*0.4-(ih/zoom*0.4)':d=1:s={W}x{H}:fps={FPS}")
         if s.get("flash"):
             vf.append("eq=brightness='if(lt(t,0.07),0.35,0)':eval=frame")
+        if s.get("vf_extra"):  # per-shot grade, e.g. pull a day-drifting clip back to night
+            vf.append(s["vf_extra"])
         at = []
         rem = sp
         while rem > 2.0: at.append("atempo=2.0"); rem /= 2
