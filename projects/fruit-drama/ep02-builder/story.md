@@ -49,3 +49,21 @@ Reason: the arc has two halves (betrayal -> karma); IG Part 1 of EP01 drew comme
 | S5 | PEACH, calm and strong; AVOCADO's hand on her shoulder | PEACH: "You chose money. We chose peace." |
 | S6 | rain; he leaves; the toy falls into a puddle; through the window the family under warm light; camera pulls back | TEXT: "SOME DOORS NEVER OPEN TWICE." |
 Credits: 12 clips ~240 (two parts). Extra location refs: construction site, tiny home, villa, bakery.
+
+## v3 — FINAL STRUCTURE (owner 2026-10-12: fewer scenes, use every 8 s clip fully, save credits): 4 + 4 clips (~160 credits), ~30-32 s per part
+### PART 1 — "He Left Them for Money"
+| C | clip (8 s, used in full) | lines |
+|---|---|---|
+| C1 | construction site: APRICOT brings his dad's lunch box, hug; a red sports car stops; STRAWBERRY holds out a gold card | STRAWBERRY: "Why carry bricks… when you could live like a king?" |
+| C2 | home at night: he packs; the boy grabs his leg; he pulls free; PEACH at the door | APRICOT: "Daddy, don't go!" PEACH: "If you leave… don't come back." |
+| C3 | STRAWBERRY's villa party: he is in rich clothes; PINEAPPLE gives her a diamond necklace; she dumps him; guards grab him | STRAWBERRY: "You're just muscles. He's an empire." |
+| C4 | rain, curb, suitcase, cracked phone with the family photo; he looks to camera | BLUEBERRY: "I'm going home." TEXT: "PART 2: TOO LATE?" |
+Hook = first second of C2 (the boy grabbing his leg) placed before C1 (no extra clip).
+### PART 2 — "Too Late"
+| C | clip | lines |
+|---|---|---|
+| C1 | rain: he walks with a toy truck to his old house — dark, empty; he turns: across the street a warm bakery, through the window PEACH, APRICOT on AVOCADO's shoulders, laughing | TEXT: "HE CAME BACK…" |
+| C2 | he walks in, soaked; laughter stops; he kneels with the toy; the boy hides behind AVOCADO | BLUEBERRY: "Son… I'm back." APRICOT: "Who is he?" |
+| C3 | (START = C2 END) PEACH, calm and strong, AVOCADO's hand on her shoulder; he lowers his head | PEACH: "You chose money. We chose peace." |
+| C4 | rain: he walks away; the toy falls into a puddle; camera pulls back past the warm window | TEXT: "SOME DOORS NEVER OPEN TWICE." |
+Hook = "Who is he?" moment from C2 placed first.
