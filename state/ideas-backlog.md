@@ -86,3 +86,17 @@ billionaire + betrayal + revenge), works standalone, needs dialogue (Veo lip-syn
 Plan: test ONE standalone Short (50–60 s) on this channel; if it beats the dragon Shorts, open a dedicated series.
 Cast (draft): MANGO (the hidden billionaire), STRAWBERRY (the wife), PINEAPPLE (the flashy rich rival).
 Alt: "fruit war" = fruit kingdoms fighting (reuses the battle format).
+
+## Channel performance snapshot (owner screenshot, 2026-10-12)
+| Short | date | length | views | comments |
+|---|---|---|---|---|
+| Five warriors (CT E01) | 28 Sep | 0:35 | 1,014 | 0 |
+| She Mocked His Blind Eye (CT E02) | 29 Sep | 0:29 | 497 | 2 |
+| THE FINAL (CT E03) | 2 Oct | 0:30 | 283 | 1 |
+| Rajan vs masked Champion (CT E04) | 3 Oct | 0:39 | 44 | 3 |
+| FIRE vs ICE (DT E01) | 6 Oct | 0:39 | 178 | 1 |
+| STORM vs ICE (DT E02) | 7 Oct | 0:27 | 288 | 0 |
+| GOLD vs STORM (DT E03) | 8 Oct | 0:25 | 401 | 0 |
+| Fruit Drama Part 1 | 11 Oct | 1:02 | 6 (day 1, 0% Shorts feed) | 0 |
+Reading: Dragon Throne grows each episode (178 -> 288 -> 401); best results are 25-35 s fantasy battles.
+Fruit Drama is off-niche and over 60 s. Recommendation: DT E04 next; Part 2 of FD only if Part 1 recovers in 72 h.
