@@ -61,3 +61,4 @@ anywhere else. Format: `YYYY-MM-DD · decision · (file updated)`.
 - 2026-10-08: DT sound rule (owner): keep dragon roars, hits, breaking stone and wingbeats; remove thunder, lightning crackle and wind (editor `clip_af` band-limit + denoise); no synthetic booms.
 - 2026-10-08: DT SFX versions are delivered soft (target_lufs -26, compressed peaks) so in-app music stays on top.
 - 2026-10-10: Fruit drama style = 3D animated fruit-head characters (whole head is the fruit with a cartoon face, human-shaped body); all female characters wear long, loose, fully covering modest clothing (owner, permanent).
+- 2026-10-12: Modest-dress rule clarified by owner: women may wear a blouse and trousers (not only dresses), as long as both are loose and do not show the body's shape; long sleeves, high neckline, chest covered still apply.
