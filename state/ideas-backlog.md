@@ -100,3 +100,5 @@ Alt: "fruit war" = fruit kingdoms fighting (reuses the battle format).
 | Fruit Drama Part 1 | 11 Oct | 1:02 | 6 (day 1, 0% Shorts feed) | 0 |
 Reading: Dragon Throne grows each episode (178 -> 288 -> 401); best results are 25-35 s fantasy battles.
 Fruit Drama is off-niche and over 60 s. Recommendation: DT E04 next; Part 2 of FD only if Part 1 recovers in 72 h.
+Instagram snapshot (2026-10-12): Fruit Drama P1 32 likes / 3 comments (views not shown yet); GOLD vs STORM 136; STORM vs ICE 255;
+FIRE vs ICE 487; CT reels 124 / 183 / 306 / 250; FNR 148; early dragon reel 278. On IG the DT trend is the reverse of YT (newest lowest, but youngest).
