@@ -1,0 +1,34 @@
+# FRUIT DRAMA PART 2 — "The Revenge" (6 scenes, 2026-10-12). IG first.
+# Review: C1 first 1.5 s is a wide guests shot -> start at 1.55 on the doors; C2 has internal cuts at 3.0 / 6.1 (kept);
+# C4 cut at 6.8 to a wide (kept). Bodyguards came out as watermelon/lime heads (kept, reads fine). Dialogue in clip audio.
+clips_dir: media/FD/clips2
+work_dir: media/FD/work_p2
+output: media/FD/FD_PART2_v2.mp4
+target_lufs: -16
+smooth: true
+transition_sfx: false
+ambience_gain: 0
+clip_gain: 1.0
+music_gain: 0
+segments:
+  - {gain: 0.5, file: C3.mp4, in: 5.9, out: 7.4, flash: true, push: 0.0015, note: "COLD OPEN flash-forward: guards grab PINEAPPLE"}
+  - {tr: flash, file: C1.mp4, in: 1.55, out: 7.95, speed: 1.15, note: "doors open, MANGO walks in"}
+  - {tr: cut, file: C2.mp4, in: 0.0, out: 3.0, push: 0.001, note: "she laughs at him"}
+  - {tr: zoom, file: C2.mp4, in: 3.0, out: 7.95, flash: true, note: "the father reveals"}
+  - {tr: whip, file: C3.mp4, in: 0.0, out: 5.9, push: 0.0008, note: "the company is his"}
+  - {tr: cut, file: C3.mp4, in: 5.9, out: 7.95, flash: true, note: "guards grab PINEAPPLE"}
+  - {tr: dip, file: C4.mp4, in: 0.0, out: 7.95, push: 0.0006, note: "she begs"}
+  - {tr: dissolve, trd: 0.3, file: C5.mp4, in: 0.0, out: 7.95, push: 0.0006, note: "the proposal"}
+  - {tr: flash, file: C6.mp4, in: 0.0, out: 7.95, note: "yes; umbrella ending"}
+text:
+  - {at: "0", dur: 1.4, style: hook, text: "HE CAME BACK…\nAS THE OWNER", y: 0.15}
+  - {at: "1", dur: 2.4, style: hook, text: "REMEMBER THE\nPOOR HUSBAND?", y: 0.15}
+  - {at: "2+0.1", dur: 2.3, style: sub, text: "The juice seller?\nWho let him in?"}
+  - {at: "3+0.2", dur: 3.0, style: sub, text: "Meet my son…\nthe owner of this hotel."}
+  - {at: "4+1.2", dur: 2.7, style: sub, text: "Your company runs\non my bank's money."}
+  - {at: "4+4.0", dur: 1.8, style: sub, text: "As of today… it's mine."}
+  - {at: "6+1.0", dur: 1.9, style: sub, text: "I always loved you!"}
+  - {at: "6+4.0", dur: 2.8, style: sub, text: "You loved money.\nNow you have neither."}
+  - {at: "7+4.0", dur: 3.0, style: sub, text: "You helped me\nwhen I had nothing."}
+  - {at: "8+0.3", dur: 1.4, style: sub, text: "Yes."}
+  - {at: "8+5.6", dur: 2.3, style: end, text: "TRUE LOVE\nCAN'T BE BOUGHT.", y: 0.15}
