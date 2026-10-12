@@ -56,3 +56,4 @@ Full-body standing image of the same BLUEBERRY: a round deep blue-purple blueber
 - 2026-10-11 · MANGO_POOR v2 ✅ approved by owner (adult ~30, stubble dots, head ~1/7 of height, same hoodie/jeans/sneakers). Image was sent inline; not on disk — owner keeps it in Flow as the MANGO poor reference.
 - 2026-10-11 · FD Part 1 v1 edited: media/FD/FD_PART1_v1.mp4 (61.3 s, 1080x1920, -16.8 LUFS, dialogue kept, no music). Clip notes in projects/fruit-drama/edit-part1.yaml. Dialogue words not machine-verified (no offline speech model); subtitles follow the script.
 - 2026-10-12 · Part 2 refs ✅ BLUEBERRY_PARTY (neat waitress uniform, modest) and MANGO_SUIT (black three-piece suit, gold watch, adult). media/FD/FD_P2_REFS_BLUEBERRY_PARTY_MANGO_SUIT.png
+- 2026-10-12 · Owner asked for fewer scenes: Part 2 cut to 6 scenes (old P2+P3 -> S2, P4+P5 -> S3), 12 images, 6 clips (~120 credits). File: PART2_6SCENES.txt
