@@ -1,0 +1,26 @@
+# FRUIT DRAMA EP02 PART 1 — "He Left Them for Money" (2026-10-13)
+# Review: C1 good (background shifts mid-clip, continuous); C2 good; C3 after the 4.67 s cut a bodyguard has a HUMAN face
+# (breaks the fruit-head rule) -> C3 used 0-4.6 only; C4 good. Hook = the boy grabbing his father's leg (C2).
+clips_dir: media/FD/ep02_p1
+work_dir: media/FD/work_ep02_p1
+output: media/FD/FD_EP02_PART1_v1.mp4
+target_lufs: -16
+smooth: true
+transition_sfx: false
+ambience_gain: 0
+clip_gain: 1.0
+music_gain: 0
+segments:
+  - {gain: 0.6, file: C2.mp4, in: 0.4, out: 1.9, push: 0.0015, note: "HOOK: the boy clings to his leg"}
+  - {tr: flash, file: C1.mp4, in: 0.0, out: 7.95, note: "lunch box, red car, gold card"}
+  - {tr: dip, file: C2.mp4, in: 0.0, out: 7.95, push: 0.0006, note: "he leaves"}
+  - {tr: whip, file: C3.mp4, in: 0.0, out: 4.6, flash: true, note: "dumped for PINEAPPLE"}
+  - {tr: dip, file: C4.mp4, in: 0.0, out: 7.95, note: "rain, family photo, to camera"}
+text:
+  - {at: "0", dur: 1.5, style: hook, text: "HE LEFT HIS FAMILY\nFOR HER…", y: 0.15}
+  - {at: "1+3.0", dur: 3.3, style: sub, text: "Why carry bricks…\nwhen you could live like a king?"}
+  - {at: "2+0.5", dur: 2.0, style: sub, text: "Daddy, don't go!"}
+  - {at: "2+5.0", dur: 2.8, style: sub, text: "If you leave…\ndon't come back."}
+  - {at: "3+1.0", dur: 3.3, style: sub, text: "You're just muscles.\nHe's an empire."}
+  - {at: "4+4.3", dur: 1.9, style: sub, text: "I'm going home."}
+  - {at: "4+6.3", dur: 1.6, style: end, text: "PART 2:\nTOO LATE?", y: 0.15}
