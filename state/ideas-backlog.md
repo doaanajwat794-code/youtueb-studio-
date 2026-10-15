@@ -104,3 +104,17 @@ Instagram snapshot (2026-10-12): Fruit Drama P1 32 likes / 3 comments (views not
 FIRE vs ICE 487; CT reels 124 / 183 / 306 / 250; FNR 148; early dragon reel 278. On IG the DT trend is the reverse of YT (newest lowest, but youngest).
 UPDATE 2026-10-12: Fruit Drama P1 on Instagram = 2,581 views (32 likes, 3 comments) in ~1 day, 5x the best previous reel (487).
 Decision proposed: make FD Part 2 now, Instagram/Facebook first; keep Dragon Throne for YouTube. Fruit drama = strong IG format.
+
+## Fruit Drama — research + new two-part ideas (2026-10-15)
+Research: the fruit-drama wave started Feb-Mar 2026 on TikTok (Fruit Love Island, 39M views on its top episode; romance/cheating;
+copycats everywhere; criticised as "AI slop"). Separate recurring AI-short format: "born with something locked/hidden until 18"
+(locked helmet, numbers above heads) with a reveal twist. Our angle: original fruit stories using the "until 18" reveal, not reality-show copies.
+1. THE BANDAGED THIRD (owner idea): triplets; two plain oranges, the third baby's face bandaged "until 18"; mocked; at 18 the bandage
+   comes off: a GOLDEN apple — the lost heir of the Golden Orchard. P1 ends as the bandage starts to unwind.
+2. BORN WITH ZERO (owner idea): babies born with a number above their heads (their future worth): 500,000 / 100,000 / 0.
+   Doctor: "You'll understand at 18." Mocked as "Zero". At 18 the zero starts counting and doesn't stop. Numbers added in the edit.
+3. THE IRON BOOTS (owner idea): father straps 30 kg boots on his son (LIME) "until 18"; slow, mocked at football; at 18, in the final,
+   boots off -> lightning fast, wins; twist: the father was a banned legend.
+4. GRANDMA'S SEED: grandma's will: siblings get houses and cars, the youngest gets one seed; mocked; he plants it; P2: a tree with
+   golden fruit grows, the siblings lose everything and come begging.
+5. THE SWAPPED CRADLES: a rich baby and a poor baby swapped at birth by a jealous nurse; at 18 a DNA letter arrives on graduation day.
