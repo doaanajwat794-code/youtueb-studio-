@@ -27,3 +27,21 @@ I'm staying." He touches the bandage, gold light leaks out. TEXT "PART 2: THE RE
 PART 2: C1 Reveal Day (GRAPE in the crowd, the only one not laughing) · C2 bandage off, gold light · C3 "∞", silence, bully kneels ·
 C4 siblings: "Brother!" — KIWI: "Brother? I don't know you." He takes GRAPE's hand: "She knew me… when I was just a question mark."
 They walk away together. TEXT "NEVER JUDGE A KIWI BY ITS SKIN."
+
+## v3 FINAL PLOT (owner 2026-10-15, tightened by Claude) — 4 + 4 clips
+World: everyone has a glowing number on the forehead (adults too, neat and proud). Triplets, each a different fruit.
+Parents: APPLE (father), PEAR (mother, modest). Kids: ORANGE (500,000), CHERRY (300,000), KIWI ("?" -> bandaged).
+### PART 1 — "Born With a Question Mark"
+| C | 8 s | lines |
+|---|---|---|
+| C1 | hospital: PEAR holds triplets; two foreheads glow 500,000 / 300,000; the third shows a faint "?"; COCONUT doctor wraps a bandage | APPLE: "Doctor… why doesn't he have a number?" COCONUT: "I don't know… Never remove it before he turns 18." |
+| C2 | years later, family car to school: ORANGE and CHERRY (teens, numbers glowing) with KIWI (bandaged) in the back seat | ORANGE: "At school, don't tell anyone you're our brother. You don't even have a number." |
+| C3 | school cafeteria: KIWI alone, kids throw food at him; GRAPE (100,000) sits down with him and shares her lunch | GRAPE: "Can I sit with you?" |
+| C4 | schoolyard: ORANGE, CHERRY and WATERMELON grab him and rip at the bandage; blinding light bursts out, they are thrown back; KIWI collapses | (screams) TEXT: "PART 2" |
+### PART 2 — "The Reveal"
+| C | 8 s | lines |
+|---|---|---|
+| C1 | hospital: KIWI in bed, GRAPE holding his hand; COCONUT furious at the family | COCONUT: "I told you! Not before 18! … Tomorrow is his birthday." |
+| C2 | Reveal Day, school hall full; KIWI unwraps the bandage; golden light fills the hall | WATERMELON: "Let's see your nothing!" |
+| C3 | "∞" glows on his forehead; silence; WATERMELON drops to his knees; parents in shock | TEXT: "INFINITE" |
+| C4 | ORANGE and CHERRY run to him: "Brother!" — he turns to GRAPE and takes her hand | KIWI: "Brother? I don't know you." … "She knew me when I was just a question mark." TEXT: "NEVER JUDGE A KIWI BY ITS SKIN." |
