@@ -1,0 +1,28 @@
+# FRUIT DRAMA EP03 PART 1 — "Born With a Question Mark" (2026-10-15)
+# Review: C1 good (doctor's forehead number reads ~"50,000" not 350,000, small, kept); C2 static wide car shot, KIWI ended up
+# in the front seat (kept: reads fine); C3 internal cuts 3.46/5.96 (crowd thins then returns, kept as edit cuts);
+# C4 light burst strong, last frames jump at 7.83 -> out 7.8; C5 GRAPE alone to camera, clean.
+clips_dir: media/FD/ep03_p1
+work_dir: media/FD/work_ep03_p1
+output: media/FD/FD_EP03_PART1_v1.mp4
+target_lufs: -16
+smooth: true
+transition_sfx: false
+ambience_gain: 0
+clip_gain: 1.0
+music_gain: 0
+segments:
+  - {gain: 0.6, file: C4.mp4, in: 3.4, out: 4.9, flash: true, note: "COLD OPEN: the golden light bursts"}
+  - {tr: flash, file: C1.mp4, in: 0.0, out: 7.95, push: 0.0006, note: "birth, the question mark, the bandage"}
+  - {tr: dip, file: C2.mp4, in: 0.0, out: 7.95, push: 0.0008, note: "car: don't tell anyone"}
+  - {tr: dissolve, trd: 0.3, file: C3.mp4, in: 0.0, out: 7.95, note: "cafeteria, GRAPE sits with him"}
+  - {tr: whip, file: C4.mp4, in: 0.0, out: 7.8, note: "they pull the bandage, light, he falls"}
+  - {tr: dip, file: C5.mp4, in: 0.0, out: 7.95, note: "GRAPE to camera"}
+text:
+  - {at: "0", dur: 1.5, style: hook, text: "BORN WITH\nA QUESTION MARK…", y: 0.15}
+  - {at: "1+0.4", dur: 2.6, style: sub, text: "Doctor…\nwhy doesn't he have a number?"}
+  - {at: "1+4.6", dur: 3.2, style: sub, text: "I don't know…\nbut never remove it\nbefore he turns eighteen."}
+  - {at: "2+0.2", dur: 1.6, style: hook, text: "17 YEARS LATER", y: 0.15}
+  - {at: "2+1.5", dur: 6.2, style: sub, text: "At school, don't tell anyone\nyou're our brother.\nYou don't even have a number."}
+  - {at: "3+4.3", dur: 1.8, style: sub, text: "Can I sit with you?"}
+  - {at: "5+2.9", dur: 4.6, style: sub, text: "If you want to know\nwhat happened to him…\nwatch Part Two."}
