@@ -18,3 +18,12 @@ WATERMELON (school bully), COCONUT (the doctor, existing EP01 reference). Number
 | C2 | KIWI unwraps the bandage: blinding golden light fills the hall | — |
 | C3 | his forehead shows a glowing "∞"; the hall falls silent; the bully drops to his knees | TEXT: "INFINITE" |
 | C4 | ORANGE and CHERRY run to him: "Brother! We always believed in you!" He answers and walks away | KIWI: "Brother? I don't know you." TEXT: "NEVER JUDGE A KIWI BY ITS SKIN." |
+
+## v2 (owner 2026-10-15): add a kind girl with an ordinary number who loves him with his "?"
+New cast: GRAPE (girl, 100,000, kind, modest school uniform). CHERRY (sister) changes to 300,000.
+PART 1: C2 the bully knocks his books — GRAPE steps in and picks them up: "Leave him alone." · C3 siblings deny him and walk off;
+GRAPE takes his hand: "I don't care about numbers." · C4 rooftop at night before his 18th: GRAPE beside him: "Whatever is under it…
+I'm staying." He touches the bandage, gold light leaks out. TEXT "PART 2: THE REVEAL".
+PART 2: C1 Reveal Day (GRAPE in the crowd, the only one not laughing) · C2 bandage off, gold light · C3 "∞", silence, bully kneels ·
+C4 siblings: "Brother!" — KIWI: "Brother? I don't know you." He takes GRAPE's hand: "She knew me… when I was just a question mark."
+They walk away together. TEXT "NEVER JUDGE A KIWI BY ITS SKIN."
