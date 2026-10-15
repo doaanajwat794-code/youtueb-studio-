@@ -45,3 +45,5 @@ Parents: APPLE (father), PEAR (mother, modest). Kids: ORANGE (500,000), CHERRY (
 | C2 | Reveal Day, school hall full; KIWI unwraps the bandage; golden light fills the hall | WATERMELON: "Let's see your nothing!" |
 | C3 | "∞" glows on his forehead; silence; WATERMELON drops to his knees; parents in shock | TEXT: "INFINITE" |
 | C4 | ORANGE and CHERRY run to him: "Brother!" — he turns to GRAPE and takes her hand | KIWI: "Brother? I don't know you." … "She knew me when I was just a question mark." TEXT: "NEVER JUDGE A KIWI BY ITS SKIN." |
+Owner 2026-10-15 (interpreted from a voice message): end of Part 1 = GRAPE comes to the camera: "If you want to know what happened… watch Part 2."
+-> Part 1 C5 (to-camera, like EP01 S8). Part 1 = 5 clips.
