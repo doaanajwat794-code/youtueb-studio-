@@ -58,3 +58,4 @@ Full-body standing image of the same BLUEBERRY: a round deep blue-purple blueber
 - 2026-10-12 · Part 2 refs ✅ BLUEBERRY_PARTY (neat waitress uniform, modest) and MANGO_SUIT (black three-piece suit, gold watch, adult). media/FD/FD_P2_REFS_BLUEBERRY_PARTY_MANGO_SUIT.png
 - 2026-10-12 · Owner asked for fewer scenes: Part 2 cut to 6 scenes (old P2+P3 -> S2, P4+P5 -> S3), 12 images, 6 clips (~120 credits). File: PART2_6SCENES.txt
 - 2026-10-12 · EP02 character refs ✅ all six (BLUEBERRY worker + rich, PEACH, APRICOT, STRAWBERRY_RICH, AVOCADO). media/FD/FD_EP02_CHARACTERS.png
+- 2026-10-15 · EP03 character refs ✅ all eight (numbers correct). media/FD/FD_EP03_CHARACTERS.webp
