@@ -1,0 +1,29 @@
+# FRUIT DRAMA EP03 PART 2 — "The Reveal" (2026-10-16). Owner delivered 6 s clips.
+# Review: C1 static wide but clear; C2 cut 3.96 (wide -> ceiling cracks) good; C3 good; C4 cut 1.96, energy shield strong;
+# C5 PROBLEMS: ORANGE loses his blazer (bare fruit body) 1.5-4.5 s, KIWI takes CHERRY's hand at ~5.2 s (should be GRAPE),
+# GRAPE walk-off only 0.33 s after the 5.67 cut -> v1 uses C5 0-4.9 only; recommend an 8 s retake of C5.
+clips_dir: media/FD/ep03_p2
+work_dir: media/FD/work_ep03_p2
+output: media/FD/FD_EP03_PART2_v1.mp4
+target_lufs: -16
+smooth: true
+transition_sfx: false
+ambience_gain: 0
+clip_gain: 1.0
+music_gain: 0
+segments:
+  - {gain: 0.6, file: C4.mp4, in: 3.6, out: 5.0, flash: true, push: 0.0012, note: "COLD OPEN: the energy shield"}
+  - {tr: flash, file: C1.mp4, in: 0.0, out: 5.98, push: 0.001, note: "hospital: never before eighteen"}
+  - {tr: dip, file: C2.mp4, in: 0.0, out: 5.98, note: "Reveal Day, the ceiling cracks"}
+  - {tr: cut, file: C3.mp4, in: 0.0, out: 5.98, push: 0.0008, note: "he pulls off the bandage"}
+  - {tr: flash, file: C4.mp4, in: 0.0, out: 5.98, note: "infinity, the shield"}
+  - {tr: dip, file: C5.mp4, in: 0.0, out: 4.9, note: "Brother? I don't know you."}
+text:
+  - {at: "0", dur: 1.4, style: hook, text: "HE WAS BORN WITH\nA QUESTION MARK…", y: 0.15}
+  - {at: "1+0.2", dur: 2.6, style: sub, text: "I told you!\nNever before eighteen!"}
+  - {at: "1+3.0", dur: 2.9, style: sub, text: "Tomorrow is his birthday…\nthe world will see."}
+  - {at: "2+0.3", dur: 2.8, style: sub, text: "Now let's see\nthe question mark's nothing!"}
+  - {at: "4+2.2", dur: 2.4, style: hook, text: "INFINITE", y: 0.12}
+  - {at: "5+0.2", dur: 1.6, style: sub, text: "Brother! You saved us!"}
+  - {at: "5+2.0", dur: 2.9, style: sub, text: "Brother?\nI don't know you."}
+  - {at: "5+3.4", dur: 1.5, style: end, text: "NEVER JUDGE A KIWI\nBY ITS SKIN.", y: 0.15}
