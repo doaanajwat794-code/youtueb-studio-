@@ -47,3 +47,7 @@ Parents: APPLE (father), PEAR (mother, modest). Kids: ORANGE (500,000), CHERRY (
 | C4 | ORANGE and CHERRY run to him: "Brother!" — he turns to GRAPE and takes her hand | KIWI: "Brother? I don't know you." … "She knew me when I was just a question mark." TEXT: "NEVER JUDGE A KIWI BY ITS SKIN." |
 Owner 2026-10-15 (interpreted from a voice message): end of Part 1 = GRAPE comes to the camera: "If you want to know what happened… watch Part 2."
 -> Part 1 C5 (to-camera, like EP01 S8). Part 1 = 5 clips.
+
+## PART 2 v2 — action (owner 2026-10-16): C1 hospital warning -> C2 Reveal Day, the hall cracks, chandelier above ORANGE/CHERRY/WATERMELON
+-> C3 KIWI pulls the bandage off himself, golden light -> C4 "∞", an energy shield holds the chandelier, he saves them
+-> C5 "Brother! You saved us!" / "Brother? I don't know you." / "She knew me when I was just a question mark." TEXT "NEVER JUDGE A KIWI BY ITS SKIN."
