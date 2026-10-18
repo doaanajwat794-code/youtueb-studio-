@@ -6,7 +6,7 @@ Key object: a half-torn baby photo in an old locket (STRAWBERRY) — the mother 
 ## PART 1 — "Know Your Place, Maid"
 | C | 8 s | lines |
 |---|---|---|
-| C1 | mansion breakfast: STRAWBERRY serves tea; GRAPE throws the tea on her apron; PEACH looks away | GRAPE: "Know your place, maid." |
+| C1 | mansion breakfast: STRAWBERRY serves tea; GRAPE throws the tea on her apron; PEACH (mother) laughs and orders her to clean the floor | GRAPE: "Know your place, maid." PEACH: "Clean it. Now." |
 | C2 | night, tiny maid room: STRAWBERRY opens an old locket with half of a baby photo, tears | STRAWBERRY: "Who are you… Mom?" |
 | C3 | GRAPE's birthday party: PEACH's diamond necklace is missing; GRAPE points; the guard opens STRAWBERRY's bag: the necklace (GRAPE smirks) | GRAPE: "It was the maid!" |
 | C4 | PEACH at the door; STRAWBERRY walks out into the rain with a small suitcase | PEACH: "Get out of my house!" |
@@ -23,3 +23,5 @@ Key object: a half-torn baby photo in an old locket (STRAWBERRY) — the mother 
 Owner 2026-10-18: use the fruits people love most: maid = STRAWBERRY (new face, not EP01's), fake daughter = GRAPE, mother = PEACH (new, older).
 
 Owner 2026-10-18: the spoiled daughter becomes GRAPE (a pale green grape, distinct from EP03's purple GRAPE). PEACH mother + STRAWBERRY maid/gown approved.
+
+Owner 2026-10-18: the cruelty comes from BOTH the mother and the daughter. Claude's call: no extra characters (no father/brothers) — two villains are enough for 40 s, keeps credits and images down, and makes the mother's regret in Part 2 stronger.
