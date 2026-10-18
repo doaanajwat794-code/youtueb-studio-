@@ -118,3 +118,13 @@ copycats everywhere; criticised as "AI slop"). Separate recurring AI-short forma
 4. GRANDMA'S SEED: grandma's will: siblings get houses and cars, the youngest gets one seed; mocked; he plants it; P2: a tree with
    golden fruit grows, the siblings lose everything and come begging.
 5. THE SWAPPED CRADLES: a rich baby and a poor baby swapped at birth by a jealous nurse; at 18 a DNA letter arrives on graduation day.
+
+## Fruit Drama — trend research #2 + new ideas (2026-10-18)
+Trends: AI micro-dramas exploding (Douyin H1 2026: 221,900 AI short dramas, 1,055 over 100M views); the "wealthy family" template
+dominates; 30-second episodes; serialized numbered parts with cliffhangers; AI manhua dramas trending (Weibo, Oct 12).
+Ideas (2 parts, ~4-5 clips each):
+1. THE MAID WAS THE REAL DAUGHTER (wealthy family + swapped at birth): PEACH maid humiliated by the rich LEMON "daughter"; DNA on the birthday.
+2. THE JANITOR OWNS THE COMPANY (boss in disguise): old FIG janitor mocked by the arrogant manager PINEAPPLE; board meeting reveal.
+3. THE MIRROR OF TRUTH (fantasy manhua): the PRINCE's magic mirror shows who truly loves him; the fake fiancée vs the palace cook.
+4. TWINS SWITCH PLACES: poor twin APRICOT takes the rich twin's place at an elite school; the rich twin learns poverty.
+5. THE WEDDING DRESS (modest): bride mocked for a cheap dress; the groom's mother recognises it as the family's lost heirloom.
