@@ -1,0 +1,28 @@
+# FRUIT DRAMA EP04 PART 1 — "Know Your Place, Maid" (2026-10-20)
+# Review: all five clips usable. C1 tea throw + kneeling; C2 locket and tear, excellent; C3 pear-headed guard, bag reveal;
+# C4 rain exit strong; C5 internal cuts 4.46/6.0/6.92 (close-up, shattering glass insert, close-up) — natural edit.
+clips_dir: media/FD/ep04_p1
+work_dir: media/FD/work_ep04_p1
+output: media/FD/FD_EP04_PART1_v1.mp4
+target_lufs: -16
+smooth: true
+transition_sfx: false
+ambience_gain: 0
+clip_gain: 1.0
+music_gain: 0
+segments:
+  - {gain: 0.6, file: C4.mp4, in: 0.0, out: 1.6, push: 0.0015, note: "HOOK: thrown out in the rain"}
+  - {tr: flash, file: C1.mp4, in: 0.0, out: 7.95, push: 0.0005, note: "tea thrown, clean it now"}
+  - {tr: dip, file: C2.mp4, in: 0.0, out: 7.95, push: 0.0005, note: "the locket"}
+  - {tr: dissolve, trd: 0.3, file: C3.mp4, in: 0.0, out: 7.95, note: "framed at the party"}
+  - {tr: whip, file: C4.mp4, in: 0.0, out: 7.95, note: "get out of my house"}
+  - {tr: dip, file: C5.mp4, in: 0.0, out: 7.95, note: "the DNA envelope"}
+text:
+  - {at: "0", dur: 1.6, style: hook, text: "THEY TREATED\nHER LIKE A MAID…", y: 0.15}
+  - {at: "1+2.4", dur: 1.7, style: sub, text: "Know your place, maid."}
+  - {at: "1+4.3", dur: 2.4, style: sub, text: "Clean it. Now."}
+  - {at: "2+4.4", dur: 2.4, style: sub, text: "Who are you…\nMom?"}
+  - {at: "3+1.3", dur: 2.2, style: sub, text: "It was the maid!"}
+  - {at: "4+0.1", dur: 2.0, style: sub, text: "Get out of my house!"}
+  - {at: "5+0.1", dur: 2.6, style: sub, text: "Madam… the DNA results\nyou asked for."}
+  - {at: "5+6.4", dur: 1.5, style: end, text: "PART 2", y: 0.15}
