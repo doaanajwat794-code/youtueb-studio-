@@ -60,3 +60,13 @@ The same rainy gate. STRAWBERRY holds her white umbrella over GRAPE, sheltering 
 
 === C6 CLIP (Frames to Video, 8 s: C6_START -> C6_END) ===
 Night, light rain. GRAPE stands alone with her suitcase, crying, waiting for revenge. STRAWBERRY walks to her and holds her white umbrella over her. GRAPE looks up, stunned. STRAWBERRY says softly in a gentle young female voice, her mouth moving in sync: "I won't treat you the way you treated me." GRAPE breaks down in tears. Slow cinematic camera pulling back. Sound: soft rain on the umbrella. No music, no text.
+
+##### 2026-10-22 · Flow refused with "interests of third-party content providers" #####
+Likely trigger: C5 (pink gown + grand staircase entrance + ball = reads like a famous fairy-tale princess scene).
+Fix: no staircase, no ball; she enters a family dinner hall through a door. Also avoid the words "real daughter" and "princess".
+=== C5_START v2 · attach: STRAWBERRY_GOWN + PEACH ===
+The next evening, a warm elegant dining hall in the mansion, a long table with candles and fruit-headed family friends seated in modest formal clothes. STRAWBERRY (from her reference) in her long, loose blush-pink dress with long sleeves and a high neckline, the small silver locket at her neck, steps in through a tall wooden door, shy; PEACH (from her reference), the mother, in her long dark-green dress and cream shawl, stands at the head of the table smiling warmly. Every character has a whole fruit head with a cartoon face, no human faces anywhere. Style: original 3D animated look, cinematic lighting, vertical 9:16, characters large in frame. All women wear loose, fully covering clothes. No text, no logo.
+=== C5_END v2 · attach: STRAWBERRY_GOWN + PEACH + GRAPE + C5_START v2 ===
+The same dining hall. PEACH holds STRAWBERRY's hand beside the head of the table, both smiling; the seated guests clap; GRAPE stands alone near the wall, ashamed. Every character has a whole fruit head with a cartoon face, no human faces anywhere. Style: original 3D animated look, cinematic lighting, vertical 9:16. All women wear loose, fully covering clothes. No text, no logo.
+=== C5 CLIP v2 ===
+In the warm dining hall, STRAWBERRY steps in shyly. PEACH walks to her, takes her hand and says proudly in a warm mature female voice, her mouth moving in sync: "Everyone… this is my daughter, Strawberry." The seated guests smile and clap; GRAPE stands alone by the wall, ashamed. Gentle camera. Sound: soft clapping. No music, no text.
