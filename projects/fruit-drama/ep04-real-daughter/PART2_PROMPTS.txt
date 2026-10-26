@@ -70,3 +70,20 @@ The next evening, a warm elegant dining hall in the mansion, a long table with c
 The same dining hall. PEACH holds STRAWBERRY's hand beside the head of the table, both smiling; the seated guests clap; GRAPE stands alone near the wall, ashamed. Every character has a whole fruit head with a cartoon face, no human faces anywhere. Style: original 3D animated look, cinematic lighting, vertical 9:16. All women wear loose, fully covering clothes. No text, no logo.
 === C5 CLIP v2 ===
 In the warm dining hall, STRAWBERRY steps in shyly. PEACH walks to her, takes her hand and says proudly in a warm mature female voice, her mouth moving in sync: "Everyone… this is my daughter, Strawberry." The seated guests smile and clap; GRAPE stands alone by the wall, ashamed. Gentle camera. Sound: soft clapping. No music, no text.
+
+##### 2026-10-26 · ALL Part 2 clips refused ("third-party content providers") — v2 clip prompts #####
+Changes: no character names in the prompt or the dialogue (the spoken name "Strawberry" may match a known brand/character),
+roles instead of names, no "designer"/brand words, no staircase/ball, shorter prompts, "original animated characters".
+Diagnostic first: run C3 with only "Gentle cinematic motion, original animated characters." If that also fails, the IMAGES are the trigger.
+=== C1 CLIP v2 ===
+Original animated fruit characters. In a mansion hall at night, the mother with a peach head reads a letter with trembling hands and whispers, her mouth moving in sync: "She… is my daughter?" The young woman with a green grape head grabs for the letter and cries, her mouth moving in sync: "It's a mistake! Tear it up!" The mother pulls the letter away and stares at her. Slow push-in. Sound: rain outside, tense silence. No music, no text.
+=== C2 CLIP v2 ===
+Original animated fruit characters. In a security room full of monitors, a guard with a pear head plays a recording: on the screen the young woman with a green grape head hides a sparkling necklace in a small cloth bag. The mother with a peach head turns to her and says, her mouth moving in sync: "You did this… and I sent my own child into the rain!" The grape-headed young woman backs away. Tense camera. Sound: humming monitors. No music, no text.
+=== C3 CLIP v2 ===
+Original animated fruit characters. Night, heavy rain. The mother with a peach head hurries out of the mansion with a black umbrella and searches the empty wet streets, calling out, her mouth moving in sync: "Where are you? Please come back!" Emotional tracking camera. Sound: rain, footsteps. No music, no thunder, no text.
+=== C4 CLIP v2 ===
+Original animated fruit characters. At a rainy bus stop, the mother with a peach head kneels before the young woman with a strawberry head and holds out half of an old torn photo; the young woman takes the other half from her small locket and the two halves match. The mother says softly, her mouth moving in sync: "My child… forgive me." She holds the umbrella over her and they hug. Slow push-in. Sound: soft rain. No music, no text.
+=== C5 CLIP v2 (use the C5 v2 dining-hall images) ===
+Original animated fruit characters. In a warm dining hall, the young woman with a strawberry head steps in shyly in a pink dress. The mother with a peach head takes her hand and says proudly, her mouth moving in sync: "Everyone… this is my daughter." The seated guests clap; the grape-headed young woman stands alone by the wall, ashamed. Gentle camera. Sound: soft clapping. No music, no text.
+=== C6 CLIP v2 ===
+Original animated fruit characters. Night, light rain by an iron gate. The young woman with a green grape head stands alone with a suitcase, crying. The young woman with a strawberry head walks up and holds a white umbrella over her, and says gently, her mouth moving in sync: "I won't treat you the way you treated me." The grape-headed young woman starts to cry. Slow camera pulling back. Sound: soft rain on the umbrella. No music, no text.
