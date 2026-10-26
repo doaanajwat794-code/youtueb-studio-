@@ -1,0 +1,30 @@
+# FRUIT DRAMA EP04 PART 2 — "The Real Daughter" (2026-10-26)
+# Review: C1 letter readable; C2 tablet shows the grape on screen; C3 raincoat search (hood looks bulky, fine);
+# C4 the two halves match, hug; C5 staircase entrance (v2 text passed); C6 umbrella kindness. All usable.
+clips_dir: media/FD/ep04_p2
+work_dir: media/FD/work_ep04_p2
+output: media/FD/FD_EP04_PART2_v1.mp4
+target_lufs: -16
+smooth: true
+transition_sfx: false
+ambience_gain: 0
+clip_gain: 1.0
+music_gain: 0
+segments:
+  - {gain: 0.5, file: C4.mp4, in: 3.0, out: 4.6, push: 0.0015, note: "HOOK: the two halves match"}
+  - {tr: flash, file: C1.mp4, in: 0.0, out: 7.95, push: 0.0005, note: "the letter"}
+  - {tr: dip, file: C2.mp4, in: 0.0, out: 7.95, note: "the tablet: it was you"}
+  - {tr: whip, file: C3.mp4, in: 0.0, out: 7.95, note: "the search in the rain"}
+  - {tr: dissolve, trd: 0.3, file: C4.mp4, in: 0.0, out: 7.95, push: 0.0005, note: "the two halves, forgive me"}
+  - {tr: dip, file: C5.mp4, in: 0.0, out: 7.95, note: "this is my daughter"}
+  - {tr: dissolve, trd: 0.3, file: C6.mp4, in: 0.0, out: 7.95, note: "the umbrella"}
+text:
+  - {at: "0", dur: 1.6, style: hook, text: "THE MAID WAS\nHER DAUGHTER…", y: 0.15}
+  - {at: "1+0.2", dur: 2.0, style: sub, text: "She…\nis my daughter?"}
+  - {at: "1+3.4", dur: 2.4, style: sub, text: "It's a mistake!\nTear it up!"}
+  - {at: "2+3.6", dur: 2.6, style: sub, text: "It was you…\nall along."}
+  - {at: "3+5.0", dur: 2.8, style: sub, text: "Where are you?\nPlease come back!"}
+  - {at: "4+4.9", dur: 2.4, style: sub, text: "My child…\nforgive me."}
+  - {at: "5+4.5", dur: 2.8, style: sub, text: "Everyone…\nthis is my daughter."}
+  - {at: "6+0.3", dur: 3.6, style: sub, text: "I won't treat you\nthe way you treated me."}
+  - {at: "6+4.6", dur: 3.3, style: end, text: "KINDNESS IS\nTHE REAL WEALTH.", y: 0.15}
